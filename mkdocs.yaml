@@ -9,4 +9,3 @@ theme:
       - bash
       - python
   locale: es
-  navigation_depth: 0
