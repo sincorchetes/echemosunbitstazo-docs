@@ -1,25 +1,5 @@
 # Python
 
-## Contenido
-
-- [Condicionales](https://echemosunbitstazo.es/devel/python/Controles de flujo.html)
-- [Fecha y hora](https://echemosunbitstazo.es/devel/python/Fecha y hora.html)
-- [Función print()](https://echemosunbitstazo.es/devel/python/Función print%2C type y ver los diferentes tipos de datos.html)
-- [Función type()](https://echemosunbitstazo.es/devel/python/Función print%2C type y ver los diferentes tipos de datos.html#funcion-type)
-- [Cadenas o *strings*](https://echemosunbitstazo.es/devel/python/Función print%2C type y ver los diferentes tipos de datos.html#cadenas-o-strings)
-- [Constantes](https://echemosunbitstazo.es/devel/python/Función print%2C type y ver los diferentes tipos de datos.html#constantes)
-- [Números](https://echemosunbitstazo.es/devel/python/Función print%2C type y ver los diferentes tipos de datos.html#numeros)
-- [Imprimir valores y funciones](https://echemosunbitstazo.es/devel/python/Imprimir valores y funciones.html)
-- [Obtener datos introducidos por el usuario](https://echemosunbitstazo.es/devel/python/Introducir datos y control de excepciones.html)
-- [¿Cómo usar Python?](https://echemosunbitstazo.es/devel/python/Intérprete%2C comentarios%2C identificadores y palabras clave.html)
-- [Programación orientada a objetos](https://echemosunbitstazo.es/devel/python/Programación Orientada a Objetos.html)
-- [Tipos de operadores](https://echemosunbitstazo.es/devel/python/Tipos de operadores e introducción a los módulos.html)
-- [Tuplas](https://echemosunbitstazo.es/devel/python/Tuplas%2C listas%2C diccionarios y sets.html)
-- [Listas](https://echemosunbitstazo.es/devel/python/Tuplas%2C listas%2C diccionarios y sets.html#listas)
-- [Diccionarios](https://echemosunbitstazo.es/devel/python/Tuplas%2C listas%2C diccionarios y sets.html#diccionarios)
-- [Sets](https://echemosunbitstazo.es/devel/python/Tuplas%2C listas%2C diccionarios y sets.html#sets)
-- [Instalación](https://echemosunbitstazo.es/devel/python/Preparando el entorno/Preparando el entorno.html)
-
 ## Historia
 
 Python es un lenguaje de programación interpretado, de alto nivel y de interés general. Este lenguaje tiene una filosofía de programación que se centra en la legibilidad del código, para ello implementa una serie de declaraciones y estándares que ha de respetarse para que el código funcione como es la indentación. Python es un lenguaje orientado a objetos que facilitan a los desarrolladores escribir un código limpio, eficaz, lógico y pequeño que sirve tanto para pequeños, como medianos y grandes proyectos.
