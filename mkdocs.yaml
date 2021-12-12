@@ -4,7 +4,7 @@ theme:
   analytics:
     gtag: UA-114291557-2
   highlightjs: true
-    hljs_languages:
+  hljs_languages:
       - yaml
       - bash
       - python
