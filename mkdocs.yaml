@@ -9,5 +9,4 @@ theme:
       - bash
       - python
   locale: es
-  collapse_navigation: False
-  navigation_depth: 1
+  navigation_depth: 0
