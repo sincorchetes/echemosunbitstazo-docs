@@ -225,35 +225,35 @@ Nota
 Vamos a llamar al módulo `random` y lo llamaremos como `TirarDados` que más tarde utilizaremos el método `.random()` para generar números aleatorios que están comprendidos entre 0.n y 1.n y que, haciendo uso del método `.round()` aproximaremos el número a favor del 1 o del 0.
 
 ```
- 1#!/usr/bin/env python3
- 2#
- 3# Juego elaborado por Álvaro Castillo
- 4# GPLv2
- 5#
- 6from random import random as TirarDados
- 7dragon_hp = 100
- 8personaje_hp = 100
- 9hit_dragon = 5
-10hit_personaje = 5
-11
-12while True:
-13  if personaje_hp == 0:
-14    print("Hemos ganado :)")
-15    break
-16  elif dragon_hp == 0:
-17    print("Ganó el Dragón :(")
-18    break
-19  else:
-20    pass
-21  dados=round(TirarDados())
-22  if ( dados == 0 ):
-23    dragon_hp -= hit_dragon
-24    print("¡Hemos golpeado al dragón!, le queda: ", dragon_hp, "de vida.")
-25  elif ( dados == 1):
-26   personaje_hp -= hit_personaje
-27   print("¡El dragón nos ha golpeado!, tenemos de vida:", personaje_hp,".")
-28  else:
-29   print("Hubo un fallo")
+ #!/usr/bin/env python3
+ #
+ # Juego elaborado por Álvaro Castillo
+ # GPLv2
+ #
+ from random import random as TirarDados
+ dragon_hp = 100
+ personaje_hp = 100
+ hit_dragon = 5
+ hit_personaje = 5
+
+ while True:
+   if personaje_hp == 0:
+     print("Hemos ganado :)")
+     break
+    elif dragon_hp == 0:
+      print("Ganó el Dragón :(")
+      break
+    else:
+      pass
+    dados=round(TirarDados())
+    if ( dados == 0 ):
+      dragon_hp -= hit_dragon
+      print("¡Hemos golpeado al dragón!, le queda: ", dragon_hp, "de vida.")
+    elif ( dados == 1):
+  personaje_hp -= hit_personaje
+     print("¡El dragón nos ha golpeado!, tenemos de vida:", personaje_hp,".")
+    else:
+     print("Hubo un fallo")
 ```
 
 Este es el análisis resumido de este juego:
@@ -279,5 +279,3 @@ Dando como resultado algo parecido a esto:
 ¡Hemos golpeado al dragón!, le queda:  75 de vida.
 [...]
 ```
-
-[Siguiente ](https://echemosunbitstazo.es/devel/python/Fecha y hora.html)[ Anterior](https://echemosunbitstazo.es/devel/python/python.html)
