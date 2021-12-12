@@ -1,4 +1,4 @@
-## Instalación
+# Instalación
 
 ## Exportando base de datos
 

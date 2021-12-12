@@ -1,4 +1,4 @@
-# Bash
+# Introducción
 
 ## ¿Qué es Bash?
 

@@ -1,4 +1,4 @@
-# Zabbix
+# Introducción
 
 Software de monitorización elaborado en PHP….
 
