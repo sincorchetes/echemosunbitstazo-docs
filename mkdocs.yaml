@@ -2,7 +2,7 @@ site_name: Echemos un bitstazo
 theme:
   name: readthedocs
   analytics:
-    gtag: UA-114291557-2
+    gtag: UA-114291557-1
   highlightjs: true
   hljs_languages:
       - yaml
