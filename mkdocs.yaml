@@ -1,3 +1,4 @@
 site_name: Echemos un bitstazo
 theme:
   name: readthedocs
+  custom_dir: docs
