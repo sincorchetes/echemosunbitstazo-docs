@@ -28,9 +28,7 @@ Como norma general y es altamente recomendado hacer uso de los comandos `useradd
 
 4. Creamos una entrada en `/etc/shadow` mediante haciendo uso de `vipw -s`:
 
-Nota
-
-Para saber que algoritmo cifrado utilizar, podemos comprobarlo en el fichero `/etc/login.defs`, en la variable `ENCRYPT_METHOD` lo que pasa que utiliza el sistema un salto o varios (lo desconocemos) para generar la contraseña a parte de la codificiación. Para visualizar el prefijo que necesitamos se puede consultar en: * `man 3 crypt` * `$1$`: MD5 * `$2a$`: Blowfish * `$5$`: SHA-256 * `$6$`: SHA-512
+> Nota: Para saber que algoritmo cifrado utilizar, podemos comprobarlo en el fichero `/etc/login.defs`, en la variable `ENCRYPT_METHOD` lo que pasa que utiliza el sistema un salto o varios (lo desconocemos) para generar la contraseña a parte de la codificiación. Para visualizar el prefijo que necesitamos se puede consultar en: * `man 3 crypt` * `$1$`: MD5 * `$2a$`: Blowfish * `$5$`: SHA-256 * `$6$`: SHA-512
 
 Sin embargo, es **altamente recomendable** generar una contraseña nueva haciendo uso del comando `passwd(1)`, ya que esta genera la contraseña con el salto correcto, el algoritmo correcto y se genera automáticamente la entrada en `/etc/shadow`: passwd pepito
 
