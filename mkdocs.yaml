@@ -1,3 +1,12 @@
 site_name: Echemos un bitstazo
 theme:
   name: readthedocs
+  analytics:
+    gtag: UA-114291557-2
+  highlightjs: true
+      hljs_languages:
+          - yaml
+          - bash
+          - python
+  locale: es
+  collapse_navigation: False
