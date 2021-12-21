@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tipos de operadores - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tipos de operadores";
+    var mkdocs_page_input_path = "desarrollo/python/tipos-de-operadores.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Tipos de operadores</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#aritmeticos">Aritméticos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#adiccion">Adicción</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sustraccion">Sustracción</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#multiplicacion">Multiplicación</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#division-cociente">División (cociente)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#modulo-resto-de-una-division">Módulo, (resto de una división)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operadores-de-asignacion">Operadores de asignación</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#igual">Igual (=)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mas-e-igual">Más e igual (+=)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#menos-e-igual-">Menos e igual (-=)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#multiplicar-e-igual">Multiplicar e igual (*=)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operadores-de-comparacion">Operadores de comparación</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#menor-que">Menor que</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mayor-que">Mayor que</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#menor-igual-que">Menor igual que</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mayor-igual-que">Mayor igual que</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distinto-de">Distinto de</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operadores-logicos">Operadores lógicos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#operador-and">Operador and</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#operador-or">Operador or</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#operador-not">Operador not</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operadores-bitwise">Operadores bitwise</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ampersan">Ampersan (&amp;)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tuberia-o-pipe">Tubería o pipe</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#desplazamiento-hacia-la-derecha-o-shift-to-right">Desplazamiento hacia la derecha o (shift-to-right)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#desplazamiento-hacia-la-izquierda-o-shift-to-left">Desplazamiento hacia la izquierda o (shift-to-left)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inversion-bitwise">Inversión bitwise</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operador-de-identidad">Operador de identidad</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#operador-is">Operador is</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#oeprador-is-not">Oeprador is not</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#operadores-de-membresia">Operadores de membresía</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#operador-in">Operador in</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#operador-not-in">Operador not in</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Tipos de operadores</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tipos-de-operadores">Tipos de operadores</h1>
+<p>En Python tenemos varios tipos de oepradores para hacer comparaciones, cálculos, valorar expresiones lógicas…</p>
+<ul>
+<li>Aritmético</li>
+<li>Asignación</li>
+<li>Comparación</li>
+<li>Lógico</li>
+<li>Bit a bit (<em>bitwise</em>)</li>
+<li>Identidad</li>
+<li>Membresía</li>
+</ul>
+<h2 id="aritmeticos">Aritméticos</h2>
+<p>Se utiliza para realizar operaciones matemáticas y se utilizando dos operandos para llevarlas a cabo.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Se utiliza para realizar operaciones de adicción (suma)</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Operaciones de sustracción (resta)</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplicación</td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>División (cociente)</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Módulo (resto de una división)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adiccion">Adicción</h3>
+<pre><code>&gt;&gt;&gt; 2 + 3
+5
+</code></pre>
+<h3 id="sustraccion">Sustracción</h3>
+<pre><code>&gt;&gt;&gt; 1 - 2
+-1
+</code></pre>
+<h3 id="multiplicacion">Multiplicación</h3>
+<pre><code>&gt;&gt;&gt; 2 * 1
+2
+</code></pre>
+<h3 id="division-cociente">División (cociente)</h3>
+<pre><code>&gt;&gt;&gt; 4 / 2
+0
+</code></pre>
+<h3 id="modulo-resto-de-una-division">Módulo, (<em>resto de una división</em>)</h3>
+<pre><code>&gt;&gt;&gt; 4 % 2
+2.0
+</code></pre>
+<h2 id="operadores-de-asignacion">Operadores de asignación</h2>
+<p>Estos operadores permiten asignar valores, por norma general a variables, pero no olvidemos que podemos involucrar otros tipos de identificadores como pueden ser listas, tuplas…</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>Asigna un valor</td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>Suma un valor al valor actual y guardar el nuevo valor</td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>Resta un valor al valor actual y guardar el nuevo valor</td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>Multiplica un valor al valor actual y guardar el nuevo valor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="igual">Igual (<code>=</code>)</h3>
+<pre><code>&gt;&gt;&gt; variable = 10
+&gt;&gt;&gt; print(variable)
+10
+</code></pre>
+<h3 id="mas-e-igual">Más e igual (<code>+=</code>)</h3>
+<pre><code>&gt;&gt;&gt; variable = 1
+&gt;&gt;&gt; variable += 2
+&gt;&gt;&gt; print(variable)
+3
+</code></pre>
+<h3 id="menos-e-igual-">Menos e igual (<code>-=</code>)</h3>
+<pre><code>&gt;&gt;&gt; variable = 1
+&gt;&gt;&gt; variable -= 2
+&gt;&gt;&gt; print(variable)
+-1
+</code></pre>
+<h3 id="multiplicar-e-igual">Multiplicar e igual (<code>*=</code>)</h3>
+<pre><code>&gt;&gt;&gt; variable = 2
+&gt;&gt;&gt; variable *= 2
+&gt;&gt;&gt; print(variable)
+4
+</code></pre>
+<h2 id="operadores-de-comparacion">Operadores de comparación</h2>
+<p>Estos operadores te permiten realizar una comparación entre dos valores, son muy utilizados en los condicionales o en validaciones como pueden ser bucles…etc. Además, los valores comparados devuelven un <code>True</code> o un <code>False</code> (<em>booleano</em>) si la comparación se cumple o no.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;</code></td>
+<td>Menor que</td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td>Mayor que</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>Menor o igual que</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>Mayor o igual que</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Distinto de</td>
+</tr>
+</tbody>
+</table>
+<h3 id="menor-que">Menor que</h3>
+<pre><code>&gt;&gt;&gt; 1 &lt; 2
+True
+</code></pre>
+<h3 id="mayor-que">Mayor que</h3>
+<pre><code>&gt;&gt;&gt; 1 &gt; 2
+False
+</code></pre>
+<h3 id="menor-igual-que">Menor igual que</h3>
+<pre><code>&gt;&gt;&gt; 1 &lt;= 2
+True
+</code></pre>
+<h3 id="mayor-igual-que">Mayor igual que</h3>
+<pre><code>&gt;&gt;&gt; 1 &gt;= 2
+False
+</code></pre>
+<h3 id="distinto-de">Distinto de</h3>
+<pre><code>&gt;&gt;&gt; 1 != 2
+True
+</code></pre>
+<h2 id="operadores-logicos">Operadores lógicos</h2>
+<p>Estos permiten realizar operaciones lógicas y devuelven <code>True</code> o <code>False</code> según el resultado.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td>Deben cumplirse las condiciones sí o sí</td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td>Debe cumplir al menos una de las condiciones evaluadas</td>
+</tr>
+<tr>
+<td><code>not</code></td>
+<td>Devuelve <code>False</code> si el resultado es verdadero</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operador-and">Operador and</h3>
+<pre><code>&gt;&gt;&gt; 1&lt;2 and 2&lt;3
+True
+&gt;&gt;&gt; x = 100 &lt; 20 and 2&gt;3
+&gt;&gt;&gt;print(x)
+False
+</code></pre>
+<h3 id="operador-or">Operador or</h3>
+<pre><code>&gt;&gt;&gt; 1&lt;2 and 100&gt;100
+True
+</code></pre>
+<h3 id="operador-not">Operador not</h3>
+<pre><code>&gt;&gt;&gt; not(2 != 100 and 90&lt;200)
+False
+</code></pre>
+<h2 id="operadores-bitwise">Operadores <em>bitwise</em></h2>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;</code></td>
+<td>Convierte el primer y segundo nº decimal en nº binarios, compara ambos nº.Cuando se encuentra 1 bit en el primer nº, y en el segundo también, se establece 1.Cuando se encuentra 1 bit en el primer nº y un 0 en el segundo también se establece un 0.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>Convierte el primer y segundo nº decimal en nº binarios, compara ambos nº.Cuando se encuentra 1 bit en el primer nº, y en el segundo también, se establece 1.Cuando se encuentra 1 bit en el primer nº y un 0 en el segundo también se establece un 1.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Convierte el primer y segundo nº decimal en nº binarios, compara ambos nº.Cuando se encuentra 1 bit en el segundo nº, y se desplaza el bit en el segundo también, se establece 1.Cuando se encuentra 1 bit en el primer nº y un 0 en el segundo también se establece un 1.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>Lo anterior pero desde la izquierda</td>
+</tr>
+<tr>
+<td><code>~</code></td>
+<td>Devuelve el complemento del nº menos el nº que obtenemos cambiado cada 1 por un 0 y un 0 por un 1. Es lo mismo que -nº-1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ampersan">Ampersan (&amp;)</h3>
+<pre><code>&gt;&gt;&gt; 7 &amp; 2
+2
+</code></pre>
+<p>¿Por qué nos devuelve 2? Si nosotros pasamos a binario ambos números:</p>
+<pre><code>7 = 0 0 0 0 0 1 1 1
+2 = 0 0 0 0 0 0 1 0
+</code></pre>
+<p>Cuando coincida el 1 del primer valor, con el 1 del segundo quedará como 1. Si el primer valor hay un 0 y en el segundo hay 1, se quedará el 0 por encima del 1 quedando tal que así:</p>
+<pre><code>0 0 0 0 0 1 1 1
+0 0 0 0 0 0 1 0
+---------------------
+0 0 0 0 0 0 1 0
+</code></pre>
+<p>Si conviertes este número binario a decimal te dará 2.</p>
+<h2 id="tuberia-o-pipe">Tubería o <em>pipe</em></h2>
+<pre><code>&gt;&gt;&gt; 190 | 9
+191
+</code></pre>
+<p>¿Por qué nos devuelve 191? Si nosotros pasamos a binario ambos números:</p>
+<pre><code>190 = 1 0 1 1 1 1 1 0
+9 = 0 0 0 0 1 0 0 1
+</code></pre>
+<p>Cuando coincida el 1 del primer valor, con el 1 del segundo quedará como 1. Si el primer valor hay un 0 y en el segundo hay 1, se quedará el 1 por encima del 0 quedando tal que así:</p>
+<pre><code>1 0 1 1 1 1 1 0
+0 0 0 1 0 0 0 1
+---------------------
+1 0 1 1 1 1 1 1
+</code></pre>
+<p>Si conviertes este número binario a decimal te dará 191.</p>
+<h3 id="desplazamiento-hacia-la-derecha-o-shift-to-right">Desplazamiento hacia la derecha o (<em>shift-to-right</em>)</h3>
+<pre><code>&gt;&gt;&gt; 10 &gt;&gt; 2
+2
+</code></pre>
+<p>¿Por qué nos devuelve 2? Si pasas el nº 10 a binario:</p>
+<pre><code>10 = 0 0 0 0 1 0 1 0
+</code></pre>
+<p>Desplazas 2 posiciones añadiendo dos ceros hacia la derecha, y te quedaría:</p>
+<pre><code>0 0 0 0 0 0 1 0
+</code></pre>
+<p>Si conviertes este número binario a decimal te dará 2.</p>
+<h3 id="desplazamiento-hacia-la-izquierda-o-shift-to-left">Desplazamiento hacia la izquierda o (<em>shift-to-left</em>)</h3>
+<p>Este procedimiento es el mismo que el anterior, pero hacia el otro lado.</p>
+<pre><code>&gt;&gt;&gt; 10 &lt;&lt; 2
+40
+</code></pre>
+<p>¿Por qué devuelve 2? Si pasas a binario el nº 10:</p>
+<pre><code>10 = 0 0 0 0 1 0 1 0
+</code></pre>
+<p>Desplazas 2 posiciones añadiendo dos ceros hacia la izquierda, y te quedaría:</p>
+<pre><code>0 0 1 0 1 0 0 0
+</code></pre>
+<p>Si conviertes este número binario a decimal te dará 40.</p>
+<h2 id="inversion-bitwise">Inversión <em>bitwise</em></h2>
+<pre><code>&gt;&gt;&gt; ~100
+-101
+</code></pre>
+<p>¿Por qué devuelve -101? Devuelve el complemento del nº menos el nº que obtenemos cambiado cada 1 por un 0 y un 0 por un 1. Es lo mismo que -nº-1</p>
+<h2 id="operador-de-identidad">Operador de identidad</h2>
+<p>Prueba si dos operandos comparten una identidad. Aquí hay dos tipos de operadores <code>is</code> e <code>is not</code>.</p>
+<h3 id="operador-is">Operador is</h3>
+<p>Por ejemplo, comparamos si un valor almacenado en x es igual a su valor:</p>
+<pre><code>&gt;&gt;&gt; x = 10
+&gt;&gt;&gt; x is 10
+True
+</code></pre>
+<h3 id="oeprador-is-not">Oeprador is not</h3>
+<p>Aquí utilizamos el ejemplo anterior pero a la inversa.</p>
+<pre><code>&gt;&gt;&gt; x = 10
+&gt;&gt;&gt; x is not 10
+False
+</code></pre>
+<h2 id="operadores-de-membresia">Operadores de membresía</h2>
+<p>Estos operadores permiten verificar si hay un <code>str</code> en otro <code>str</code>, <code>list</code>, <code>dict</code>, <code>tuple</code>… Se utiliza <code>in</code> para buscar y devolver <code>True</code> si encuentra dicho <code>str</code>, o, not in para verificar que no está.</p>
+<h3 id="operador-in">Operador in</h3>
+<pre><code>&gt;&gt;&gt; &quot;echemos&quot; in &quot;echemos un bitstazo&quot;
+True
+</code></pre>
+<h3 id="operador-not-in">Operador not in</h3>
+<pre><code>&gt;&gt;&gt; &quot;.es&quot; not in &quot;echemos un bitstazo&quot;
+True
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tuplas-dic-sets-listas-y-mas/" class="btn btn-neutral float-right" title="Tuplas">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../programacion-orientada-a-objetos/" class="btn btn-neutral" title="Programación orientada a objetos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../programacion-orientada-a-objetos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tuplas-dic-sets-listas-y-mas/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

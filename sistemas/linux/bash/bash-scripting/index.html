@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Aprendiendo scripting - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Aprendiendo scripting";
+    var mkdocs_page_input_path = "sistemas/linux/bash/bash-scripting.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Linux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Bash</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Aprendiendo scripting</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#como-aprender">¿Cómo aprender?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#variables">Variables</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#arrays-vectores">Arrays (vectores)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#condicionales">Condicionales</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#referencias">Referencias</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Sistemas &raquo;</li>
+        
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+        
+          <li>Bash &raquo;</li>
+        
+      
+    
+    <li>Aprendiendo scripting</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="aprendiendo-scripting">Aprendiendo scripting</h1>
+<h2 id="como-aprender">¿Cómo aprender?</h2>
+<p>Realmente cuando hablamos de desarrollo se traduce literalmente en <em>por mucho que sepas, siempre aprenderás</em>. Porque se te olvida un <code>done</code> en bucle, <code>fi</code> en un condicional, una variable mal declarada…etc, esto es así y hay que sumarle que debemos estar constantemente mirando otros <code>scripts</code> elaborados por terceras personas, practicar siempre que podamos porque esto nos ayudará a fianzar más los conocimientos que hemos aprendido aquí. Esto no es como memorizar un texto, haces examen y ¡ciao! ¡Implican muchas cosas! Como comprender conceptos abstractos, saber qué implica la ejecución de determinados comandos, conocer el sistema…etc</p>
+<p>Pero no tenemos de que preocuparnos, todo es posible. Ahora le daremos paso a las variables y <code>arrays</code></p>
+<h2 id="variables">Variables</h2>
+<p>Las variables como hemos visto en su día en matemáticas, es un conjunto de caracteres alfanuméricos (peras, melones, X:sub:1, abc:sub:12) cuyo valor asignado varía o está sujeto a algún cambio.</p>
+<p>En Bash las variables las podemos declarar directamente o mediante el uso del comando <code>declare(1)</code> que lo hablaremos más adelante ya que permite generar diferentes tipos de</p>
+<h3 id="restricciones-y-usos">Restricciones y usos</h3>
+<p>Por norma general, las variables en mayúsculas se reservan para temas de administración y gestión del sistema.</p>
+<p>Si utilizamos el comando <code>env(1)</code>, veremos toda la ristra de variables de entorno que tenemos:</p>
+<pre><code>LANG=en_US.utf8
+GDM_LANG=en_US.utf8
+HISTCONTROL=ignoredups
+DISPLAY=:0.0
+GUESTFISH_RESTORE=\e[0m
+HOSTNAME=set0.lan
+GTK_OVERLAY_SCROLLING=0
+COLORTERM=truecolor
+GUESTFISH_INIT=\e[1;34m
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+KDEDIRS=/usr
+XDG_VTNR=1
+SSH_AUTH_SOCK=/home/sincorchetes/.cache/keyring-RYPSKZ/ssh
+XDG_SESSION_ID=2
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/sincorchetes
+USER=sincorchetes
+GUESTFISH_PS1=\[\e[1;32m\]&gt;&lt;fs&gt;\[\e[0;31m\]
+DESKTOP_SESSION=mate
+PT7HOME=/opt/pt
+[SALIDA ACORTADA]
+</code></pre>
+<p>No pueden empezar con números, signos @#~½!, deberán comenzar con al menos una letra y luego si es posible usar números:</p>
+<p>Ejemplo de errores:</p>
+<pre><code>@hola=23
+h!ola=23
+#o#=23
+3hola=23
+</code></pre>
+<p>Correcto:</p>
+<pre><code>hola=23
+h014=23
+hola=&quot;Esto es un valor&quot;
+</code></pre>
+<h3 id="declarando-variables-con-texto">Declarando variables con texto</h3>
+<p>Si queremos añadir valores con cadenas a las variables, es muy importante comprender estas dos diferencias. Podemos declarar ambas con doble comillado «», ó, comillado simple “”. El problema erradica, en que no son lo mismo, el («») permite mostrar el contenido de una variable dentro de un texto, mientras que (“”) interpreta el texto tal cual.</p>
+<pre><code>$hw = &quot;Hello World&quot;
+echo &quot;$hw for everyone&quot;
+
+Hello World for everyone
+$hw = &quot;Hello World&quot;
+echo '$hw for everyone'
+$hw for everyone
+</code></pre>
+<h3 id="visualizando-las-variables-de-entornosistema">Visualizando las variables de entorno/sistema</h3>
+<p>Tenemos a nuestra disposición el comando <code>env(1)</code> que nos enseña todas las variables de entorno y de sistema que debemos respetar, vamos a comentar algunas de ellas.</p>
+<table>
+<thead>
+<tr>
+<th>Nombre variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HOME</code></td>
+<td>Ruta de trabajo del usuario actual</td>
+</tr>
+<tr>
+<td><code>PATH</code></td>
+<td>Lista de directorios dónde el shell buscará ejecutables (binarios, scripts…)</td>
+</tr>
+<tr>
+<td><code>PS1</code></td>
+<td>Prompt String 1, muestra el caracter, texto previo a la introducción de los comandos. <code>[sincorchetes@set0 ~]$</code></td>
+</tr>
+<tr>
+<td><code>IFS</code></td>
+<td>Internal Field Separator, separadores como tabulación, espacio, salto de línea, si está en blanco, se usan espacios</td>
+</tr>
+<tr>
+<td><code>MAIL</code></td>
+<td>Ruta y archivo de los mensajes del (la) usuari@ que tienen que ver con el e-mail</td>
+</tr>
+<tr>
+<td><code>SHELL</code></td>
+<td>Ruta del shell del usuario</td>
+</tr>
+<tr>
+<td><code>LANG</code></td>
+<td>Idioma y codificación</td>
+</tr>
+<tr>
+<td><code>USER</code></td>
+<td>Variable que identifica al/la usuari@ actual</td>
+</tr>
+<tr>
+<td><code>LOGNAME</code></td>
+<td>Nombre del login utilizado en inicio de sesión, por lo general suele ser el mismo que <code>$USER</code></td>
+</tr>
+<tr>
+<td><code>HISTFILE</code></td>
+<td>Ruta de archivo del historial de comandos ejecutados en la shell</td>
+</tr>
+<tr>
+<td><code>HISTSIZE</code></td>
+<td>Tamaño del archivo historial de comandos ejecutados en shell</td>
+</tr>
+<tr>
+<td><code>OLDPWD</code></td>
+<td>Directorio accedido anteriormente</td>
+</tr>
+<tr>
+<td><code>PWD</code></td>
+<td>Ruta actual</td>
+</tr>
+<tr>
+<td><code>RANDOM</code></td>
+<td>Genera un número aleatorio comprendido entre 0 y 31767</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eliminando-una-variable">Eliminando una variable</h3>
+<p>Para eliminar una variable y su contenido, bastará con ejecutar el comando:</p>
+<pre><code>unset variable
+</code></pre>
+<h3 id="variable-con-acceso-solo-lectura">Variable con acceso solo lectura</h3>
+<p>Se puede establecer una variable cuyo contenido no cambia como si fuese una constante haciendo uso del comando <code>readonly(1)</code></p>
+<pre><code>readonly ejemplo=2
+</code></pre>
+<h3 id="visualizando-el-contenido-de-una-variable">Visualizando el contenido de una variable</h3>
+<p>Para visualizar una variable, bastará con utilizar el comando <code>echo(1)</code>.</p>
+<pre><code>ejemplo=&quot;Hola que tal&quot;
+
+echo $ejemplo
+</code></pre>
+<h3 id="convertir-una-variable-en-global">Convertir una variable en global</h3>
+<p>En desarrollo, se puede entender variable global como aquella que es accesible en todo momento por el programa a pesar de encontrarse en una función de manera cerrada, y una variable local aquella que solo se produce una vez y posteriormente, una vez efectuada la ejecución del bloque de código acaba por auto-suprimirse como un mensaje del inspector Gadget.</p>
+<p>Para poder hacerla accesible deberemos hacer uso del comando <code>source(1)</code>. Si tenemos un archivo con variables y queremos cargarlas, bastará con ejecutar:</p>
+<pre><code>source ruta_script
+</code></pre>
+<p>Y podremos acceder desde dónde queramos desde la shell dónde hayamos ejecutado dicho comando.</p>
+<h3 id="utilizando-variable-para-ayudarnos-con-los-comandos">Utilizando variable para ayudarnos con los comandos</h3>
+<p>Por supuestísimo que podemos hacer uso de las variables para obtener una automatización.</p>
+<pre><code>ejemplo=:code:`pwd`
+ls $ejemplo
+</code></pre>
+<p>Nota</p>
+<p>No obstante, si tratamos de copiar archivos, directorios cuyas rutas se encuentran en variables, puede dar error, y es porque interpreta uno de los dos el nombre tal cual dando error. Para ello tendremos que utilizar el {}.</p>
+<pre><code>ruta_archivo_origen = /etc/group
+ruta_archivo_destino = /home/$USER/Documentos
+
+cp ${ruta_archivo_origen} ${ruta_archivo_destino}
+</code></pre>
+<h3 id="sustituir-cadenas-en-variables">Sustituir cadenas en variables</h3>
+<p>Podemos sustituir los valores que se encuentran en las variables sin tener que reasignarlas, solo utilizando llaves.</p>
+<p>Si la variable está vacía o no existe, el texto se autoasignará. Probaremos con una variable cualquiera que al hacerle un <code>echo(1)</code> no mostrará valor alguno. Si está definida, mostrará el valor de la variable.</p>
+<pre><code>echo $ejemplo
+</code></pre>
+<p>Posteriormente efectuamos:</p>
+<pre><code>echo ${ejemplo:-Está aprobado}Está aprobado
+</code></pre>
+<p>Pero el valor y la variable desaparecen. Si está definida, mostrará el valor de la variable. Si queremos que perduren, haremos los siguiente:</p>
+<pre><code>echo ${ejemplo:=Está aprobado}Está aprobadoecho $ejemploEstá aprobado
+</code></pre>
+<p>Por otro lado, si nos encontramos con una variable previamente declarada, pero no vacía, se puede sustituir utilizando el «:+», no es un cambio permanente.</p>
+<pre><code>echo ${PS1:+[${USER}@:code:`pwd`]}
+</code></pre>
+<p>Y por último, si tenemos una variable que está vacía o que no exista, se interrumpe el script y mostrará el mensaje de error que le asignemos, si existe, devolverá el contenido de la variable:</p>
+<pre><code>echo ${dsfsd:?[${USER}@:code:`pwd`]}bash: dsfsd: [sincorchetes@/home/sincorchetes]
+</code></pre>
+<h3 id="obtener-el-valor-de-una-cadena">Obtener el valor de una cadena</h3>
+<p>Si queremos obtener el número de caracteres que constituyen el valor de una variable podemos hacerlo:</p>
+<pre><code>ejemplo=&quot;Hola que tal&quot;echo ${#ejemplo}12
+</code></pre>
+<h3 id="operaciones-aritmeticas-con-variables">Operaciones aritméticas con variables</h3>
+<p>Se pueden hacer operaciones aritméticas con variables si primeramente declaramos el tipo de dato a través del comando <code>typeset(1)</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+ - * /</code></td>
+<td>Sumar, restar, multiplicar, dividir</td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Nos da el módulo de la operación</td>
+</tr>
+<tr>
+<td><code>&lt; &gt; &lt;= =&gt;</code></td>
+<td>Establece comparaciones, <code>1=True;</code> <code>0=False</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>Igual que</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Diferente de</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mostrar-el-resultado-de-la-siguiente-suma">Mostrar el resultado de la siguiente suma</h3>
+<pre><code>typeset -i aa=1200+2200echo $a3200
+</code></pre>
+<p>¿Son iguales estos resultados?</p>
+<pre><code>typeset -i resultadoa=1200b=1200resultado=${a}==${b}echo $resultado1
+</code></pre>
+<p>Podemos encontrar muchos más operadores <code>help let</code>.</p>
+<h3 id="variables-especiales">Variables especiales</h3>
+<p>No se pueden utilizar, suelen ser de solo lectura y notifican de algo ocurrido por lo general.</p>
+<h4 id="saber-si-un-comando-se-ejecuto-con-exito-o-nop">Saber si un comando se ejecutó con éxito o nop</h4>
+<pre><code>echo $?
+</code></pre>
+<p>Nos devolverá un código al haber ejecutado un comando. Por lo general, 0 es que se ejecutó con éxito, 1 falló la ejecución del comando, 127 no encontró el ejecutable. Según el comando, ejecutable, binario… devuelve un código de error distinto.</p>
+<h4 id="obtener-el-pid-del-shell-actual">Obtener el PID del shell actual</h4>
+<p>El PID proviene de Process ID, es el número que identifica un proceso, (<em>más adelante explicaremos qué son los procesos</em>) de la shell actual</p>
+<pre><code>echo $$25382
+</code></pre>
+<h4 id="pid-del-ultimo-proceso-iniciado-en-segundo-plano">PID del último proceso iniciado en segundo plano</h4>
+<p>Si hemos ejecutado un binario y/o ejecutable en segundo plano, nos chivará el número de identificación de proceso.</p>
+<pre><code>echo $!25982
+</code></pre>
+<h4 id="opciones-del-shell">Opciones del shell</h4>
+<p>Son las características que tiene habilitadas la shell por defecto, en Fedora muestran las siguientes:</p>
+<pre><code>echo $-himBHs
+</code></pre>
+<p>El significado lo podemos encontrar <code>bash(1)</code>, sección <em>SHELL BUILTIN COMMANDS</em>:</p>
+<ul>
+<li>h: Recuerda la ubicación de los comandos a medida de que se buscan para ejecutarse. Activado por defecto.</li>
+<li>i: Interactiva</li>
+<li>m: Modo monitor. El control de trabajos está activado.</li>
+<li>B: El intérprete de comandos permite una expansión del uso de las llaves y las varibles. Por ejemplo, <code>echo a{d,c,d,b}e</code> devolverá <code>ade ace abe</code>. Viene habilitado por defecto.</li>
+<li>H: Permite sustituir el estilo del histórico de comandos, se habilita por defecto pero debe tener la característica de interactivo (i).</li>
+</ul>
+<h2 id="arrays-vectores">Arrays (vectores)</h2>
+<p>Los vectores, o también conocidos como <em>arrays</em> permiten almacenar un conjunto de datos en un solo espacio de la memoria. En otros lenguajes como PHP pueden anidarse y confinar múltiples conjuntos de datos dentro de un solo espacio de memoria creando <em>arrays</em> multidimensionales.</p>
+<p>Sin embargo, en Bash, esto no es posible, ya que solo podremos crear vectores de una sola dimensión y sin un índice personalizado mediante su creación. a menos que declaremos la posición como el resultado de una variable (<em> <code>pagina1=1</code> = <code>array[pagina1]="Valor"</code> </em>). El índice en este caso, se identifica mediante un número comprendido entre 0-(n) dónde «n» es el número de datos que hemos añadido cuando declaramos un *array*.</p>
+<pre><code>$array = (a b c d )   Datos almacenados en cada una de las posiciones   ^    \_|_|_|_/      /*----------------------*\    |     |||      /   ==&gt; a = 1234       \   Nombre     Datos    /  ==&gt; b = &quot;Hello world&quot;   \   del    de  -------*   ==&gt; c = :code:`pwd`         *    Array    Declarados   \  ==&gt; d = $resultado     /                \*-----------------------*/
+</code></pre>
+<p>En este caso, para acceder al valor de cada letra correspondiente, tendremos que hacer uso de: <code>$nombre_array</code> + [<code>n</code>]. Dónde n es la posición del dato que queremos obtener.</p>
+<p>Ejemplo:</p>
+<pre><code>echo $array[0]||----&gt; Obtendremos: 1234echo $array[1]||----&gt; Obtendremos: Hello worldecho $array[2]||----&gt; Obtendremos: /home/sincorchetes (en mi caso)
+</code></pre>
+<h3 id="como-obtener-la-longitud-de-un-array">¿Cómo obtener la longitud de un <em>array</em>?</h3>
+<p>Básicamente, de la siguiente forma:</p>
+<pre><code>echo ${#array[*]}
+</code></pre>
+<p>Nos tendrá que dar como resultado «4», que son los valores declarados. (a= 1234, b = «Hello world»…)</p>
+<h3 id="como-obtener-todos-los-valores-de-un-array">¿Cómo obtener todos los valores de un <em>array</em>?</h3>
+<p>Sustituiremos el número de la posición por una @.</p>
+<pre><code>echo ${array[@]}
+</code></pre>
+<h4 id="como-anadir-un-nuevo-valor-a-un-indice-especifico-de-un-array-declarado">¿Cómo añadir un nuevo valor a un índice específico de un array declarado?</h4>
+<p>Bastará con mencionar el número de posición que queremos asignar el nuevo dato:</p>
+<pre><code>$array[10]=&quot;Hola que tal&quot;
+</code></pre>
+<h4 id="visualizar-el-numero-de-posiciones-ocupadas-dentro-de-un-array">Visualizar el número de posiciones ocupadas dentro de un <em>array</em></h4>
+<p>Simplemente si queremos ver que posiciones están ocupadas para utilizar las que estén libres:</p>
+<pre><code>echo ${!array[*]}
+</code></pre>
+<h4 id="ver-cuanto-tamano-contiene-de-largo-una-posicion">Ver cuánto tamaño contiene de largo una posición</h4>
+<p>Para comprobar el tamaño, simplemente hacemos:</p>
+<pre><code>echo ${#array[1]}
+</code></pre>
+<h4 id="como-anadir-un-nuevo-valor-sin-declarar-posicion-en-un-array">¿Cómo añadir un nuevo valor sin declarar posición en un <em>array</em>?</h4>
+<p>Simplemente si queremos añadir un dato nuevo sin especificar un índice en cuestión.</p>
+<pre><code>array+=(nuevo_valor)
+</code></pre>
+<h4 id="eliminar-una-posicion-del-array">Eliminar una posición del array</h4>
+<p>Utilizaremos el comando <code>unset(1)</code> como se ha utilizado para eliminar variables declaradas.</p>
+<pre><code>unset array[n]
+</code></pre>
+<h4 id="resultado-de-un-comando-que-se-separe-como-valores-y-que-estos-ocupen-una-posicion-dentro-del-array">Resultado de un comando que se separe como valores y que estos ocupen una posición dentro del <em>array</em></h4>
+<p>Esto quiere decir, que si asignamos un solo valor, cuyo valor sea el resultado de un comando, este generará una salida y todos los datos expuestos en la salida del comando se convertirán en un valor dentro de una posición. Por ejemplo, si hacemos un <code>cat /etc/group</code>, obtendremos una salida similar a esta:</p>
+<pre><code>root:x:0:bin:x:1:daemon:x:2:sys:x:3:adm:x:4:tty:x:5:disk:x:6:[SALIDA ACORTADA]
+</code></pre>
+<p>Bien, si le decimos al <em>array</em> que nos almacene esta lista para luego visualizarla, podemos hacerlo.</p>
+<pre><code>array=(`cat /etc/group`)
+</code></pre>
+<p>Si hacemos un <code>echo ${array[0]}</code> veremos que nos saldrá la primera línea del documento:</p>
+<pre><code>root:x:0:
+</code></pre>
+<p>Si queremos obtener toda la lista:</p>
+<pre><code>echo ${array[@]}
+</code></pre>
+<h2 id="condicionales">Condicionales</h2>
+<p>Imaginémonos que vamos a comprar el pan y resulta de que o bien no hay, o bien sale más caro de lo que imaginamos, o bien no es el tipo que buscamos…etc, entonces tenemos que pensar ¿Qué hacer? y aquí entra en juego el uso de los condicionales.</p>
+<p>Los condicionales son evaulaciones que aplicamos en determinados valores que obtenemos como resultado de una operación anterior, bloques de código que han sido ejecutados y que han devuelto alguna salida. Es decir, con el if <strong>regularemos el flujo de trabajo de nuestro sript</strong>, añadiendo diferentes situaciones para resultados diferentes.</p>
+<h3 id="condicional-if">Condicional If</h3>
+<p>If permite añadir una situación diferente que en caso de que no se cumpla la condición, continuará ejecutando el resto del código. Este se puede elaborar en dentro de un script (<em>como haremos a partir de ahora</em>), o bien se puede ejecutar en una sola línea de ejecución en Bash.</p>
+<p>Creamos un script dónde añadiremos el siguiente bloque de código.</p>
+<pre><code>estado=&quot;Cerrado&quot;
+parque=$estado
+
+if [ $parque == &quot;Cerrado&quot;]
+then
+  echo &quot;Está cerrado&quot;
+fi
+</code></pre>
+<p>Si ejecutamos el código de arriba, nos devolverá un mensaje de que se encuentra cerrado. Sin embargo, si cambiamos «Cerrado» =&gt; «Abierto». La cosa cambia, ya que no producirá una salida.</p>
+<pre><code>estado=&quot;Cerrado&quot;
+parque=$estado
+
+if [ $parque == &quot;Cerrado&quot;]
+then
+  echo &quot;Está cerrado&quot;
+fi
+</code></pre>
+<p>¿Por qué sucede esto? Porque como la condición no se cumple, ya que caracter-caracter se va comprobando que sean correctos dentro de la condición, en cuanto sea alguno de ellos distinto, se prosigue con el resto del código sin hacer nada al respecto. Si queremos decirle que ejecute otra instrucción de código utilizaremos la sentencia else.</p>
+<pre><code>estado=&quot;Cerrado&quot;
+parque=$estado
+
+if [ $parque == &quot;Cerrado&quot;]
+then
+  echo &quot;Está cerrado&quot;
+else
+  echo &quot;Está abierto&quot;
+fi
+</code></pre>
+<p>Pero… ¿Y si queremos añadir más condiciones? Un parque puede estar abierto, cerrado, en obras entre otras cosas. Para eso tenemos la sentencia if-elif.</p>
+<h3 id="condicional-if-elif">Condicional If-elif</h3>
+<pre><code>estado=&quot;Abierto&quot;
+parque=$estado
+
+if [ $parque == &quot;Cerrado&quot;]
+then
+  echo &quot;Está cerrado&quot;
+elif [ $parque == &quot;Abierto&quot; ]
+then
+  echo &quot;Está abierto&quot;
+fi
+</code></pre>
+<p>Más estados…</p>
+<pre><code>estado=&quot;Obras&quot;
+parque=$estado
+
+if [ $parque == &quot;Cerrado&quot;]
+then
+  echo &quot;Está cerrado&quot;
+elif [ $parque == &quot;Abierto&quot; ]
+then
+  echo &quot;Está abierto&quot;
+elif [ $parque == &quot;Obras&quot; ]
+then
+  echo &quot;Está en obras&quot;
+
+else
+  echo &quot;Consulte al ayuntamiento de su ciudad&quot;
+fi
+</code></pre>
+<h3 id="condicional-en-una-simple-linea">Condicional en una simple linea</h3>
+<p>Se pueden escribir condicionales en una sola línea, acortando todo el bloque de código en una sola instrucción reduciendo el consumo de memoria y de procesamiento, pero aumentando la complejidad de lectura para el desarrollador.</p>
+<pre><code>if [ $parque == &quot;Cerrado&quot; ]; then  echo &quot;Está cerrado&quot; ; elif [ $parque == &quot;Abierto&quot; ]; then  echo &quot;Está abierto&quot; ; elif [ $parque == &quot;Obras&quot; ]; then echo &quot;Está en obras&quot; ; fi
+</code></pre>
+<h3 id="como-evalua-if-todo-esto">¿Cómo evalúa if todo esto?</h3>
+<p>Los corchetes que incluimos como sintaxis del if, realmente esconden el comando <code>test(1)</code>. Este comando básicamente compara valores, por ejemplo:</p>
+<pre><code>[ 2 -eq 0 ]
+</code></pre>
+<p>Si hacemos un <code>echo $?</code> para ver el resultado de la ejecución del comando, nos saldrá un 1 como señal de ARCHIVOALSE.</p>
+<pre><code>[ 0 -eq 0 ]
+</code></pre>
+<p>Al hacer un <code>echo $?</code> nos mostrará el 0, de verdadero.</p>
+<p>Lo mismo da utilizar los corchetes como llamar directamente al comando.</p>
+<pre><code>test 0 -eq 0
+</code></pre>
+<p>Veremos el resultado de la ejecución del comando, recordemos 0 es éxito !=0 puede ser un error.</p>
+<pre><code>echo $?
+</code></pre>
+<h4 id="tabla-de-expresiones-utilizadas">Tabla de expresiones utilizadas</h4>
+<p>Las siguientes expresiones devuelven todas verdadero en su defecto en caso de que cumplan la condición. Para ver el resultado, hay que verificar la salida de la ejecución del comando con <code>echo $?</code></p>
+<table>
+<thead>
+<tr>
+<th>Expresión en terminal</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[ -a ARCHIVO ]</code></td>
+<td>ARCHIVO existe</td>
+</tr>
+<tr>
+<td><code>[ -b ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es un fichero especial de bloques</td>
+</tr>
+<tr>
+<td><code>[ -c ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es archivo especial de caracteres</td>
+</tr>
+<tr>
+<td><code>[ -d ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es un directorio</td>
+</tr>
+<tr>
+<td><code>[ -e ARCHIVO ]</code></td>
+<td>ARCHIVO existe</td>
+</tr>
+<tr>
+<td><code>[ -f ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es un archivo regular</td>
+</tr>
+<tr>
+<td><code>[ -g ARCHIVO ]</code></td>
+<td>ARCHIVO existe y tiene el SGID asignado</td>
+</tr>
+<tr>
+<td><code>[ -h ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es un enlace simbólico</td>
+</tr>
+<tr>
+<td><code>[ -k ARCHIVO ]</code></td>
+<td>ARCHIVO existe y tiene asignado sticky bit</td>
+</tr>
+<tr>
+<td><code>[ -p ARCHIVO ]</code></td>
+<td>ARCHIVO existe y está nombrado como tubería (ARCHIVOIARCHIVOO)</td>
+</tr>
+<tr>
+<td><code>[ -r ARCHIVO ]</code></td>
+<td>ARCHIVO existe y tiene permisos de lectura</td>
+</tr>
+<tr>
+<td><code>[ -s ARCHIVO ]</code></td>
+<td>ARCHIVO existe y tiene un tamaño mayor que 0</td>
+</tr>
+<tr>
+<td><code>[ -t ARCHIVO ]</code></td>
+<td>La descripción del fichero de ARCHIVO está abierta y se refiere a una terminal</td>
+</tr>
+<tr>
+<td><code>[ -u ARCHIVO ]</code></td>
+<td>ARCHIVO existe y tiene SUID asignado</td>
+</tr>
+<tr>
+<td><code>[ -w ARCHIVO ]</code></td>
+<td>ARCHIVO existe y puede escribirse en él</td>
+</tr>
+<tr>
+<td><code>[ -x ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es un ejecutable</td>
+</tr>
+<tr>
+<td><code>[ -O ARCHIVO ]</code></td>
+<td>ARCHIVO existe y está gestionado por su usario</td>
+</tr>
+<tr>
+<td><code>[ -G ARCHIVO ]</code></td>
+<td>ARCHIVO existe y está gestionado por su grupo</td>
+</tr>
+<tr>
+<td><code>[ -L ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es enlace simbólico</td>
+</tr>
+<tr>
+<td><code>[ -N ARCHIVO ]</code></td>
+<td>ARCHIVO existe y se modificó desde la última vez que se leyó</td>
+</tr>
+<tr>
+<td><code>[ -S ARCHIVO ]</code></td>
+<td>ARCHIVO existe y es un socket</td>
+</tr>
+<tr>
+<td><code>[ ARCHIVO1 -nt ARCHIVO2 ]</code></td>
+<td>ARCHIVO1 se modificó antes que ARCHIVO2, o si ARCHIVO1 existe y ARCHIVO2 no</td>
+</tr>
+<tr>
+<td><code>[ ARCHIVO1 -ot ARCHIVO2 ]</code></td>
+<td>ARCHIVO1 es más viejo que ARCHIVO2, o ARCHIVO2 existe y ARCHIVO1 no</td>
+</tr>
+<tr>
+<td><code>[ ARCHIVO1 -ef ARCHIVO2 ]</code></td>
+<td>ARCHIVO1 y ARCHIVO2 se refieren al mismo dispositivo y número de inodo</td>
+</tr>
+<tr>
+<td><code>[ -o OPNAME ]</code></td>
+<td>Si la shell tiene la opción «OPTIONNAME» activdada <code>bash -o</code></td>
+</tr>
+<tr>
+<td><code>[ -z STRING ]</code></td>
+<td>La longitud del STR es 0</td>
+</tr>
+<tr>
+<td><code>[ -n STRING ]</code></td>
+<td>Si la longitud de STRING no es 0</td>
+</tr>
+<tr>
+<td><code>[ STRING ]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[ STR1 == STR2 ]</code></td>
+<td>Si las cadenas son iguales</td>
+</tr>
+<tr>
+<td><code>[ STR1 = STR2 ]</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>[ STR1 != STR2 ]</code></td>
+<td>Si las cadenas no son iguales</td>
+</tr>
+<tr>
+<td><code>[ STR1 &lt; STR2 ]</code></td>
+<td>STR1 se ordena antes que STR2 según como esté la localización configurada</td>
+</tr>
+<tr>
+<td><code>[ STR1 &gt; STR2 ]</code></td>
+<td>STR1 ordena después de STR2 en base al idioma del sistema</td>
+</tr>
+</tbody>
+</table>
+<h4 id="expresiones-para-numeros">Expresiones para números</h4>
+<p>Las siguientes condiciones solo son aplicables para números enteros, y devolverán verdadero en caso de cumplir la condición.</p>
+<table>
+<thead>
+<tr>
+<th>Expresión en terminal</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[ N1 -eq N2 ]</code></td>
+<td>N1 es igual que N2</td>
+</tr>
+<tr>
+<td><code>[ N1 -ne N2 ]</code></td>
+<td>N1 no es igual a N2</td>
+</tr>
+<tr>
+<td><code>[ N1 -lt N2 ]</code></td>
+<td>N1 es menor que N2</td>
+</tr>
+<tr>
+<td><code>[ N1 -le N2 ]</code></td>
+<td>N1 es menor o igual que N2</td>
+</tr>
+<tr>
+<td><code>[ N1 -gt N2 ]</code></td>
+<td>N1 es mayor que N2</td>
+</tr>
+<tr>
+<td><code>[ N1 -ge N2 ]</code></td>
+<td>N1 es mayor o igual que N2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="comparando-multiples-valores">Comparando múltiples valores</h4>
+<p>Se pueden anidar condiciones para un determinado valor o conjunto de valores como podemos ver a continuación gracias a los operadores lógicos.</p>
+<pre><code>cmd1 &amp;&amp; cmd2` =&gt; Si devuelve 0 (éxito), se ejecutará `cmd2` `cmd1 || cmd2` =&gt; Si devuelve un número distinto a 0, se ejecutará `cmd2
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Expresión en terminal</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[[ VAL1 -eq VAL2 &amp;&amp; VAL3 -lt VAL1 ]]</code></td>
+<td>Si el VAL1 es igual a VAL2 y a su vez, VAL3 es menor que VAL1, devolverá verdadero</td>
+</tr>
+<tr>
+<td><code>[[ VAL1 == VAL2 ]]</code></td>
+<td>Comprueba que VAL1 es igual a VAL2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li>Ediciones ENI ~ LPIC-1</li>
+<li>StackOverflow - <a href="https://stackoverflow.com/questions/35432562/why-echo-outputs-himbh-on-man-bash-shell">Why echo outputs himBH on man bash shell</a></li>
+<li>Gulvi ~ <a href="https://gulvi.com/serie/curso-programacion-bash/capitulo/arrays-bash">Curso programación Bash</a></li>
+<li>StackExchange ~ <a href="https://unix.stackexchange.com/questions/68322/how-can-i-remove-an-element-from-an-array-completely">How can I remove an element from an array</a></li>
+<li>LinuxQuestions ~ <a href="https://www.linuxquestions.org/questions/programming-9/bash-array-add-function-example-using-indirect-array-reference-as-function-argument-815329">Bash array Add function example using indirect</a></li>
+<li>GNU.org ~ <a href="https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html?target=_blank">Brace Expansion</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/" class="btn btn-neutral float-right" title="Ajustando la apariencia en aplicaciones Qt">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

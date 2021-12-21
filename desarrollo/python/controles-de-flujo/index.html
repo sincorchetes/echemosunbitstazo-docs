@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Condicionales - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Condicionales";
+    var mkdocs_page_input_path = "desarrollo/python/controles-de-flujo.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Condicionales</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#condicional-if">Condicional if</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#condicional-if-else">Condicional if-else</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#condicional-if-elif-else">Condicional if-elif-else</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bucles">Bucles</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bucle-for">Bucle for</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bucle-while">Bucle while</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#break-continue-pass">break, continue, pass</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#juego-dragon-vs-personaje">Juego, Dragón VS Personaje</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Condicionales</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="condicionales">Condicionales</h1>
+<h2 id="condicional-if">Condicional if</h2>
+<p>Esta estructura de control te permite evaluar una condición y ejecutar un trozo de código si la cumple.</p>
+<pre><code>&gt;&gt;&gt; if (condición):
+&gt;&gt;&gt;  Bloque de código
+</code></pre>
+<h2 id="condicional-if-else">Condicional if-else</h2>
+<p>El <code>if-else</code> es una estructura de control que permite hacer 1 cosa si se cumple la condicioń, si esta no se cumple, únicamente se ejecutará un bloque de código sin contemplar otras posibilidades.</p>
+<pre><code>if (condición 1):
+  Bloque de código
+else:
+  Bloque de código
+</code></pre>
+<p>Veamos un ejemplo, Si tenemos un coche de marca Opel, emitirás un mensaje que diga «Tienes un Opel», si no es así, mostraremos un mensaje que diga que «No tienes un coche Opel».</p>
+<pre><code>&gt;&gt;&gt; marca = &quot;Citröen&quot;
+&gt;&gt;&gt; if (marca == &quot;Opel&quot;):
+&gt;&gt;&gt;   print(&quot;Tienes un Opel&quot;)
+&gt;&gt;&gt; else:
+&gt;&gt;&gt;  print(&quot;No tienes un coche Opel&quot;)
+'No tienes un coche Opel'
+</code></pre>
+<h2 id="condicional-if-elif-else">Condicional if-elif-else</h2>
+<p>¿Pero qué pasa cuando queremos comprobar múltiples condiciones? No podemos estar anidando <code>if-else</code> como si no hubiese un mañana uno dentro del otro. Para eso tenemos la estructura <code>if-elif-else</code>. Esta estructura nos permite hacer 1 cosa u otra en base a una condición, la cuál estará compuesto por uno o múltiples operadores como aritméticos, lógicos…</p>
+<pre><code>if (condición 1):
+  Bloque de código
+elif (condición3):
+  Bloque de código
+elif (condición2):
+  Bloque de código
+else:
+  Bloque de código
+</code></pre>
+<p>Veamos un ejemplo, Si tenemos un coche de marca Opel, emitirás un mensaje que diga «Tienes un Opel», si no es así, mostraremos un mensaje que diga que «No tienes un coche Opel».</p>
+<pre><code>&gt;&gt;&gt; marca = &quot;Citröen&quot;
+&gt;&gt;&gt; if (marca == &quot;Opel&quot;)
+&gt;&gt;&gt;   print(&quot;Tienes un Opel&quot;)
+&gt;&gt;&gt; elif (marca == &quot;Citröen&quot;)
+&gt;&gt;&gt;   print(&quot;Tienes un coche Opel&quot;)
+&gt;&gt;&gt; elif (marca == &quot;Audi&quot;):
+&gt;&gt;&gt;   print(&quot;Tienes un Audi&quot;)
+&gt;&gt;&gt; else:
+&gt;&gt;&gt;   print(&quot;Tu marca de coche no está registrada&quot;)
+Tienes un coche Citröen
+</code></pre>
+<p>Todo esto se puede complicar aún más haciendo uso de otros operadores y de otros <code>if-elif-else</code> anidados, por ejemplo, utilizaremos los operadores de comparación con lógicos tal que así:</p>
+<pre><code>&gt;&gt;&gt; marca_coche = &quot;Toyota&quot;
+&gt;&gt;&gt; modelo_coche = &quot;AE87&quot;
+&gt;&gt;&gt; motor_coche = 1600
+&gt;&gt;&gt; if (marca_coche == &quot;Toyota&quot; and modelo_coche == &quot;AE92&quot;):
+&gt;&gt;&gt;   if (motor_coche == 1600):
+&gt;&gt;&gt;     print(&quot;Perfecto&quot;)
+&gt;&gt;&gt;   elif (motor_coche == 1400):
+&gt;&gt;&gt;     print(&quot;Bien&quot;)
+&gt;&gt;&gt;   elif (motor_coche == 1200):
+&gt;&gt;&gt;     print(&quot;Cuidado con las cuestas&quot;)
+&gt;&gt;&gt;   else:
+&gt;&gt;&gt;     print(&quot;Esto huele a chasis&quot;)
+&gt;&gt;&gt; elif (marca_coche == &quot;Citröen&quot; and modelo_coche == &quot;Saxo&quot;):
+&gt;&gt;&gt;   print(&quot;Enhorabuena, tienes un coche que pesa poco y corre mucho.&quot;)
+&gt;&gt;&gt; else:
+&gt;&gt;&gt;   print(&quot;Error 404, Tu coche no encontrado.&quot;)
+Error 404, Tu coche no encontrado.
+</code></pre>
+<p>Este mensaje se produce porque en el primer condicional estamos esperando recibir el modelo AE92, y sin embargo, recibimos el AE87; como en la segunda condición (<code>elif</code>) requiere del modelo «Citröen» también queda descartado imprimiendo el mensaje «Error 404, Tu coche no encontrado.». No obstante, si cambiamos <code>modelo_coche</code> por AE92 y volvemos a ejecutar las sentencias, veremos que recibiremos el mensaje de: «Perfecto».</p>
+<h2 id="bucles">Bucles</h2>
+<h3 id="bucle-for">Bucle for</h3>
+<p>¿Qué ocurre si queremos recorrer una lista o generar múltiples ejecuciones de código? Pues evidetenmente con un <code>if</code> no nos vale, ya que solo nos permite validar una condicioń, y cuando la valide, esta dejará de ejecutarse.</p>
+<pre><code>for variable_interactiva in secuencia:
+  Bloque código
+</code></pre>
+<h4 id="como-funciona">¿Cómo funciona?</h4>
+<p>En <code>secuencia</code> va una condición, podemos poner que recorra todos los valores de una lista y nos lo imprima por <code>variable_interactiva</code>.</p>
+<pre><code>&gt;&gt;&gt; frutas = [ &quot;Peras&quot;, &quot;Manzanas&quot;, &quot;Arándanos&quot;, &quot;Pomelo&quot;]
+&gt;&gt;&gt; for fruta in frutas:
+&gt;&gt;&gt;   print(fruta)
+Peras
+Manzanas
+Arándanos
+Pomelo
+</code></pre>
+<p>También se puede hacer ejecuciones por el tamaño de la lista:</p>
+<pre><code>&gt;&gt;&gt; frutas = [ &quot;Peras&quot;, &quot;Manzanas&quot;, &quot;Arándanos&quot;, &quot;Pomelo&quot;]
+&gt;&gt;&gt; for fruta in range(0 ,len(frutas)):
+&gt;&gt;&gt;   print(&quot;Esta es la posición&quot;, fruta,&quot;de la fruta: &quot;,frutas[fruta])
+Esta es la posición 0 de la fruta:  Peras
+Esta es la posición 1 de la fruta:  Manzanas
+Esta es la posición 2 de la fruta:  Arándanos
+Esta es la posición 3 de la fruta:  Pomelo
+</code></pre>
+<h4 id="como-podemos-hacer-que-se-hagan-n-ejecuciones-para-hacer-tal-cosa">¿Cómo podemos hacer, que se hagan <code>n</code> ejecuciones para hacer tal cosa?</h4>
+<p>Con la función <code>range()</code>.</p>
+<pre><code>&gt;&gt;&gt; for x in range(0,100):
+&gt;&gt;&gt;   print(x)
+0
+1
+2
+3
+4
+[... Corto aquí porque llega hasta 99 ...]
+</code></pre>
+<h4 id="por-que-hasta-99-y-no-100">¿Por qué hasta 99 y no 100?</h4>
+<p>Porque recordemos que el valor 0 es una posición que se cuenta, realmente es <code>n - 1</code>.</p>
+<h4 id="como-puedo-romper-una-ejecucion">¿Cómo puedo romper una ejecución?</h4>
+<p>Tenemos el comando <code>break</code> que rompe la ejecución del código, por lo que me han enseñado, es mejor finalizar las cosas como tocan en vez de usar este tipo de «cañones». Pero que sepamos que lo podemos usar. Normalmente se usan cuando hay condicionales añadidos, esto no quiere decir que se siga ejecutándo el resto del programa que tengamos, solo se frena el bucle <code>for</code> que hemos invocado en nuestro fragmento de código.</p>
+<pre><code>&gt;&gt;&gt; for x in range(0,100):
+&gt;&gt;&gt;   print(x)
+&gt;&gt;&gt;   if (x == 4):
+&gt;&gt;&gt;     break
+0
+1
+2
+3
+4
+[... Se para la ejecución ...]
+</code></pre>
+<h3 id="bucle-while">Bucle while</h3>
+<p>Este bucle se repetirá hasta que la condición se cumpla.</p>
+<pre><code>&gt;&gt;&gt; while ( condicion ):
+&gt;&gt;&gt;   # Bloque de código
+</code></pre>
+<p>Un ejemplo sencillo puede ser:</p>
+<pre><code>&gt;&gt;&gt; a = 1
+&gt;&gt;&gt; while a &lt; 10:
+&gt;&gt;&gt;   print(a)
+&gt;&gt;&gt;   a += 2
+0
+2
+4
+6
+8
+</code></pre>
+<h3 id="break-continue-pass">break, continue, pass</h3>
+<p>Estas tres sentencias permiten modificar la interacción de los bucles. <code>break</code>: Rompe toda la ejecución de un bucle.</p>
+<pre><code>for x in range(0,10):
+  if x == 5:
+    break
+  print(x)
+</code></pre>
+<p>Veremos que la ejecución cuando llega a 5 el bucle se para a pesar de que le hemos dicho que el bucle vaya de 0 a 10 e imprimirá como último valor 4.</p>
+<p><code>continue</code>: Se salta la ejecución en ese momento de la condición del bucle, pero sigue iterando el resto de elementos del bucle hasta finalizar.</p>
+<pre><code>for x in range(0,10):
+  if x == 5:
+    continue
+  print(x)
+</code></pre>
+<p>En este caso, observamos que cuando detecte que <code>x = 5</code>, el valor 5 no se imprimirá, pero continuará realizando el resto de condición.</p>
+<p><code>pass</code>: No ejecuta nada y deja que continue el flujo del bucle.</p>
+<pre><code>for x in range(0,10):
+  if x == 5:
+    pass
+  print(x)
+</code></pre>
+<p>Se ejecutará como si no existiera la palabra reservada <code>pass</code>.</p>
+<h3 id="juego-dragon-vs-personaje">Juego, Dragón VS Personaje</h3>
+<p>Un dragón nos estará golpeando hasta que nosotros matemos al dragón o el dragón nos mate a nosotros:</p>
+<p>Nota</p>
+<p>Vamos a llamar al módulo <code>random</code> y lo llamaremos como <code>TirarDados</code> que más tarde utilizaremos el método <code>.random()</code> para generar números aleatorios que están comprendidos entre 0.n y 1.n y que, haciendo uso del método <code>.round()</code> aproximaremos el número a favor del 1 o del 0.</p>
+<pre><code> #!/usr/bin/env python3
+ #
+ # Juego elaborado por Álvaro Castillo
+ # GPLv2
+ #
+ from random import random as TirarDados
+ dragon_hp = 100
+ personaje_hp = 100
+ hit_dragon = 5
+ hit_personaje = 5
+
+ while True:
+   if personaje_hp == 0:
+     print(&quot;Hemos ganado :)&quot;)
+     break
+    elif dragon_hp == 0:
+      print(&quot;Ganó el Dragón :(&quot;)
+      break
+    else:
+      pass
+    dados=round(TirarDados())
+    if ( dados == 0 ):
+      dragon_hp -= hit_dragon
+      print(&quot;¡Hemos golpeado al dragón!, le queda: &quot;, dragon_hp, &quot;de vida.&quot;)
+    elif ( dados == 1):
+  personaje_hp -= hit_personaje
+     print(&quot;¡El dragón nos ha golpeado!, tenemos de vida:&quot;, personaje_hp,&quot;.&quot;)
+    else:
+     print(&quot;Hubo un fallo&quot;)
+</code></pre>
+<p>Este es el análisis resumido de este juego:</p>
+<ol>
+<li>La vida de ambos duelistas están asignadas en una variable</li>
+<li>El daño que quita cada uno de ellos también</li>
+<li>La condición siempre es <code>True</code> por lo que siempre se ejecutará originando un bucle infinito <code>infinityLoop</code></li>
+<li>Si la vida de alguno de los duelistas llega a <code>0</code>, se interrumpe el bucle usando <code>break</code></li>
+<li>La variable <code>dados</code> obtiene un número aproximado a <code>1|0</code> dependiendo lo que salga.</li>
+<li>Hay un condicional que dice si <code>datos=1</code> ataca el dragón, si <code>dados=0</code> atacamos nosotros.</li>
+<li>Haciendo uso de los operadores de asignación, restamos el valor de afección a la vida del duelista afectado y se imprime un mensaje indicando quién ha golpeado a quién y cuánta vida le queda al duelista contrario.</li>
+<li>Se repite el proceso hasta llegar al punto 4</li>
+</ol>
+<p>Dando como resultado algo parecido a esto:</p>
+<pre><code>¡El dragón nos ha golpeado!, tenemos de vida: 95 .
+¡Hemos golpeado al dragón!, le queda:  95 de vida.
+¡Hemos golpeado al dragón!, le queda:  90 de vida.
+¡Hemos golpeado al dragón!, le queda:  85 de vida.
+¡El dragón nos ha golpeado!, tenemos de vida: 90 .
+¡Hemos golpeado al dragón!, le queda:  80 de vida.
+¡Hemos golpeado al dragón!, le queda:  75 de vida.
+[...]
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../fecha-y-hora/" class="btn btn-neutral float-right" title="Fecha y hora">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../fecha-y-hora/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Introducción - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Introducci\u00f3n";
+    var mkdocs_page_input_path = "sistemas/linux/systemd/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Linux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Systemd</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Introducción</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#configuracion">Configuración</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hostname">Hostname</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fuentes">Fuentes</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Sistemas &raquo;</li>
+        
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+        
+          <li>Systemd &raquo;</li>
+        
+      
+    
+    <li>Introducción</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduccion">Introducción</h1>
+<h2 id="configuracion">Configuración</h2>
+<h3 id="codificacion-del-sistema">Codificación del sistema</h3>
+<h4 id="obtener-un-resumen-de-la-codificacion-del-sistema">Obtener un resumen de la codificación del sistema</h4>
+<pre><code>localectl
+</code></pre>
+<h4 id="obtener-un-listado-de-las-codificaciones-disponibles">Obtener un listado de las codificaciones disponibles</h4>
+<pre><code>localectl list-locales
+</code></pre>
+<h4 id="configurar-una-codificacion-del-sistema">Configurar una codificación del sistema</h4>
+<pre><code>sudo localectl set-locale en_US.utf8
+</code></pre>
+<h3 id="huso-horario">Huso horario</h3>
+<h4 id="obtener-un-resumen-de-la-fecha-hora-del-sistema">Obtener un resumen de la fecha-hora del sistema</h4>
+<pre><code>timedatectl
+</code></pre>
+<h4 id="obtener-lista-de-husos-horarios">Obtener lista de husos horarios</h4>
+<pre><code>timedatectl list-timezones
+</code></pre>
+<h4 id="configurar-huso-horario">Configurar huso horario</h4>
+<pre><code>sudo timedatectl set-timezone Atlantic/Canary
+</code></pre>
+<h2 id="hostname">Hostname</h2>
+<p>Configurar el hostname de la máquina:</p>
+<pre><code>sudo hostnamectl set-hostname NOMBRE_MAQUINA
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="no-encuentro-la-codificacion-que-quiero">No encuentro la codificación que quiero</h3>
+<h4 id="revisar-los-locales-instalados">Revisar los locales instalados</h4>
+<pre><code>rpm -qa |grep glibc-langpack
+dnf list installed langpacks*
+</code></pre>
+<h4 id="instalar-el-idioma-especifico">Instalar el idioma específico</h4>
+<pre><code>sudo dnf install glibc-langpack-IDIOMA
+</code></pre>
+<h4 id="la-pantalla-del-portatil-entra-en-suspension-con-ac-y-conectada-a-otro-monitor">La pantalla del portátil entra en suspensión con AC y conectada a otro monitor</h4>
+<pre><code>/etc/systemd/logind.conf
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+</code></pre>
+<h4 id="reiniciar-el-servicio-no-hacer-sighup-como-dice">Reiniciar el servicio (no hacer SIGHUP como dice)</h4>
+<pre><code>systemctl restart systemd-logind
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<p>https://unix.stackexchange.com/questions/597360/how-to-disable-suspending-the-system-when-the-lid-is-closed</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="diferencias-entre-gestores-de-servicios/" class="btn btn-neutral float-right" title="Diferencias entre gestores de servicios">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/" class="btn btn-neutral" title="Ajustando la apariencia en aplicaciones Qt"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="diferencias-entre-gestores-de-servicios/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

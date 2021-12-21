@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Gestión de usuari@s y grupos - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gesti\u00f3n de usuari@s y grupos";
+    var mkdocs_page_input_path = "sistemas/linux/acl/gestion-de-usuarios-y-grupos.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Linux</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Acl</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Gestión de usuari@s y grupos</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#algunos-conceptos">Algunos conceptos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usuaris">Usuari@s</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#grupos">Grupos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#permisos">Permisos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#permisos-especiales">Permisos especiales</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#referencias">Referencias</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Sistemas &raquo;</li>
+        
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+        
+          <li>Acl &raquo;</li>
+        
+      
+    
+    <li>Gestión de usuari@s y grupos</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="gestion-de-usuaris-y-grupos">Gestión de usuari@s y grupos</h1>
+<h2 id="algunos-conceptos">Algunos conceptos</h2>
+<p>Linux al igual que otro sistema operativo basado en UNIX, por herencia obtiene uno de los hitos que marcó un antes y después en la era de los sistemas, y es el término <strong>multiusuario</strong>. Esto quiere decir que nos permite tener diferentes cuentas de distintos usuari@s iniciadas en el sistema corriendo <strong>n</strong> procesos a la vez pertenecientes a cada usuario. Anteriormente, si querías hacer uso del sistema y otra persona quería utilizarlo, no podías ya que tod@s disponían de una sola sesión de usuario, sin embargo con los avances que hicieron en el pasado, sacaron adelante esta magnífica característica, la del <strong>multiusuario</strong>.</p>
+<h2 id="usuaris">Usuari@s</h2>
+<p>L@s usuari@s son personas que tienen un determinado nivel de acceso tanto a la empresa dónde resida el equipo al que pueden acceder y operar, como en su equipo personal. A nivel lógico, esto se conoce como cuentas de usuari@, las cuáles contienen como mínimo un nombre para la cuenta siendo este el nombre de usuari@ y una contraseña. No obstante, l@s desarrolladores de sistemas operativos o de cualquier otro tipo de software intentan simplificar el tratamiento de las cuentas de usuarios mediante un ID numérico, ya que se consume menos recursos buscando números que letras.</p>
+<p>En Linux, esos ID asignados a los usuarios se les denominan UID <em>User Identifier</em> o identificador de usuario. Según la distribución, el primer usuario o la primera usuaria del sistema, este establece un UID de 1000, y comienza a sumarse +1 a los posteriores UID creados. También, se añade un grupo nuevo al sistema con el mismo nombre de la cuenta del usuario o de la usuaria y se establece como un grupo primario con el mismo ID.</p>
+<h3 id="como-crear-una-usuari">¿Cómo crear un(a) usuari@?</h3>
+<p>Como norma general y es altamente recomendado hacer uso de los comandos <code>useradd(8)</code> o <code>adduser(8)</code> podríamos crear un(a) usuari@ a mano, haciendo los siguientes pasos y como usuario root o haciendo uso de <code>sudo(1)</code>:</p>
+<ol>
+<li>
+<ul>
+<li>Averiguamos cual es el último UID/GID antes de crear nuestr@ usuari@</li>
+</ul>
+<p><code>grep 100* /etc/group``grep 100* /etc/passwd</code></p>
+</li>
+<li>
+<ul>
+<li>Modificar la entrada del fichero <code>/etc/passwd</code> <strong>haciendo uso de :code:<code>vipw(8)</code></strong> añadiendo la información mínima para tener un(a) usuari@, vamos ha hacerlo con «pepito»:</li>
+</ul>
+<p><code>pepito:x:1004:1004::/home/pepito:/bin/bash</code></p>
+</li>
+<li>
+<ul>
+<li>Creamos un grupo para nuestro usuario /etc/group</li>
+</ul>
+<p><code>pepito:x:1004:</code></p>
+</li>
+<li>
+<p>Creamos una entrada en <code>/etc/shadow</code> mediante haciendo uso de <code>vipw -s</code>:</p>
+</li>
+</ol>
+<blockquote>
+<p>Nota: Para saber que algoritmo cifrado utilizar, podemos comprobarlo en el fichero <code>/etc/login.defs</code>, en la variable <code>ENCRYPT_METHOD</code> lo que pasa que utiliza el sistema un salto o varios (lo desconocemos) para generar la contraseña a parte de la codificiación. Para visualizar el prefijo que necesitamos se puede consultar en: * <code>man 3 crypt</code> * <code>$1$</code>: MD5 * <code>$2a$</code>: Blowfish * <code>$5$</code>: SHA-256 * <code>$6$</code>: SHA-512</p>
+</blockquote>
+<p>Sin embargo, es <strong>altamente recomendable</strong> generar una contraseña nueva haciendo uso del comando <code>passwd(1)</code>, ya que esta genera la contraseña con el salto correcto, el algoritmo correcto y se genera automáticamente la entrada en <code>/etc/shadow</code>: passwd pepito</p>
+<ol>
+<li>Creamos el directorio: <code>/home/nombre_usuari@</code></li>
+<li>Creamos el archivo: <code>/var/spool/mail/nombre_usuari@</code></li>
+<li>Copiamos los archivos <code>/etc/skel/*</code> en <code>/home/nombre_usuari@</code></li>
+<li>Fijamos los permisos correspondientes <a href="mailto:usuari%40/grupo">usuari@/grupo</a> al directorio <code>/home/nombre_usuari@</code> <code>nombre_usuari@:grupo_usuari@</code> + <code>chmod 700</code></li>
+<li>Declaramos los permisos <code>chmod 660 /var/spool/mail/nombre_usuari@</code></li>
+</ol>
+<p>Y listo, tendremos a nuestr@ usuari@ cread@. No obstante, este proceso, además de ser tedioso, complejo y propenso a errores, es preferible hacer uso de unos comandos que nos facilitan crearlo.</p>
+<h3 id="comando-useradd">Comando useradd</h3>
+<p>Con este comando generamos un(a) usuari@ en ¡menos que canta un gallo! Todo lo que tenemos que hacer es: .. code-block:: bash</p>
+<blockquote>
+<p>sudo useradd pepito -m sudo passwd pepito</p>
+</blockquote>
+<p>Y ya directamente tenemos usuari@ con su directorio <code>/home</code> y <code>/var/spool/mail</code> por defecto con sus correspondientes permisos, con la entrada correctamente creada en el fichero <code>/etc/passwd</code>, <code>/etc/shadow</code> y <code>/etc/group</code> listo para identificarse.</p>
+<p>¿Fácil verdad? También hay que tener en cuenta, que la configuración por defecto del comando <code>useradd(8)</code> que se encuentra en <code>/etc/default/useradd</code>, ya que puede haber otras distribuciones que tengan otros parámetros, o directamente, no contenga ningún fichero y hay que especificarlo de forma manual tal que así: .. code-block:: bash</p>
+<blockquote>
+<p>sudo useradd pepito -m -k /etc/skel -U sudo passwd pepito</p>
+</blockquote>
+<ul>
+<li><code>-m</code>: Genera un directorio en <code>/home</code> con el nombre de pepito</li>
+<li><code>-k /etc/skel</code>: Copia los archivos básicos para que funcione plenamente <code>bash(1)</code></li>
+<li><code>-U</code>: Crea un grupo con el mismo nombre que el usuario</li>
+</ul>
+<h3 id="comando-adduser">Comando adduser</h3>
+<p>Si no tenemos suficiente con el anterior, podemos hacer uso de <code>adduser(8)</code>. Es un comando parecido al anterior, no hay mucha diferencia de usabilidad al menos en Linux. En FreeBSD, este comando tiene por defecto un asistente interactivo que nos va preguntando paso por paso cómo crearlo facilitándonos un poco la tarea. Este comando toma los valores para crear el usuario del fichero <code>/etc/default/useradd</code> como el comando anterior.</p>
+<h3 id="ficheros-implicados-en-el-uso-de-ambos-comandos">Ficheros implicados en el uso de ambos comandos</h3>
+<p>Según el <code>man</code> de ambos comandos, tenemos una serie de ficheros implicados cuando ejecutamos uno de los dos comandos para crear el o la usuari@.</p>
+<ul>
+<li><code>/etc/passwd</code>: Archivo clave con la información de la cuenta de usuari@</li>
+<li><code>/etc/shadow</code>: Información sobre la seguridad de la cuenta de usuari@</li>
+<li><code>/etc/group</code>: Grupos con sus correspondienes GID, usuari@s unid@s…</li>
+<li><code>/etc/gshadow</code>: Información relevante sobre la seguridad de los grupos</li>
+<li><code>/etc/default/useradd</code>: Esquema por defecto sobre cómo crear la cuenta de usuari@</li>
+<li><code>/etc/skel/</code>: Directorio que contiene ficheros por defecto para el/la usuari@</li>
+<li><code>/etc/login.defs</code>: Configuración del cifrado de las contraseñas, permisos…etc</li>
+</ul>
+<h3 id="como-autenticarse-con-una-usuari-en-nuestra-sesion">¿Cómo autenticarse con un(a) usuari@ en nuestra sesión?</h3>
+<p>Si nos encontramos logeados mediante nuestr@ usuari@ rutinario, pero queremos acceder a otras cuentas del sistema, podemos hacerlo haciendo uso del comando <code>su(1)</code>.</p>
+<p>Estamos en la cuenta de pepito, y queremos pasar a la de susana.</p>
+<pre><code>su - susana
+</code></pre>
+<h3 id="como-modificar-la-informacion-de-una-usuari">¿Cómo modificar la información de un(a) usuari@?</h3>
+<p>Tenemos un comando (<em>¿Cómo no?</em>), para modificar y actualizar la información de nuestr@ usuari@. Este comando se llama <code>usermod(8)</code>. Entre otras cosas, nos permite bloquear una cuenta, actualizar y gestionar lá fecha de demora y fecha límite para cambiar la contraseña, añadir un usuario a grupos secundarios…</p>
+<h4 id="bloquear-una-cuenta">Bloquear una cuenta</h4>
+<pre><code>sudo usermod -L pepito
+</code></pre>
+<p>Si vemos el <code>/etc/passwd</code>, habrá añadido delante de la contraseña una (!), eso quiere decir que se encuentra bloqueada la cuenta.</p>
+<h4 id="desbloqueando-la-cuenta">Desbloqueando la cuenta</h4>
+<pre><code>sudo usermod -U pepito
+</code></pre>
+<h4 id="anadiendo-una-usuari-a-un-grupo-nuevo">Añadiendo un(a) usuari@ a un grupo nuevo</h4>
+<pre><code>sudo usermod -a -G pepito video
+</code></pre>
+<h4 id="cambiando-el-grupo-principal">Cambiando el grupo principal</h4>
+<pre><code>sudo usermod -g users pepito
+</code></pre>
+<h4 id="modificando-el-shell-della-usuari">Modificando el shell del/la usuari@</h4>
+<pre><code>sudo usermod -s /bin/bash pepito
+</code></pre>
+<h4 id="cambiando-el-directorio-de-trabajo">Cambiando el directorio de trabajo</h4>
+<pre><code>sudo usermod -d /srv pepito
+</code></pre>
+<h4 id="insertando-un-comentario">Insertando un comentario</h4>
+<pre><code>sudo usermod -c &quot;Comentario&quot; pepito
+</code></pre>
+<p>Podemos obtener más información accediendo al <code>man(1)</code> de <code>usermod(8)</code></p>
+<h3 id="como-eliminar-una-usuari">¿Cómo eliminar un(a) usuari@?</h3>
+<p>Como la mayor parte de las cosas en Linux o sistemas UNIX-like, se puede hacer prácticamente todo a mano, esto se puede hacer al sentido inverso cuando creamos el/la usuari@ en el sistema.</p>
+<ol>
+<li>Eliminar la entrada del usuario pepito de <code>/etc/passwd</code> haciendo uso de <code>vipw(8)</code></li>
+<li>Destruir el directorio <code>/home/pepito</code> o el asignado, en caso de haber escogido otro directorio</li>
+<li>Eliminar el fichero del directorio <code>/var/spool/mail/pepito</code></li>
+<li>Quitar el grupo que se creó junto con el/la usuari@ por defecto del fichero <code>/etc/groups</code> pero haciendo uso de <code>vigr(8)</code></li>
+</ol>
+<p>Y si queremos evitarnos tanta historia, bastará con hacer uso del comando <code>userdel(8)</code></p>
+<p>Tan solo con ejecutar:</p>
+<pre><code>sudo userdel -r pepito
+</code></pre>
+<p>Habremos hecho todos los pasos anteriores con un sencillo comando.</p>
+<h3 id="directorio-de-trabajo">¿Directorio de trabajo?</h3>
+<p>Tod@s l@s usuari@s poseen un entorno de trabajo por defecto que se encuentra en el directorio <code>/home</code>. Este entorno de trabajo contiene el nombre de la cuenta del/la usuari@ y le permite trabajar en él y que, por defecto, se van almacenando archivos de configuración de programas entre un largo etcétera.</p>
+<h3 id="super-usuario">¿Super usuario?</h3>
+<p>Existe un usuario por defecto creado en el sistema llamado <code>root</code>. Este usuario por defecto en todos los sistemas UNIX, UNIX-like como Liux, FreeBSD, Minix…etc tiene acceso a tod@s los archivos, carpetas, operaciones con dispositivos, procesos… del sistema. Es muy importante utilizarlo lo menos posible y <strong>nunca</strong> revelar su contraseña, o ejecutar aplicaciones sobre todo gráficas con este usuario.</p>
+<h2 id="grupos">Grupos</h2>
+<p>Por lo general, los grupos son agrupaciones de personas que tienen un objetivo en común, si bien pueden ser personas que tienen el mismo gusto por ver a su cantante favorito como obtener los mejores diseños de sus productos para una empresa. En nuestro caso, los grupos permiten formar un conjunto de usuari@s que desempeñen un rol determinado dentro del sistema. Creando, modificando documentos que ell@s hayan generado pero que otr@s que no pertenezca a dicho grupo no tengan permisos para hacerlo. Un usuario, o una usuaria puede formar parte de más de un grupo a la vez, pero por defecto, tienen un grupo primario al que pertenecen.</p>
+<p>Los grupos como l@s usuari@s, contienen un ID que faciliten su recuperación dentro del sistema, en este caso se llama GID de <code>Group Identifier</code> o Identificador de grupo. El sistema por defecto tiene unos grupos ya asignados para determinadas actividades del mismo para diferentes tareas como el acceso a los dispositivos de audio y video entre otras cosas.</p>
+<h3 id="grupos-primarios">¿Grupos primarios?</h3>
+<p>Los grupos primarios son algo así como el grupo principal al que pertenece un/una usuari@. Cada archivo que cree o modifique deberá contener el mismo grupo o si no, no podrá hacerlo a menos que se encuentre añadido a un grupo secundario. Un grupo primario como su nombre indica, es el primer grupo al que pertenece y por ende solo podrá tener un GID asociado a la cuenta. Sin embargo, una cuenta de usuari@ puede pertenecer a muchos grupos secundarios.</p>
+<h3 id="como-linux-sabe-que-hace-una-cosa-y-un-grupo-otra">¿Cómo Linux sabe qué hace una cosa y un grupo otra?</h3>
+<p>Existen una serie de ficheros clave que todo administrador debe saber que existen:</p>
+<ul>
+<li><code>/etc/passwd</code>: Contiene los nombres de usuario, contraseñas (en antiguas versiones que no usen <code>shadow(5)</code>, UID, GID, descripción, directorio de trabajo y el intérprete de comandos que utilice. Cuando en el campo de la contraseña se encuentra una «x» quiere decir que hace uso del archivo <code>/etc/shadow</code></li>
+<li><code>/etc/shadow</code>: Es un fichero que contiene todas las contraseñas ya sean de grupos o de usuari@s cifradas en un algoritmo determinado por el sistema, se utiliza para evitar que las contraseñas se puedan leer en <code>/etc/passwd</code> ya que tod@s l@s usuari@s tienen acceso lectura. Este archivo contiene:</li>
+<li>Nombre de la cuenta de usuari@</li>
+<li>Contraseña encriptada, o bien puede incluir (!) que aparece como cuenta bloqueada en el sistema, un ejemplo de esto es cuando creamos una nueva cuenta sin haberle asignado una contraseña.</li>
+<li>Fecha del último cambio de contraseña, si se encuentra vacío, es que no están habilitadas las gestiones de cuentas de l@s usuari@s.</li>
+<li>Fecha mínima para efectuar un cambio de contraseña</li>
+<li>Fecha máxima límite para modificar la contraseña</li>
+<li>Periodo de aviso para cambiarla</li>
+<li>Número de días con el usuario inactivo después de que haya expirado la contraseña</li>
+<li>Fecha de expiración de la cuenta</li>
+<li>Campo reservado</li>
+<li><code>/etc/shadow-</code>: Copia de seguridad del fichero anterior</li>
+<li><code>/etc/group</code>: Contiene nombre del grupo, contraseña (en caso de no usar <code>shadow(5)</code>), GID, lista de usuarios adjuntos</li>
+</ul>
+<blockquote>
+<p>Son los archivos principales y que tod@s tenemos que tener hechos una copia de seguridad en caso de que falle el sistema o nos equivoquemos editando alguno de ellos.</p>
+<p>Nota</p>
+<p>A pesar de no ser altamente recomendable su edición, si queremos editar a mano los ficheros <code>passwd(5)</code> o <code>shadow(5)</code> tenemos que utilizar los comandos <code>vigr(1)</code> para edición de grupos y <code>vipw(1)</code> para edición de los ficheros tanto <code>passwd(5)</code> como <code>shadow(5)</code>.</p>
+</blockquote>
+<h3 id="como-crear-un-grupo">¿Cómo crear un grupo?</h3>
+<p>Los grupos se pueden crear manualmente al igual que l@s usuari@s haciendo uso del comando <code>vigr(8)</code>. No obstante, es preferible como siempre hacer uso de los comandos que nos faciliten las cosas más que nada para evitar incorrecciones de cualquier índole.</p>
+<h3 id="comando-groupadd">Comando groupadd</h3>
+<p><code>groupadd(8)</code> es una bella herramienta con la que crear un grupo, edita el fichero <code>/etc/group</code> y a su vez actualiza el <code>/etc/gshadow</code> para añadir la contraseña asignada</p>
+<h4 id="creando-un-grupo">Creando un grupo</h4>
+<pre><code>sudo groupadd sysadmins
+</code></pre>
+<h4 id="creando-un-grupo-con-gid-especifico">Creando un grupo con GID específico</h4>
+<pre><code>sudo groupadd -g 1200 sysadmins
+</code></pre>
+<h4 id="asignando-contrasena-a-un-grupo">Asignando contraseña a un grupo</h4>
+<pre><code>sudo groupadd -p contraseña sysadmins
+</code></pre>
+<h3 id="como-modificar-un-grupo">¿Cómo modificar un grupo?</h3>
+<p>Como podemos modificar l@s usuari@s, ¿Por qué no los grupos? Pues claro que sí podemos hacerlo con <code>groupmod(8)</code>.</p>
+<h3 id="comando-groupmod">Comando groupmod</h3>
+<p>Este comando nos permitirá modificar cierta información de los grupos que tenemos como por ejemplo:</p>
+<h4 id="cambiando-el-nombre-del-grupo">Cambiando el nombre del grupo</h4>
+<pre><code>sudo groupmod -n devels sysadmins
+</code></pre>
+<h4 id="cambiando-el-gid">Cambiando el GID</h4>
+<pre><code>sudo groupmod -g 1203 devels
+</code></pre>
+<h4 id="modificando-la-contrasena">Modificando la contraseña</h4>
+<pre><code>sudo groupmod -p &quot;Contraseña&quot; devels
+</code></pre>
+<h3 id="como-eliminar-el-grupo">¿Cómo eliminar el grupo?</h3>
+<p>También es otra operación que podemos hacer con <code>vigr(8)</code>, pero es mejor utilizando este método.</p>
+<pre><code>sudo groupdel devels
+</code></pre>
+<h3 id="como-cambiar-temporalmente-nuestr-grupo-primario">¿Cómo cambiar temporalmente nuestr@ grupo primario?</h3>
+<p>Los usuarios siempre utilizamos un grupo primario que permite identificarnos con diversas partes o áreas del sistema. En caso de haber actualizado algo que requiera de una persona conectada al ordenador, se puede hacer pasar por la otra persona para saber que… Entonces existen una serie de restricciones intrínsecas como no editar un documento a la vez, si has instalado un software reciente que requiere permisos y por tanto reiniciar la sesión gráfica, se puede evitar.</p>
+<p>Básicamente es gracias al comando <code>newgrp(1)</code></p>
+<pre><code>newgrp finance
+</code></pre>
+<p>Y con esto, se activa nuestro grupo secundario como primario.</p>
+<h3 id="visualizando-los-grupos-en-los-que-estoy">Visualizando los grupos en los que estoy</h3>
+<p>Se puede ver fácilmente haciendo uso del comando</p>
+<pre><code>groups
+</code></pre>
+<h3 id="comodin">Comodín</h3>
+<p>Tenemos un pequeño comodín que nos permite modificar ciertas cosas de nuestr@ usuari@ o de un grupo en concreto como su contraseña. Esta herramienta se llama <code>gpasswd(1)</code> y la tenemos instalada por defecto.</p>
+<h4 id="anadiendo-una-usuari-a-un-grupo">Añadiendo un(a) usuari@ a un grupo</h4>
+<pre><code>sudo gpasswd -a pepito users
+</code></pre>
+<h4 id="eliminando-una-usuari-de-un-grupo">Eliminando un(a) usuari@ de un grupo</h4>
+<pre><code>sudo gpasswd -d pepito users
+</code></pre>
+<h4 id="suprimir-contrasena-en-un-grupo">Suprimir contraseña en un grupo</h4>
+<pre><code>sudo gpasswd -r users
+</code></pre>
+<h2 id="permisos">Permisos</h2>
+<p>Poco sentido tiene diferenciar usuarios y grupos si no les atribuímos algún permiso especial que permita establecer una cierta jerarquía o distinción, ya que si no, estaríamos dejando un sistema horizontal en el que tod@s l@s usuari@s puedan hacer lo que quieran dentro del sistema. Aquí entra en juego el factor permisos.</p>
+<p>Los permisos en UNIX se rigen por una serie de campos</p>
+<blockquote>
+<ul>
+<li>Usuario: Solo el autor puede leer, escribir, ejecutar, o una combinación de los mismos, el poder en este caso sobre el fichero solo lo tiene él o ella o el usuario <code>root</code>.</li>
+<li>Grupo: Tod@s l@s usuari@s que formen parte del grupo, dependiendo de los permisos que tenga establecido en este apartado el fichero o directorio podrán o no leer, escribir, o ejecutar en caso de ser un fichero ejecutable.</li>
+<li>Todo el mundo: El resto de usuari@s del sistema que no pertenezcan ni al grupo, ni sea el autor del fichero, dependiendo de los permisos podrá o no acceder a los directorios y ficheros.</li>
+</ul>
+</blockquote>
+<p>Imaginemos que tenemos el siguiente ejemplo:</p>
+<p>Somos jefes(as) de un proyecto de desarrollo, y tenemos vari@s emplead@s a nuestro cargo. Nosotr@s como jefe(as) del proyecto, tenemos plena acción sobre todos los ficheros (somos autores). Y, seleccionamos determinados ficheros para determinados grupos, por ejemplo, todos aquellos ficheros que tengan que ver con el departamento de comunicación que tiene múltiples usuari@s, solo podrán acceder los de comunicación; el grupo de desarrolladores(as) tiene sus ficheros a cargo…etc Y cada usuari@ dentro de su grupo, tiene acceso pleno a los ficheros, sin embargo, las personas de otros grupos no pueden acceder a dichos archivos por las restricciones. Y luego, tenemos un apartado público, que solo podrá leer determinados archivos. ¡Voilá! hemos explicado el funcionamiento de usuarios y grupos de una forma sencilla.</p>
+<pre><code>                         Jefes(as) de proyecto
+                                         \º/ \ª/
+                                            |
+                              |-------------------|
+                                |     Contabilidad        |
+                                |     Directivas                  |
+                                |     Contratos                     |
+                                |-------------------|
+                ________________|________
+               /                                                                       \
+      Comunicación                                     Desarrollo
+        \º/ \ª/                                                  \º/ \ª/
+                 |                                                      |
+|-----------------|                    |-----------------|
+|     Inventario RRSS |                        | Código fuente   |
+| Inversores            |                      | Contraseñas OS  |
+| Media                           |                    | Servidores      |
+| ...                               |                  | ...                         |
+|-----------------|                    |-----------------|
+               |                                                                        |
+               |                               Todo el mundo
+               |                               \º/ \ª/\º/ \ª/
+               *-------------------------&gt;  \º/ \ª/\º/
+                                                                          \ª/ \ª/
+                                                                            |
+                                                                      |-------------|
+                                                                      | index.html  |
+                                                                      | setup.sh        |
+                                                                      | screenshots |
+                                                                      | Twitter     |
+                                                                      | Facebook    |
+                                                                      | Google+     |
+                                                                      |-------------|
+</code></pre>
+<p>Ahora vamos a traducir las palabras en el lenguaje que lo interpreta el sistema, tenemos hasta tres formas de conceder, modificar o leer permisos:</p>
+<ul>
+<li>Formato verbal o por carácter: Se hacen uso de las letras para asignar, modificar o simplemente leer los permisos:</li>
+</ul>
+<blockquote>
+<ul>
+<li>r: <em>read</em> solo lectura</li>
+<li>w: <em>writable</em> solo escritura (<em>debe ir acompañado de lectura para que pueda modificarse</em>)</li>
+<li>x: <em>executable</em> solo ejecutable (<em>debe ir acompañado del permiso lectura para poder ejecutarse</em>)</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>r</th>
+<th>w</th>
+<th>x</th>
+<th>rw</th>
+<th>rx</th>
+<th>wx</th>
+<th>rwx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usuario</td>
+<td><code>chmod u+r f1</code></td>
+<td><code>u+w</code></td>
+<td><code>u+x</code></td>
+<td><code>u+rw</code></td>
+<td><code>u+rx</code></td>
+<td><code>u+wx</code></td>
+<td><code>u+rwx</code></td>
+</tr>
+<tr>
+<td>Grupo</td>
+<td><code>chmod g+r f1</code></td>
+<td><code>g+r</code></td>
+<td><code>g+x</code></td>
+<td><code>g+rw</code></td>
+<td><code>g+rx</code></td>
+<td><code>g+wx</code></td>
+<td><code>g+rwx</code></td>
+</tr>
+<tr>
+<td>Todo el mundo</td>
+<td><code>chmod o+r f1</code></td>
+<td><code>o+r</code></td>
+<td><code>o+x</code></td>
+<td><code>o+rw</code></td>
+<td><code>o+rx</code></td>
+<td><code>o+wx</code></td>
+<td><code>o+rwx</code></td>
+</tr>
+<tr>
+<td>Tod@s</td>
+<td><code>chmod a+r f1</code></td>
+<td><code>a+r</code></td>
+<td><code>a+x</code></td>
+<td><code>a+rw</code></td>
+<td><code>a+rx</code></td>
+<td><code>a+wx</code></td>
+<td><code>a+rwx</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Formato numérico basado en Octal: Se hace uso del 1 al 7 para definir los permisos</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>r</th>
+<th>w</th>
+<th>x</th>
+<th>rw</th>
+<th>rx</th>
+<th>wx</th>
+<th>rwx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usuario</td>
+<td>400</td>
+<td>200</td>
+<td>100</td>
+<td>600</td>
+<td>500</td>
+<td>300</td>
+<td>700</td>
+</tr>
+<tr>
+<td>Grupo</td>
+<td>040</td>
+<td>020</td>
+<td>010</td>
+<td>060</td>
+<td>050</td>
+<td>030</td>
+<td>070</td>
+</tr>
+<tr>
+<td>Todo el mundo</td>
+<td>004</td>
+<td>002</td>
+<td>001</td>
+<td>006</td>
+<td>005</td>
+<td>003</td>
+<td>007</td>
+</tr>
+<tr>
+<td>Usuario + Grupo</td>
+<td>440</td>
+<td>220</td>
+<td>110</td>
+<td>660</td>
+<td>550</td>
+<td>330</td>
+<td>770</td>
+</tr>
+<tr>
+<td>Grupo + Mundo</td>
+<td>044</td>
+<td>022</td>
+<td>011</td>
+<td>066</td>
+<td>055</td>
+<td>033</td>
+<td>077</td>
+</tr>
+<tr>
+<td>Usuario + M</td>
+<td>404</td>
+<td>202</td>
+<td>101</td>
+<td>606</td>
+<td>505</td>
+<td>303</td>
+<td>707</td>
+</tr>
+<tr>
+<td>Tod@s</td>
+<td>444</td>
+<td>222</td>
+<td>111</td>
+<td>666</td>
+<td>555</td>
+<td>333</td>
+<td>777</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ul>
+<li>Mediante máscara: Esta es la forma menos común de declarar los permisos, pero también se utiliza. Para declarar un valor hay que hacer uso del comando <code>umask(1p)</code></li>
+</ul>
+</blockquote>
+<p>Si queremos asignar el valor 022 a la máscara, este es el valor que le tendremos que restar al número actual de permisos que se encuentre en el directorio actual. Por ejemplo:</p>
+<ul>
+<li>002 = 777 - 002 = 775 (rwrwxr-x)</li>
+<li>444 = 644 - 444 = 200 (-w——-)</li>
+<li>020 = 660 - 020 = 640 (rw–r—-)</li>
+</ul>
+<p>Para declarar el valor de una máscara se hace uso de <code>umask(1p)</code> tal que así:</p>
+<pre><code>umask 020
+</code></pre>
+<p>Cuando se declara una máscara en un directorio, todos los archivos y rutas que se creen dentro de él, heredarán estos permisos. No es que se aplique directamente al archivo/directorio.</p>
+<h3 id="como-ver-los-permisos">¿Cómo ver los permisos?</h3>
+<p>Para visualizar los permisos tenemos el magnífico comando <code>ls(1)</code></p>
+<pre><code>ls -al
+</code></pre>
+<p>Este comando muestra todos los archivos y directorios que se encuentren en el directorio actual además de los ocultos. En suma, muestra los enlaces tanto duros como simbólicos. En la siguiente salida, si nos fijamos en la primera columna de la izquierda veremos los permisos y el tipo de archivo.</p>
+<pre><code>lrwxrwxrwx.  1 sincorchetes sincorchetes    37 May 19 21:51  .steampath -&gt; /home/sincorchetes/.steam/sdk32/steam
+lrwxrwxrwx.  1 sincorchetes sincorchetes    35 May 19 21:51  .steampid -&gt; /home/sincorchetes/.steam/steam.pid
+drwxrwxr-x.  3 sincorchetes sincorchetes  4096 Mar  7 14:17  .subversion
+-rw-rw-r--.  1 sincorchetes sincorchetes     8 Mar 28 22:29  .tasks
+drwxrwxr-x.  2 sincorchetes sincorchetes  4096 Jan 20 04:25  .themes
+drwx------.  3 sincorchetes sincorchetes  4096 Feb 12 01:10  .thumbnails
+drwx------.  3 sincorchetes sincorchetes  4096 Jan 20 11:05  .thunderbird
+drwxrwxr-x.  3 sincorchetes sincorchetes  4096 May 27 19:56  .tmux
+-rw-rw-r--.  1 sincorchetes sincorchetes   370 May 27 19:57  .tmux.conf
+drwxrwxr-x.  7 sincorchetes sincorchetes  4096 Jun  2 12:38  .vagrant.d
+drwxr-xr-x.  2 sincorchetes sincorchetes  4096 Jun  4 17:08  Videos
+</code></pre>
+<p>Los archivos que contienen una «l» en los permisos denotan que son enlaces simbólicos y se puede además saber porque apuntan a otro directorio/fichero «-&gt;».</p>
+<p>Aquellos que contienen una «d», denotan que son directorios y los que no contienen nada más que un «-» se interpretan como archivos.</p>
+<p>Modificando la autoría de archivos/directorios Como podemos ver, se pueden asignar múltiples permisos a los archiv@s, ahora bien, ¿Qué pasa si queremos cambiar el autor del fichero, el grupo o ambos?</p>
+<p>Podemos hacerlo gracias al comando <code>chown(1)</code>:</p>
+<ul>
+<li><code>chown usuario fichero/directorio</code>: Cambiando el autor del fichero y/o directorio</li>
+<li><code>chown usuario:grupo</code>: Cambiando el autor y el <strong>grupo</strong> al fichero y/o directorio</li>
+</ul>
+<p>Se puede asignar un autor a un fichero y tener un grupo diferente, el autor podrá modificarlo, leerlo o ejecutarlo en cualquier momento, es indiferente.</p>
+<h2 id="permisos-especiales">Permisos especiales</h2>
+<h3 id="sticky-bit">Sticky Bit</h3>
+<p>¿Qué pasa si tenemos much@s usuari@s dentro de un grupo cuyo grupo tiene asignado un directorio de trabajo y el usuario «Pepe» crea un fichero y la usuaria «Susana» intenta eliminarlo? Que podrá hacerlo siempre y cuando, se aplique una restricción llamada «Sticky Bit» del inglés, «bit pegajoso». Este permiso especial, permite restringir los archivos creados y modificados por l@s miembr@s de un grupo y evitar que se genere un «autosabotaje» o un borrado por error.</p>
+<p>Para habilitarlo bastará con efectuar:</p>
+<pre><code>chmod 1000 archivo/directorio
+</code></pre>
+<p>ó .. code-block:: bash</p>
+<blockquote>
+<p>chmod u+t archivo/directorio</p>
+</blockquote>
+<h4 id="aplicar-permisos-recursivos-en-los-ficheros-y-subdirectorios-de-un-directorio">Aplicar permisos recursivos en los ficheros y subdirectorios de un directorio</h4>
+<pre><code>chmod 1000 -R directorio
+</code></pre>
+<p>Cuando ejecutemos un <code>ls(1)</code>, veremos que en los permisos se habrá añadido un «t» al final tanto para directorios como para ficheros, esto nos indica la activación del Sticky Bit, también aparecerá modo de ejecución permitido. Si aparece una «T» en vez de una «t», esto quiere decir, que se ha activado el Sticky Bit pero solo para el usuario actual, si vemos el resultado, no contienen permisos de ejecución y por lo tanto no se permitirá crear archivos/directorios.</p>
+<h4 id="salida-con-sticky-bit-activado">Salida con Sticky Bit activado</h4>
+<pre><code>ls -al
+total 8
+drwxrwxrwt. 2 root root  4096 Jun 11 07:41 .
+drwxrwxrwt. 3 root users 4096 Jun 11 07:41 ..
+</code></pre>
+<h4 id="salida-con-sticky-bit-activado-para-el-usuari-actual">Salida con Sticky Bit activado para el usuari@ actual</h4>
+<pre><code>ls -al
+total 8
+drwxrwxrwx. 2 root         users        4096 Jun 11 07:38 .
+drwxrwxrwx. 3 sincorchetes sincorchetes 4096 Jun 11 07:37 ..
+-rwxrw-rwT. 1 sincorchetes sincorchetes    0 Jun 11 07:38 12
+</code></pre>
+<p>Aquí os podemos mostrar con más claridad el funcionamiento:</p>
+<script src=»https://asciinema.org/a/186545.js» id=»asciicast-186545» async></script>
+
+<h3 id="suid-y-sguid">SUID y SGUID</h3>
+<p>En Linux existen una serie de condiciones especiales para determinados ejecutables, archivos… que pueden editarse o ejecutarse sin ser el propietario de los mismos. Esta característica nos otorga una cierta ventaja como por ejemplo, si queremos cambiar la contraseña de nuestr@ usuari@ podemos hacerlo sin ser usuario «root».</p>
+<p>Si nos fijamos en los permisos del comando <code>passwd</code>, veremos que tiene la letra «s» dentro de la ristra de permisos.</p>
+<pre><code>ls -al /usr/bin
+-rwsr-xr-x. 1 root root         29008 Apr 12 11:24 passwd
+</code></pre>
+<p>Digamos que el/la usuari@ se hace pasar por «root» para intentar cambiar su contraseña y lo puede hacer gracias a estos permisos. Estos se llaman SUID Set User ID Bit o SGID Set Group ID Bit. Podemos verificar si un archivo o directorio lo tiene activado porque en los permisos del usuario tiene una «s» o en los permisos del grupo contiene «s». Solo el propietario del fichero/directorio puede declarar estos permisos «extendidos».</p>
+<p>Nota</p>
+<p>En caso de contener una «S», esto quiere decir, que tanto el autor del archivo/directorio como el grupo y el resto del mundo no podrá editar, modificar y/o ejecutar archivos dentro del directorio. De hecho, veremos como se encuentra reducida la salida de permisos._</p>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://linux.die.net/man?target=_blank">man pages</a></li>
+<li><a href="https://www.tldp.org/?target=_blank">The Linux Document Project</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../almacenamiento/lvm/" class="btn btn-neutral float-right" title="Lvm">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../../../servicios/web/NGINX/" class="btn btn-neutral" title="NGINX"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../../../servicios/web/NGINX/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../almacenamiento/lvm/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Introducción - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Introducci\u00f3n";
+    var mkdocs_page_input_path = "servicios/monitorizacion/zabbix/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Monitorizacion</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Zabbix</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Introducción</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#instalacion-en-centos-8">Instalación en CentOS 8</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lets-encrypt">Let’s Encrypt</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#firewalld">Firewalld</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#procedimiento-de-backup">Procedimiento de backup</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Servicios &raquo;</li>
+        
+      
+        
+          <li>Monitorizacion &raquo;</li>
+        
+      
+        
+          <li>Zabbix &raquo;</li>
+        
+      
+    
+    <li>Introducción</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduccion">Introducción</h1>
+<p>Software de monitorización elaborado en PHP….</p>
+<h2 id="instalacion-en-centos-8">Instalación en CentOS 8</h2>
+<h3 id="actualizar-el-sistema">Actualizar el sistema</h3>
+<pre><code>dnf upgrade
+</code></pre>
+<h3 id="instalar-el-repositorio">Instalar el repositorio</h3>
+<pre><code>rpm -Uvh https://repo.zabbix.com/zabbix/5.0/rhel/8/x86_64/zabbix-release-5.0-1.el8.noarch.rpm
+dnf clean all
+</code></pre>
+<h3 id="instalar-el-software-necesario">Instalar el software necesario</h3>
+<pre><code>dnf install zabbix-server-mysql zabbix-web-mysql zabbix-nginx-conf zabbix-agent mariadb-server
+</code></pre>
+<h3 id="configurando-por-primera-vez-la-base-de-datos">Configurando por primera vez la base de datos</h3>
+<h4 id="habilitando-al-arranque-y-arrancando-mariadb">Habilitando al arranque y arrancando MariaDB</h4>
+<pre><code>systemctl enable --now mariadb.service
+</code></pre>
+<h4 id="configurando-la-base-de-datos">Configurando la base de datos</h4>
+<p>Nota</p>
+<p>Solo hay que seguir los pasos.</p>
+<pre><code>mysql_secure_installation
+</code></pre>
+<h4 id="configurando-la-base-de-datos-para-zabbix">Configurando la base de datos para Zabbix</h4>
+<pre><code>mysql
+mysql -u root -p
+mysql&gt; CREATE DATABASE zabbix CHARACTER SET utf8 COLLATE utf8_bin;
+mysql&gt; CREATE USER zabbix@localhost identified BY 'AQUI_UNA_CONTRASEÑA';
+mysql&gt; GRANT ALL PRIVILEGES ON zabbix.* TO zabbix@localhost;
+mysql&gt; QUIT;
+</code></pre>
+<h4 id="importando-el-esquema-de-base-de-datos">Importando el esquema de base de datos</h4>
+<pre><code>zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u zabbix -p AQUI_UNA_CONTRASEÑA
+</code></pre>
+<h3 id="configurando-la-base-de-datos-para-el-servidor">Configurando la base de datos para el servidor</h3>
+<p>Editar el archivo <code>/etc/zabbix/zabbix_server.conf</code> y cambiar la contraseña de BBDD:</p>
+<pre><code>DBPassword=AQUI_UNA_CONTRASEÑA
+</code></pre>
+<h3 id="editar-archivo-etcnginxconfdzabbixconf">Editar archivo <code>/etc/nginx/conf.d/zabbix.conf</code></h3>
+<p>Nota</p>
+<p>Descomentar y configurar las directivas <code>listen</code> y <code>server_name</code></p>
+<pre><code># listen 80;
+# server_name example.com;
+</code></pre>
+<h3 id="escoger-el-huso-horario-etcphp-fpmdzabbixconf">Escoger el huso horario <code>/etc/php-fpm.d/zabbix.conf</code></h3>
+<pre><code>php
+php_value[date.timezone] = Atlantic/Canary
+</code></pre>
+<h3 id="arrancando-y-habilitando-zabbix-en-el-sistema">Arrancando y habilitando Zabbix en el sistema</h3>
+<pre><code>systemctl enable --now zabbix-server.service zabbix-agent.service nginx.service php-fpm.service
+</code></pre>
+<h3 id="accediendo-al-portal-de-configuracion">Accediendo al portal de configuración</h3>
+<p>Accedemos mediante el dominio que hemos configurado anteriormente:</p>
+<ul>
+<li>Usuario: Admin</li>
+<li>Contraseña: zabbix</li>
+</ul>
+<h2 id="lets-encrypt">Let’s Encrypt</h2>
+<h3 id="instalar-el-software-necesario_1">Instalar el software necesario</h3>
+<pre><code>dnf install epel-release
+dnf install certbot python3-certbot-nginx
+</code></pre>
+<p>Nota</p>
+<p>Teniendo el dominio apuntando al servidor y certificando en <a href="https://dnschecker.org/">DNS Checker</a> que el resultado del registro es la IP del dominio, procedemos a generar el certificado.</p>
+<h3 id="generando-el-certificado">Generando el certificado</h3>
+<pre><code>certbot --nginx -d DOMINIO -m TU_EMAIL --agree-tos --non-interactive
+</code></pre>
+<h3 id="reiniciando-el-servidor-web">Reiniciando el servidor web</h3>
+<pre><code>systemctl restart nginx.service
+</code></pre>
+<p>Ya tendremos nuestro servidor web protegido via SSL.</p>
+<h2 id="firewalld">Firewalld</h2>
+<h3 id="instalar-firewalld">Instalar firewalld</h3>
+<pre><code>dnf install firewalld
+</code></pre>
+<h3 id="habilitando-al-arranque-e-iniciandolo">Habilitando al arranque e iniciándolo</h3>
+<pre><code>systemctl enable --now firewalld.service
+</code></pre>
+<h3 id="abriendo-los-puertos-para-zabbix">Abriendo los puertos para Zabbix</h3>
+<pre><code>firewall-cmd --add-service http --add-service https --zone public --permanent
+firewall-cmd --reload
+</code></pre>
+<h2 id="procedimiento-de-backup">Procedimiento de backup</h2>
+<h3 id="exportar-todas-las-bases-de-datos">Exportar todas las bases de datos</h3>
+<pre><code>mysqldump -u root --all-databases -p  &gt; dump-$(date +%d-%m-%y).sql
+
+* :code:`-u root`: Usuario root
+* :code:`--all-databases`: Todas las bases de datos
+* :code:`-p`: Pregunta por la contraseña
+* :code:`&gt;` : Redirige el flujo hacia el fichero salida :code:`dump-$(date +%d-%m-%y).sql`
+</code></pre>
+<h3 id="comprimir-los-directorios-esenciales">Comprimir los directorios esenciales</h3>
+<pre><code>tar zcfv /root/zabbix-$(date +%d-%m-%y).tar.gz /etc/zabbix /usr/share/zabbix --acls --xattrs --selinux
+</code></pre>
+<p><a href="https://echemosunbitstazo.es/sysadmin/automation/ansible/ansible.html">Siguiente </a><a href="https://echemosunbitstazo.es/sysadmin/services/systemd/systemd-construyendo-svc.html"> Anterior</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../web/NGINX/" class="btn btn-neutral float-right" title="NGINX">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../../redes/conversion-numeros/" class="btn btn-neutral" title="Conversión de números"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../../redes/conversion-numeros/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../web/NGINX/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

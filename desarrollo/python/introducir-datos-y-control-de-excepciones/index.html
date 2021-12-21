@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Obtener datos introducidos por el usuario - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Obtener datos introducidos por el usuario";
+    var mkdocs_page_input_path = "desarrollo/python/introducir-datos-y-control-de-excepciones.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Obtener datos introducidos por el usuario</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#control-de-excepciones">Control de excepciones</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#try-except">try-except</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#with">with</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#trabajando-con-archivos-en-python">Trabajando con archivos en Python</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#abriendo-un-archivo">Abriendo un archivo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#leer-archivo">Leer archivo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#devuelve-una-linea">Devuelve una línea</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#leer-el-archivo-completo">Leer el archivo completo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#creando-un-archivo-nuevo">Creando un archivo nuevo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#anadir-informacion-al-archivo">Añadir información al archivo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sobreescribir-en-el-archivo">Sobreescribir en el archivo</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#eliminar-un-archivo">Eliminar un archivo</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Obtener datos introducidos por el usuario</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="obtener-datos-introducidos-por-el-usuario">Obtener datos introducidos por el usuario</h1>
+<p>Tenemos una función que es input() y podemos solicitar al usuario que introduzca un dato y que este se almacene en una variable, esto nos puede ayudar a dinamizar los programas interactuando con los usuarios:</p>
+<pre><code>input('Aquí va un mensaje')
+</code></pre>
+<p>Nota</p>
+<p>Los datos introducidos se almacenan como un <code>str</code>, por lo que si quieres almacenar datos tipo <code>float</code>, <code>int</code> tendrás que usar la función de conversión que hemos hablado en el apartado de Tipos de datos en Python.</p>
+<p>Vamos hacer este ejemplo:</p>
+<pre><code>nombre = input(&quot;¿Cómo te llamas? &quot;)
+edad = int(input(&quot;¿Qué edad tienes? &quot;))
+print(&quot;Me llamo %s y tengo %i años.&quot; % (nombre,edad))
+</code></pre>
+<p>Imprimirá un resultado como:</p>
+<pre><code>¿Cómo te llamas? Alvaro
+¿Qué edad tienes? 26
+Me llamo Álvaro y tengo 26 años.
+</code></pre>
+<h2 id="control-de-excepciones">Control de excepciones</h2>
+<p>¿Qué ocurre si queremos ejecutar un código y depende de una serie de datos que no se han inicializado? No pasa nada, tenemos un mecanismo que controla las excepciones.</p>
+<h3 id="try-except">try-except</h3>
+<pre><code>try:
+  # Bloque de código que se probará antes de ejecutar
+except:
+  # Bloque de código que se ejecutará si ocurre algún error.
+</code></pre>
+<p>Por ejemplo:</p>
+<pre><code>try:
+    print(a)
+except:
+    print(&quot;Hubo un problema.&quot;)
+</code></pre>
+<p>Esto nos imprimirá <code>Hubo un problema.</code> pero no nos dice en ningún momento dónde está el error. Evidentemente, el error es que la variable <code>a</code> no contiene ningún tipo de valor. Pero, ¿Qué ocurre si quiero personalizar estos errores y mostrar información según convenga?</p>
+<p>No pasa nada, podemos añadir excepciones por error, por ejemplo, si la variable <code>a</code> no existía, podemos crear una excepción que permita decir que no existe porque no está creada de la siguiente forma.</p>
+<ol>
+<li>Primero identificamos como se llama el error en Python:</li>
+</ol>
+<pre><code>print(A)
+Traceback (most recent call last):
+
+  File &quot;/tmp/untitled0.py&quot;, line 9, in &lt;module&gt;
+    print(a)
+
+NameError: name 'a' is not defined
+</code></pre>
+<p>El nombre del error que tenemos que utilizar es <code>NameError</code>.</p>
+<ol>
+<li>Definimos el <code>try-except</code> de la siguiente manera:</li>
+</ol>
+<pre><code>try:
+  print(a)
+except NameError:
+  print(&quot;La variable no se ha asignao, por favor, revisa el programa.&quot;)
+except:
+  print(&quot;Hubo un problema, contacte con el desarrollador de la aplicación.&quot;)
+</code></pre>
+<p>¿Se pueden definir múltiples errores y que impiman un mensaje? Sí que se puede, esto además nos permite ahorrar mucho código.</p>
+<pre><code>try:
+  pass
+except(NameError, TypeError, ValueError):
+  pass
+except:
+  pass
+</code></pre>
+<p>También podemos usar un alias e imprimir solo el mensaje de error:</p>
+<pre><code>try:
+  print(a)
+except(NameError, TypeError, ValueError) as EstoEsUnError:
+  print(EstoEsUnError)
+except:
+  pass
+</code></pre>
+<p>¿Para qué nos sirve esto? Para tener un mayor control en la validación e impresión de nuestro código. <code>EstoEsUnError</code> imprimirá: <code>NameError: name 'a' is not defined</code>, con este <code>str</code> podemos iniciar una validación on <code>if-elif-else</code>.</p>
+<h3 id="with">with</h3>
+<p><code>with</code> es un método que permite realizar acciones que posteriormente necesitan limpiarse para que no queden restos en memoria, un ejemplo muy común y extendido es cuando se trabaja con archivos.</p>
+<pre><code>with open('nombreArchivo.ext', modo') as fichero:
+  # Bloque de código
+</code></pre>
+<p>Cuando abrimos el archivo de esta forma, aunque hayan problemas con el archivo, este termina cerrándose y dejando de existir en la memoria. Sin embargo, si trabajamos con el archivo de la siguiente forma, el archivo quedará en la memoria de forma casi indefinida en el tiempo generando datos basura:</p>
+<pre><code>fichero = open('nombreArchivo.ext','modo')
+</code></pre>
+<p>Además, de que hay que cerrarlo debidamente:</p>
+<pre><code>fichero.close()
+</code></pre>
+<p>En el siguiente punto trabajaremos más con los archivos, no nos alarmemos.</p>
+<p>Puedes consultar más información sobre este apartado en este <a href="https://docs.python.org/3/tutorial/errors.html">hilo</a> de la documentación.</p>
+<h2 id="trabajando-con-archivos-en-python">Trabajando con archivos en Python</h2>
+<p>¿Qué podemos hacer en Python con los archivos? ¿Podemos trabajar con ellos? La cuestión es que sí, podemos abrir, leer, escribir o crear y eliminar archivos, las operaciones básicas que nos deja hacer un SO si estuvieramos en una shell como <code>bash</code> o <code>zsh</code>.</p>
+<h3 id="abriendo-un-archivo">Abriendo un archivo</h3>
+<p>La sintaxis que se utiliza es:</p>
+<pre><code>fichero = open(&quot;ruta del archivo&quot;, modo)
+</code></pre>
+<p>La sintaxis <strong>correcta</strong>, que <strong>debe usarse</strong> y que utilizaremos en estos ejemplos es:</p>
+<pre><code>with open(&quot;ruta del archivo&quot;, modo) as nombreFichero:
+  # Bloque de código
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>Lectura, es el valor por defecto, abre el archivo para que se pueda leer y da un error si el archivo no existe.</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>Abre un archivo para agregarle información al final, si no existe el archivo lo crea.</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>Sobreescribe cualquier contendio que haya en el archivo que esté abierto y/o crea el archivo si no existe.</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>Crea el archivo, si devuelve error quiere decir que ya existe.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="leer-archivo">Leer archivo</h3>
+<p>Creamos este archivo:</p>
+<pre><code>$ cd /home/$USER/
+$ cat &lt;&lt; EOF &gt;&gt; hola.txt
+&gt; Hola Mundo
+&gt; EOF
+</code></pre>
+<p>Si hacemos un <code>cat hola.txt</code> nos mostrará <code>Hola Mundo</code>. Bien, abrimos el archivo con Python</p>
+<pre><code>&gt;&gt;&gt; with open(&quot;hola.txt&quot;,&quot;r&quot;) as fichero:
+&gt;&gt;&gt;   fichero.read()
+Hola Mundo
+</code></pre>
+<p>Este método también permite decirle que nos imprima los n caracteres del principio del texto con <code>.read(4)</code>.</p>
+<h3 id="devuelve-una-linea">Devuelve una línea</h3>
+<p>Si tenemos un archivo con más líneas, podemos imprimirlas con <code>.readline()</code> en vez de <code>.read()</code>. Sin embargo, si queremos imprimir mas líneas, tenemos que llamar varias veces al método.</p>
+<pre><code>&gt;&gt;&gt; fichero.readline()
+&gt;&gt;&gt; fichero.readline()
+</code></pre>
+<h3 id="leer-el-archivo-completo">Leer el archivo completo</h3>
+<p>Con ayuda de un bucle <code>for</code> lo hacemos:</p>
+<pre><code>&gt;&gt;&gt; with open(&quot;ejemplo.txt&quot;, &quot;r&quot;) as fichero:
+&gt;&gt;&gt; for linea in fichero:
+&gt;&gt;&gt;   print(linea)
+</code></pre>
+<h3 id="creando-un-archivo-nuevo">Creando un archivo nuevo</h3>
+<p>Si el archivo existe, dará error.</p>
+<pre><code>&gt;&gt;&gt; with open(&quot;ejemplo.txt&quot;, &quot;x&quot;) as fichero:
+</code></pre>
+<p>Cuando terminemos de escribir en un archivo, lo cerramos para que no quede en memoria.</p>
+<pre><code>fichero.close()
+</code></pre>
+<h3 id="anadir-informacion-al-archivo">Añadir información al archivo</h3>
+<p>En esta línea añadimos el siguiente texto.</p>
+<pre><code>&gt;&gt;&gt; with open(&quot;hola.txt&quot;,&quot;a&quot;) as fichero:
+&gt;&gt;&gt; fichero.write(&quot;Esta es una línea de ejemplo&quot;)
+</code></pre>
+<p>Cuando terminemos de escribir en un archivo, lo cerramos para que no quede en memoria.</p>
+<pre><code>fichero.close()
+</code></pre>
+<h3 id="sobreescribir-en-el-archivo">Sobreescribir en el archivo</h3>
+<p>Sobreescribimos el archivo si lo abrimos con el modo <code>w</code>:</p>
+<pre><code>&gt;&gt;&gt; with open(&quot;hola.txt&quot;,&quot;w&quot;) as fichero:
+&gt;&gt;&gt; fichero.write(&quot;Te he sobreescrito el contenido con esta línea&quot;)
+</code></pre>
+<p>Cuando terminemos de escribir en un archivo, lo cerramos para que no quede en memoria.</p>
+<pre><code>fichero.close()
+</code></pre>
+<h3 id="eliminar-un-archivo">Eliminar un archivo</h3>
+<p>Hay que importar un módulo llamado <code>os</code>:</p>
+<pre><code>import os
+os.remove(&quot;hola.txt&quot;)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modulos/" class="btn btn-neutral float-right" title="Modulos">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../instalacion/" class="btn btn-neutral" title="Instalación"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../instalacion/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../modulos/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

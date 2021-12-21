@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Conversión de números - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Conversi\u00f3n de n\u00fameros";
+    var mkdocs_page_input_path = "redes/conversion-numeros.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Conversión de números</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduccion">Introducción</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#binario">Binario</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#binario-decimal-bin-dec">Binario =&gt; Decimal BIN-&gt;DEC</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mediante-posicion">Mediante posición</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#binario-hexadecimal">Binario =&gt; Hexadecimal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#binario-octal">Binario -&gt; Octal</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#decimal">Decimal</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#decimal-binario-dec-bin">Decimal =&gt; Binario DEC-&gt;BIN</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#division">División</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decimal-hexadecimal">Decimal -&gt; Hexadecimal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decimal-octal">Decimal -&gt; Octal</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hexadecimal">Hexadecimal</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hexadecimal-decimal">Hexadecimal =&gt; Decimal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hexadecimal-binario">Hexadecimal =&gt; Binario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hexadecimal-octal">Hexadecimal -&gt; Octal</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#octal">Octal</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#octal-decimal">Octal -&gt; Decimal</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#octal-binario">Octal -&gt; Binario</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#octal-hexadecimal">Octal -&gt; Hexadecimal</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fuentes">Fuentes</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Redes &raquo;</li>
+        
+      
+    
+    <li>Conversión de números</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="conversion-de-numeros">Conversión de números</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>En informática tendremos que enfrentarnos con varios problemas que requieren de soluciones distintas haciendo uso de la capacidad resolutiva para según que problemas con los que nos podamos encontrar en el ámbito de sistemas, haciendo uso de algoritmos para sacarnos de apuros en desarrollo Web, e incluso, haciendo un proceso de descartes en base a pruebas de rendimiento.</p>
+<p>Aquí todo es posible, sin embargo, también debemos aprender las unidades básicas con la que las máquinas trabajan para enviar información a bajo nivel, obtener un color para nuestros desarrollos Web…etc Todo esto lo aprenderemos aquí.</p>
+<h2 id="binario">Binario</h2>
+<p>Los números binarios son aquellos que están comprendidos entre 0 y 1 utilizando como base el 2. Esto representa la condición eléctrica, es decir, 0 es apagado y 1 es encendido.</p>
+<h3 id="binario-decimal-bin-dec">Binario =&gt; Decimal BIN-&gt;DEC</h3>
+<p>Para convertir de binario a decimal tenemos dos formas de hacerlo.</p>
+<ul>
+<li>Mediante el uso de una tabla exponencial</li>
+<li>Tabla de exponentes</li>
+</ul>
+<h4 id="mediante-posicion">Mediante posición</h4>
+<p>Para convertir mediante posición, lo único que deberemos hacer, es saber en qué posición tenemos cada número y utilizar las potencias.</p>
+<p>110101:sub:(2) =&gt; Decimal</p>
+<pre><code>((1*2⁵)+(1*2⁴)+(0*2³)+(1*2²)+(0*2¹)+(1*2⁰)) =
+((1*2⁵)+(1*2⁴)+(1*2²)+(1*2⁰)) = 53(10)
+</code></pre>
+<p>53:sub:(10) es nuestro número decimal.</p>
+<p>Tabla de exponentes</p>
+<p>Dibujamos una tabla en relación al número que creemos que podamos obtener:</p>
+<table>
+<thead>
+<tr>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 7</td>
+<td>2 6</td>
+<td>2 5</td>
+<td>2 4</td>
+<td>2 3</td>
+<td>2 2</td>
+<td>2 1</td>
+<td>2 0</td>
+</tr>
+</tbody>
+</table>
+<p>Y en base al número que nos den, comenzamos a comparar de menor a mayor. Por ejemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Nº</th>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>105</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="binario-hexadecimal">Binario =&gt; Hexadecimal</h3>
+<table>
+<thead>
+<tr>
+<th>Hexadecimal</th>
+<th>Binario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>A</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1100</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1101</td>
+</tr>
+<tr>
+<td>E</td>
+<td>1110</td>
+</tr>
+<tr>
+<td>F</td>
+<td>1111</td>
+</tr>
+</tbody>
+</table>
+<p>Para convertir tan solo necesitaremos traducir cifra por cifra en base a esta tabla. Por ejemplo: 1010111101100100</p>
+<pre><code>1010 = A
+1111 = F
+0110 = 6
+0100 = 4
+</code></pre>
+<p>Nuestro número es: AF64</p>
+<h3 id="binario-octal">Binario -&gt; Octal</h3>
+<p>Tenemos que tener presente la siguiente equivalencia:</p>
+<table>
+<thead>
+<tr>
+<th>Decimal</th>
+<th>Binario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>111</td>
+</tr>
+</tbody>
+</table>
+<p>El octal solo hace uso de 3 bits, y no de 4 como el decimal o hexadecimal. Tomaremos los 3 primeros bits y los separamos para hacer la conversión.</p>
+<pre><code>1 010 010 111(2) = x(8)
+1 010 111 =&gt; Vemos como el 1 está solo, por ello, le añadimos 2 ceros para normalizarlo.
+001 010 111.
+</code></pre>
+<p>Nuestro número es: 127:sub:(8)</p>
+<h2 id="decimal">Decimal</h2>
+<p>Son números comprendidos entre 0 y 9, hacen uso de base 10. Estos se suelen utilizar mucho para representar la numeración IPv4, obtener un color para aplicarlo en desarrollo Web mediante la función rgb/rgba()…etc</p>
+<h3 id="decimal-binario-dec-bin">Decimal =&gt; Binario DEC-&gt;BIN</h3>
+<p>Para convertir de binario a decimal tenemos dos formas de hacerlo:</p>
+<ul>
+<li>Mediante división</li>
+<li>Tabla exponencial</li>
+</ul>
+<h4 id="division">División</h4>
+<p>Para convertir de decimal a binario, simplemente tenemos que tener en cuenta el resto de la división, ignorar los decimales y continuar dividiendo el número del cociente hasta que ya no pueda dividirse más. Para reconstruir el número, se seleccionan de derecha a izquierda.</p>
+<p>Por ejemplo:</p>
+<pre><code>362|2 = 0
+181|2 = 1
+ 90|2 = 0
+ 45|2 = 1
+ 22|2 = 0
+ 11|2 = 1
+  5|2 = 1
+  2|2 = 0
+  0|2 = 1
+</code></pre>
+<p>101101010</p>
+<p>Tabla de exponentes</p>
+<p>Dibujamos una tabla en relación al número que creemos que podamos obtener.</p>
+<table>
+<thead>
+<tr>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 7</td>
+<td>2 6</td>
+<td>2 5</td>
+<td>2 4</td>
+<td>2 3</td>
+<td>2 2</td>
+<td>2 1</td>
+<td>2 0</td>
+</tr>
+</tbody>
+</table>
+<p>Y en base al número que nos den, comenzamos a comparar de menor a mayor. Por ejemplo:</p>
+<table>
+<thead>
+<tr>
+<th>Nº</th>
+<th>128</th>
+<th>64</th>
+<th>32</th>
+<th>16</th>
+<th>8</th>
+<th>4</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>105</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="decimal-hexadecimal">Decimal -&gt; Hexadecimal</h3>
+<p>Dividimos el número entre 16 utilizamos el cociente para seguir dividiendo sin utilizar los decimales resultantes. Posteriormente, para obtener el resto, se multiplica el decimal obtenido de la división por 16 que es la base para obtener el resto.</p>
+<p>Por ejemplo:</p>
+<p>2937:sub:(10) -&gt; x:sub:(16)</p>
+<pre><code>2937|16 = 183.5625 -&gt; Resto = 0.5625*16 = 9
+ 183|16 = 11.4375 -&gt; Re = 0.4375*16 = 7
+  11|16 = 0.6875 -&gt; Re = 0.6875*16 = B
+</code></pre>
+<p>Con lo que nuestro nº es: B79:sub:(16)</p>
+<h3 id="decimal-octal">Decimal -&gt; Octal</h3>
+<p>Se divide el número decimal entre 8, se desestiman los decimales, y el último número que ya no puede ser divisible se queda tal cual como resto formando parte del nº. Se lee de derecha hacia la izquierda.</p>
+<pre><code>210(10) = x(8)
+
+210|8 = Resto =2
+ 26|8 = Re = 2
+  3|8 = Re =3
+</code></pre>
+<p>Nuestro número es: 322.</p>
+<h2 id="hexadecimal">Hexadecimal</h2>
+<p>Estos números son muy utilizados sobre todo cuando queremos manipular cierta información de archivos, contemplan un rango entre 0 y F, siendo F el número 15, hace uso de base 16.</p>
+<h3 id="hexadecimal-decimal">Hexadecimal =&gt; Decimal</h3>
+<p>Para convertir de hexadecimal a decimal</p>
+<p>Utilizamos las posiciones de los números y los multiplicamos por el resultado de su base.</p>
+<pre><code>B79(16) = x(12)
+
+B*16² + 7*16¹ + 9*16⁰ =
+11*256 + 7*16 + 9*1 =
+2816+112+9 = 2937(10)
+</code></pre>
+<h3 id="hexadecimal-binario">Hexadecimal =&gt; Binario</h3>
+<p>Tenemos que tener en cuenta la siguiente equivalencia:</p>
+<table>
+<thead>
+<tr>
+<th>Hexadecimal</th>
+<th>Binario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>A</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>B</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>C</td>
+<td>1100</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1101</td>
+</tr>
+<tr>
+<td>E</td>
+<td>1110</td>
+</tr>
+<tr>
+<td>F</td>
+<td>1111</td>
+</tr>
+</tbody>
+</table>
+<p>Para convertir tan solo necesitaremos traducir cifra por cifra en base a esta tabla. Por ejemplo: A7F0</p>
+<pre><code>A = 1010
+7 = 0111
+F = 1111
+0 = 0000
+</code></pre>
+<p>Nuestro número es: 1010011111110000</p>
+<h3 id="hexadecimal-octal">Hexadecimal -&gt; Octal</h3>
+<p>Realizar este proceso de conversión no es un método directo. Primero hay que traducir de HEX-&gt;BIN y luego de BIN-&gt;OCT para obtener el valor.</p>
+<pre><code>E67(16) = x(8)
+
+E(16) = 1110(2)
+6(16) = 0110(2)
+7(16) = 0111(2)
+</code></pre>
+<p>Nº convertido= 111001100111</p>
+<pre><code>Una vez obtenido el binario, lo pasamos a octal.
+111001100111(2) = x(8)
+
+111 001 100 111 = 7147(8)
+</code></pre>
+<p>Nuestro número es 7147:sub:(8)</p>
+<h2 id="octal">Octal</h2>
+<p>Útil pero menos visto, nos permite obtener un número comprendido entre 0-7, hace uso de base 8.</p>
+<h3 id="octal-decimal">Octal -&gt; Decimal</h3>
+<p>Se tiene en cuenta la posición de la cifra, ya que luego se multiplica por su base, y a su vez, la base se multiplica por sí misma tantas veces tenga n en el exponente.</p>
+<pre><code>7147(8) = x(10)
+
+7*8³ + 1*8² + 4*8¹ + 7*8⁰ = 3584 + 64 + 32 + 7
+</code></pre>
+<p>Nuestro número es: 3,687</p>
+<h3 id="octal-binario">Octal -&gt; Binario</h3>
+<p>Básicamente utilizamos 3 bits por dígito, hay que tener en cuenta la siguiente equivalencia:</p>
+<p>Tenemos que tener presente la siguiente equivalencia:</p>
+<table>
+<thead>
+<tr>
+<th>Decimal</th>
+<th>Binario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>111</td>
+</tr>
+</tbody>
+</table>
+<p>7420:sub:(8)-&gt; x:sub:(2)</p>
+<pre><code>7 = 111
+4 = 100
+2 = 010
+0 = 000
+</code></pre>
+<p>Nuestro número es: 111100010000:sub:(2)</p>
+<h3 id="octal-hexadecimal">Octal -&gt; Hexadecimal</h3>
+<p>Como hemos dicho anteriormente, es un proceso que no se hace directo y hay que hacer uso del paso anterior para obtener el número hexadecimal.</p>
+<p>7456(8) -&gt; x(2)</p>
+<pre><code>7 = 111
+4 = 100
+5 = 101
+6 = 110
+
+Nº binario: 111100101110
+</code></pre>
+<p>Para obtener el número hexadecimal, bastará con separar 4 bits los dígitos del nº binario.</p>
+<pre><code>1111 0010 1110(2) -&gt; x(16)
+
+1111 = F
+0010 = 2
+1110 = E
+</code></pre>
+<p>Nuestro número es: F2E</p>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li><a href="[https://wikipedia.org?target=_blank](https://wikipedia.org/?target=_blank)">Wikipedia</a></li>
+<li><a href="https://coderstoolbox.net/number?target=_blank">Conversor números</a></li>
+<li><a href="[https://youtube.com?target=_blank](https://youtube.com/?target=_blank)">Youtube</a></li>
+<li><a href="[https://www.calculadoraconversor.com?target=_blank](https://www.calculadoraconversor.com/?target=_blank)">Calculadora Conversor</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Archivo_binario#/media/File:Binary_file.png?target=_blank">Img de cabecera</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../servicios/monitorizacion/zabbix/" class="btn btn-neutral float-right" title="Introducción">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../desarrollo/python/tuplas-dic-sets-listas-y-mas/" class="btn btn-neutral" title="Tuplas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../desarrollo/python/tuplas-dic-sets-listas-y-mas/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../servicios/monitorizacion/zabbix/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

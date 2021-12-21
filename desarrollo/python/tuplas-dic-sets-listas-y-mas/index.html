@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Tuplas - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tuplas";
+    var mkdocs_page_input_path = "desarrollo/python/tuplas-dic-sets-listas-y-mas.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Tuplas</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#anadir-elementos-a-la-tupla">Añadir elementos a la tupla</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#duplicar-el-str-o-caracter-que-obtengamos-por-un-no-de-veces">Duplicar el str o caracter que obtengamos por un nº de veces</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#muestra-el-str-que-este-ubicada-en-una-posicion">Muestra el str que esté ubicada en una posición</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mostrar-un-conjunto-de-valores-especificos-de-la-tupla-haciendo-uso-de-su-posicion">Mostrar un conjunto de valores específicos de la tupla haciendo uso de su posición</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Tuplas</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tuplas">Tuplas</h1>
+<p>Conjunto de valores que no cambian dentro del flujo de la ejecución del programa. Pueden contener como valor todo tipo de dato incluyendo otra tupla. Más info en la <a href="https://docs.python.org/3/library/stdtypes.html?highlight=tuple#tuple">doc oficial de Python</a></p>
+<pre><code>&gt;&gt;&gt; nacionalidad = ( 'Español', 'Turco', 'Italiano')
+&gt;&gt;&gt; paises = ( 'España', nacionalidad, 'Turquía', 'Italia' )
+&gt;&gt;&gt; print(paises)
+('España', ('Español', 'Turco', 'Italiano'), 'Turquía', 'Italia')
+</code></pre>
+<h2 id="anadir-elementos-a-la-tupla">Añadir elementos a la tupla</h2>
+<pre><code>&gt;&gt;&gt; nacionalidad = ( 'Español', 'Turco', 'Italiano')
+&gt;&gt;&gt; paises = ( 'España', nacionalidad, 'Turquía', 'Italia' )
+&gt;&gt;&gt; paises += ('Francia', 'Munich')
+&gt;&gt;&gt; print(paises)
+  ('España', ('Español', 'Turco', 'Italiano'), 'Turquía', 'Italia', 'Francia', 'Munich')
+</code></pre>
+<h2 id="duplicar-el-str-o-caracter-que-obtengamos-por-un-no-de-veces">Duplicar el <code>str</code> o caracter que obtengamos por un nº de veces</h2>
+<pre><code>&gt;&gt;&gt; nacionalidad = ( 'Español', 'Turco', 'Italiano')
+&gt;&gt;&gt; nacionalidad * 2
+('Español', 'Turco', 'Italiano', 'Español', 'Turco', 'Italiano')
+</code></pre>
+<h2 id="muestra-el-str-que-este-ubicada-en-una-posicion">Muestra el <code>str</code> que esté ubicada en una posición</h2>
+<pre><code>&gt;&gt;&gt; nacionalidad = ( 'Español', 'Turco', 'Italiano')
+&gt;&gt;&gt; print(nacionalidad[2])
+'Italiano'
+</code></pre>
+<h2 id="mostrar-un-conjunto-de-valores-especificos-de-la-tupla-haciendo-uso-de-su-posicion">Mostrar un conjunto de valores específicos de la tupla haciendo uso de su posición</h2>
+<pre><code>&gt;&gt;&gt; paises = ( 'España', nacionalidad, 'Turquía', 'Italia','Francia', 'Munich')
+&gt;&gt;&gt; print(paises[3:5])
+('Italia', 'Francia')
+</code></pre>
+<h1 id="listas">Listas</h1>
+<p>Grupo de valores representados dentro de unos [], se pueden cambiar de forma simple y sencilla. Más info en la <a href="https://docs.python.org/3/library/stdtypes.html?highlight=list#list">doc oficial de las listas en Python</a></p>
+<p>Declarando una lista:</p>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+</code></pre>
+<h2 id="anadir-valores-en-la-ultima-posicion-de-la-lista-similar-a-la-tupla">Añadir valores en la última posición de la lista, (<em>similar a la tupla</em>)</h2>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+&gt;&gt;&gt; animales += [ 'lagartija', 'pez' ]
+&gt;&gt;&gt; print(animales)
+['gato', 'perro', 'búho', 'lagartija', 'pez']
+</code></pre>
+<h2 id="tambien-podemos-utilizar-extend">También podemos utilizar .extend()</h2>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+&gt;&gt;&gt; animales.extend([ 'lagartija', 'pez' ])
+&gt;&gt;&gt; print(animales)
+['gato', 'perro', 'búho', 'lagartija', 'pez']
+</code></pre>
+<p>Por otro lado podemos añadir un valor a partir de una posición específica dentro de la lista <code>.insert()</code></p>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+&gt;&gt;&gt; animales.insert(0, 'lagartija')
+&gt;&gt;&gt; print(animales)
+['lagartija', 'gato', 'perro', 'búho']
+</code></pre>
+<h2 id="eliminar-un-valor-de-la-lista">Eliminar un valor de la lista</h2>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+&gt;&gt;&gt; animales.remove('gato')
+&gt;&gt;&gt; print(animales)
+[ 'perro', 'búho' ]
+</code></pre>
+<h2 id="multiplicar-el-no-veces-los-valores-de-la-lista">Multiplicar el nº veces los valores de la lista</h2>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+&gt;&gt;&gt; animales * 2
+['gato', 'perro', 'búho', 'gato', 'perro', 'búho']
+</code></pre>
+<h2 id="mostrar-valores-especificos-utilizando-la-posicion-de-dichos-valores-en-la-lista">Mostrar valores específicos utilizando la posición de dichos valores en la lista</h2>
+<pre><code>&gt;&gt;&gt; animales = [ 'gato', 'perro', 'búho' ]
+&gt;&gt;&gt; print(animales[0:2])
+['gato', 'perro']
+</code></pre>
+<h1 id="diccionarios">Diccionarios</h1>
+<p>Son un conjunto de valores que se almacenan en modo <em>clave:valor</em>, separados los valores por comas, y todas las claves y sus valores van encerrados en <code>{}</code> como JSON. Las claves no pueden contener tuplas, diccionarios, sets… solo <code>str</code> o <code>int</code>. Más info en la <a href="https://docs.python.org/3/library/stdtypes.html?highlight=dictionary#dict">doc oficial</a></p>
+<pre><code>&gt;&gt;&gt; ciudades = { 'Andalucía': 'Sevilla', 'País Vasco': 'Bilbao', 'Baleares':'Palma' }
+</code></pre>
+<h2 id="accediendo-a-un-valor-del-diccionario">Accediendo a un valor del diccionario</h2>
+<pre><code>&gt;&gt;&gt; ciudades = { 'Andalucía': 'Sevilla', 'País Vasco': 'Bilbao', 'Baleares':'Palma' }
+&gt;&gt;&gt; print(ciudades['Andalucía'])
+Sevilla
+</code></pre>
+<h2 id="obtener-el-no-de-posiciones-de-una-lista">Obtener el nº de posiciones de una lista</h2>
+<pre><code>&gt;&gt;&gt; ciudades = { 'Andalucía': 'Sevilla', 'País Vasco': 'Bilbao', 'Baleares':'Palma' }
+&gt;&gt;&gt; len(ciudades)
+3
+</code></pre>
+<h2 id="obtener-las-claves-de-un-diccionario">Obtener las claves de un diccionario</h2>
+<pre><code>&gt;&gt;&gt; ciudades = { 'Andalucía': 'Sevilla', 'País Vasco': 'Bilbao', 'Baleares':'Palma' }
+&gt;&gt;&gt; ciudades.keys()
+dict_keys(['Andalucía', 'País Vasco', 'Baleares'])
+</code></pre>
+<h2 id="obtener-los-valores-de-un-diccionario">Obtener los valores de un diccionario</h2>
+<pre><code>&gt;&gt;&gt; ciudades = { 'Andalucía': 'Sevilla', 'País Vasco': 'Bilbao', 'Baleares':'Palma' }
+&gt;&gt;&gt; ciudades.values()
+dict_values(['Sevilla', 'Bilbao', 'Palma'])
+</code></pre>
+<h2 id="obtener-un-valor-de-una-clave-del-diccionario">Obtener un valor de una clave del diccionario</h2>
+<pre><code>&gt;&gt;&gt; print(ciudades.get('Baleares'))
+</code></pre>
+<h2 id="eliminar-un-valor-de-una-clave-del-diccionario">Eliminar un valor de una clave del diccionario</h2>
+<pre><code>del ciudades['Baleares']
+
+# Esto de volverá None.
+print(ciudades.get('Baleares'))
+</code></pre>
+<h2 id="cambiar-el-valor-de-una-clave-del-diccionario">Cambiar el valor de una clave del diccionario</h2>
+<pre><code>ciudades['Baleares'] = 'Menorca'
+
+# Esto de volverá Menorca.
+print(ciudades.get('Baleares'))
+</code></pre>
+<h1 id="sets">Sets</h1>
+<p>Son un conjunto sin orden de valores encerrados en <code>{}</code> que se ordenan cuando se imprimen: _Más info en la <a href="https://docs.python.org/3.8/library/stdtypes.html#set-types-set-frozenset">doc oficial de los Sets en Python</a></p>
+<pre><code>&gt;&gt;&gt; marcas_coche = { 'Opel', 'Citröen', 'Tesla' }
+&gt;&gt;&gt; print(marcas_coche)
+{'Citröen', 'Opel', 'Tesla'}
+</code></pre>
+<h2 id="comparar-2-sets-y-mostrar-los-valores-no-duplicados-de-ambas-listas">Comparar 2 sets y mostrar los valores no duplicados de ambas listas</h2>
+<pre><code>&gt;&gt;&gt; marcas_coche = { 'Opel', 'Citröen', 'Tesla' }
+&gt;&gt;&gt; marcas_moto = { 'Suzuki', 'Citröen', 'Tesla', 'Yamaha' }
+&gt;&gt;&gt; marcas_coche | marcas_moto
+{'Citröen', 'Opel', 'Suzuki', 'Tesla', 'Yamaha'}
+</code></pre>
+<h2 id="comparar-2-sets-y-mostrar-los-valores-duplicados-de-ambas-listas-como-sin-repetirlos">Comparar 2 sets y mostrar los valores duplicados de ambas listas como sin repetirlos</h2>
+<pre><code>&gt;&gt;&gt; marcas_coche = { 'Opel', 'Citröen', 'Tesla' }
+&gt;&gt;&gt; marcas_moto = { 'Suzuki', 'Citröen', 'Tesla', 'Yamaha' }
+&gt;&gt;&gt; marcas_coche &amp; marcas_moto
+{'Citröen', 'Tesla'}
+</code></pre>
+<h2 id="comparar-2-sets-y-mostrar-diferencias">Comparar 2 sets y mostrar diferencias</h2>
+<pre><code>&gt;&gt;&gt; marcas_coche = { 'Opel', 'Citröen', 'Tesla' }
+&gt;&gt;&gt; marcas_moto = { 'Suzuki', 'Citröen', 'Tesla', 'Yamaha' }
+&gt;&gt;&gt; marcas_coche - marcas_moto
+{'Opel'}
+&gt;&gt;&gt; marcas_moto - marcas_coche
+{'Suzuki', 'Yamaha'}
+</code></pre>
+<h2 id="anadir-un-conjunto-de-valores-a-un-set-y-que-queden-en-primer-lugar">Añadir un conjunto de valores a un set y que queden en primer lugar</h2>
+<pre><code>marcas_coche.update([[&quot;2&quot;,&quot;3&quot;,&quot;4&quot;])
+print(marcas_coche)
+{2, 3, 4, 'Opel', 'Citröen', 'Tesla'}
+</code></pre>
+<h2 id="anadir-un-valor-al-set">Añadir un valor al set</h2>
+<pre><code>marcas_coche.add(&quot;Valor&quot;)
+print(marcas_coche)
+{2, 3, 4, 'Opel', 'Citröen', 'Tesla', 'Valor'}
+</code></pre>
+<h2 id="eliminar-un-valor-del-set">Eliminar un valor del set</h2>
+<pre><code>marcas_coche.remove(&quot;Opel&quot;)
+print(marcas_coche)
+{2, 3, 4, 'Citröen', 'Tesla', 'Valor'}
+</code></pre>
+<h2 id="imprimir-dos-sets-en-uno">Imprimir dos sets en uno</h2>
+<pre><code>setA = {1,2,3,4,5}
+setB = {6,7,8,9,10}
+print(setA|setB)
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../../redes/conversion-numeros/" class="btn btn-neutral float-right" title="Conversión de números">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tipos-de-operadores/" class="btn btn-neutral" title="Tipos de operadores"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../tipos-de-operadores/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../redes/conversion-numeros/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

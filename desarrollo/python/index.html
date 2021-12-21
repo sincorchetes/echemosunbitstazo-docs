@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Introducción - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Introducci\u00f3n";
+    var mkdocs_page_input_path = "desarrollo/python/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Introducción</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#historia">Historia</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notas-importantes">Notas importantes</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Introducción</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduccion">Introducción</h1>
+<h2 id="historia">Historia</h2>
+<p>Python es un lenguaje de programación interpretado, de alto nivel y de interés general. Este lenguaje tiene una filosofía de programación que se centra en la legibilidad del código, para ello implementa una serie de declaraciones y estándares que ha de respetarse para que el código funcione como es la indentación. Python es un lenguaje orientado a objetos que facilitan a los desarrolladores escribir un código limpio, eficaz, lógico y pequeño que sirve tanto para pequeños, como medianos y grandes proyectos.</p>
+<p>La primera versión de Python se publicó en el año 1991 por Guido van Rossum un programador holandés graduado en matemáticas y ciencias computacionales en la universidad de Amsterdam en 1982. Posteriormente se publicó la versión 2.0 el día 16 de octubre del año 2000 y la versión 3.0 que se liberó el 3 de diciembre de 2008. Actualmente las versiones 1.0 y 2.0 ya no están soportadas, esta última dejó de tener soporte el día 31 de diciembre de 2019.</p>
+<h2 id="notas-importantes">Notas importantes</h2>
+<p>Antes de seguir con este artículo es muy importante que sepamos que la versión con la que trabajaremos en las siguientes entragas es <em>Python 3</em>. Python 2.7 no tiene más soporte desde el <strong>31 de diciembre del 2019</strong>.</p>
+<p>A parte de la versión, conviene saber que tenemos que leer mucho la <a href="https://docs.python.org/3">documentación oficial</a> si no queremos perder horas y horas con las clásicas pruebas de Error/Acierto (<em>pruebo cosas al azar y lo que salga salió</em>).</p>
+<p>También tenemos muchos recursos en línea como <a href="https://realpython.com/">Real Python</a> que contienen muchos recursos bastante bien explicados; <a href="https://www.fullstackpython.com/best-python-resources.html">Full Stack Python</a> tiene tambień muchos recursos, ayudas…</p>
+<h1 id="como-usar-python">¿Cómo usar Python?</h1>
+<p>Sin duda un elemento imprescindible para poder trabajar con Python son los modos en los qué podemos trabajar con él. Podemos hacerlo de dos formas, mediante intérprete de comandos o elaborando un archivo de Python.</p>
+<h2 id="interprete-de-comandos">Intérprete de comandos</h2>
+<p>Si estas en Linux o BSD, puedes ver las múltiples (si hay), versiones instaladas en tu sistema si haces un simple: whereis python verás una salida como esta: .. code-block:: bash</p>
+<blockquote>
+<p>python: /usr/bin/python3.7-config /usr/bin/python2.7 /usr/bin/python3.7m-x86_64-config /usr/bin/python /usr/bin/python3.7 /usr/bin/python3.7m /usr/bin/python3.7m-config /usr/lib/python2.7 /usr/lib/python3.7 /usr/lib64/python2.7 /usr/lib64/python3.7 /usr/include/python2.7 /usr/include/python3.7m</p>
+</blockquote>
+<p>Como podemos ver, en mi sistema tengo instalados una versión de Python 3.7 como una 2.7. Es importante destacar que en el curso SIEMPRE trabajaremos con la rama 3.7 o superior porque la versión 2.7 quedó fuera de soporte desde el 31 de diciembre de 2019 y que prestaré más atención a SO Linux que BSD.</p>
+<h3 id="como-se-que-version-tengo-por-defecto-en-el-sistema">¿Cómo sé que versión tengo por defecto en el sistema?</h3>
+<p>Si hacemos un <code>ls /usr/bin |grep python</code> veremos que un enlace simbólico está apuntado a una versión concreta.</p>
+<pre><code>lrwxrwxrwx.  1 root root              9 Jan 30 10:18 python -&gt; ./python3
+lrwxrwxrwx.  1 root root              9 Oct 21 15:13 python2 -&gt; python2.7
+-rwxr-xr-x.  1 root root          16072 Oct 21 15:13 python2.7
+</code></pre>
+<p>También se puede saber desde el gestor de paquetes que utilices a menudo en tu distribución de Linux o sistemas BSD y/o ejecutando python -V que este te devolverá la versión:</p>
+<pre><code>$ python -V
+Python 3.7.6
+</code></pre>
+<h3 id="acceder-al-interprete-de-python">Acceder al intérprete de Python</h3>
+<p>Basta con que ejecutemos el comando <code>python</code> para ^<code>empezar a trabajar &lt;https://docs.python.org/3.8/tutorial/interpreter.html&gt;</code>_</p>
+<pre><code>$ python
+Python 3.7.6 (default, Jan  8 2020, 19:59:22)
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre>
+<p>Vemos una información de todo un poco, con qué compilador fue compilado Python, qué versión estamos utilizando…etc</p>
+<p>Hay una sintaxis mínima que tenemos que entender del promp cuando usamos el intérprete: <code>&gt;&gt;&gt;</code> se refiere a un código que puede ejecutarse sin identación por ejemplo cuando definimos una variable, una función…</p>
+<pre><code>&gt;&gt;&gt; variable = 1
+</code></pre>
+<p>… aquí está mencionando que tenemos que indentar, es decir, añadir los espacios (4) correspondientes para respetar la sintaxis de Python.</p>
+<pre><code>&gt;&gt;&gt; def func():
+...    variable = 1
+</code></pre>
+<p>“SALIDA”: Cuando solo salen estas comillas simples, está informando de un valor o imprimiendo la salida de una función, variable…etc</p>
+<pre><code>&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.version
+'3.7.6 (default, Jan  8 2020, 19:59:22) \n[GCC 7.3.0]'
+</code></pre>
+<h3 id="usarlo-como-calculadora">Usarlo como calculadora</h3>
+<p>Se pueden realizar operaciones aritméticas (<em>ya las veremos más adelante</em>) como suma, resta, división, multiplicación…</p>
+<pre><code>&gt;&gt;&gt; 3 + 2
+5
+</code></pre>
+<h3 id="como-salir-de-la-terminal">¿Cómo salir de la terminal?</h3>
+<p>Para salir podemos usar la función <code>exit()</code> o pulsar la combinación de teclas Ctrl + C</p>
+<h2 id="repl-tu-interprete-en-linea">REPL tu intérprete en línea</h2>
+<p><a href="https://repl.it/">REPL.it</a> es una página que utilizaré mucho para dinamizar los ejemplos, se trata de un intérprete en línea que permite crear un entorno pequeño de Python y poder trabajar con él. En casi todos los ejemplos pondré un enlace para aquellas personas que quieran probar el código y no dispongan de intérprete.</p>
+<h2 id="creando-un-archivo-python">Creando un archivo Python</h2>
+<p>Los archivos de Python tienen la extensión <code>.py</code>, y comienzan siempre declarando la ruta del intérprete, a esto se le conoce como <a href="https://es.wikipedia.org/wiki/Shebang">SheBang</a>. Por lo general, se suele utilizar la siguiente cabecera para evitar solapamientos con la versión 2.7.</p>
+<pre><code>`#!/usr/bin/env python3`
+</code></pre>
+<p>Python 3 utiliza la codificación <a href="https://docs.python.org/3/howto/unicode.html#unicode-literals-in-python-source-code">UTF-8 por defecto</a>, por lo que si queremos trabajar con otro tipo de codificación tendremos que especificarla justamente debajo del SheBang.</p>
+<pre><code>#!/usr/bin/env python3
+# -*- coding: latin-1 -*-
+</code></pre>
+<p>A partir de aquí añadimos nuestro código.</p>
+<p>También es importante, que se le den permisos de escritura al archivo de Python para poderlo ejecutar desde terminal, si no obtendremos el error de permisos:</p>
+<pre><code>$ ./hola.py
+bash: ./hola.py: Permission denied
+$ chmod +x hola.py
+$ ./hola.py
+Hello world
+</code></pre>
+<p>Ya que sabemos esto, cuando en los comandos de ejemplo haga referencia a los diferentes tipos de prompt (<code>&gt;&gt;&gt;</code>, <code>...</code> o <code>' '</code>) usamos directamente el intérprete y cuando no lo haga, estamos haciendo un archivo en Python.</p>
+<p>¡Una vez que sabemos esto, adelante!</p>
+<h2 id="comentarios">Comentarios</h2>
+<p>Algo muy importante sobre todo en nuestro código es comentar. Comentar nos permite recordar los cambios que hemos hecho en el código o tener al menos un punto de retorno porque cuando llevas muchas horas programando y programando, y revisando… dejas el código unos días, y te costará mucho entender y comprender todo el código de nuevo sin tener una ayuda de por qué decidimos hacer un cambio en la estructura, en el flujo del código…etc</p>
+<h3 id="como-se-comenta-en-python">¿Cómo se comenta en Python?</h3>
+<p>Si quieres <a href="https://docs.python.org/3.8/reference/lexical_analysis.html#comments">comentar</a> una línea, puedes usar:</p>
+<pre><code># Comentamos con la almohadilla
+</code></pre>
+<h3 id="cuando-queremos-comentar-multiples-lineas-utilizaremos-esta-sintaxis">Cuando queremos comentar múltiples líneas, utilizaremos esta sintaxis</h3>
+<pre><code>&quot;&quot;&quot;
+Este es un comentario multilínea.
+:D
+&quot;&quot;&quot;
+</code></pre>
+<p><a href="https://repl.it/@sincorchetes/comentarios">Ver ejemplo dinámico aquí</a></p>
+<h2 id="identificadores">Identificadores</h2>
+<p>Los identificadores son el nombre que se utilizan para identificar una variable, función, clases o un objeto. Las principales reglas que se deben respetar son las siguientes:</p>
+<ul>
+<li>No se utilizan caracteres especiales o numéricos menos ( _ ) que se puede utilizar como un identificador</li>
+<li>Las palabras clave no se utilizan</li>
+<li>Python discrimina de mayúsculas y minúsculas por lo que no es lo mismo llamar a una función o variable <code>var</code> si está definida como <code>Var</code>.</li>
+<li>Indentar es obligatorio, hay que respetar los espacios cuando se crean funciones, clases o métodos.</li>
+</ul>
+<h2 id="variable">Variable</h2>
+<p>Las variables permiten almacenar un valor que le asignes como una cadena, un dato númerico, listas, tuplas… el tipo de valor lo veremos con más profundidad en entregas posteriores, pero hay que saber lo que hace este identificador y para que nos puede servir.</p>
+<pre><code>&gt;&gt;&gt; variable = &quot;Hello world&quot;
+</code></pre>
+<h2 id="funciones">Funciones</h2>
+<p>Permiten ejecutar un fragmento de código específico el cuál puede solicitar o no datos para la ejecución de dicho código.</p>
+<pre><code>&gt;&gt;&gt; def nombre_funcion(argumentos):
+...    # Bloque de código
+</code></pre>
+<p>Los argumentos se separan por comas.</p>
+<h2 id="bucles">Bucles</h2>
+<p>Permiten recorrer un conjunto de datos como un <code>set|lista|tupla|collection</code>…etc o ejecutarse desde un rango específico como por ejemplo, de 0 a 100 o de 1 a 5…etc</p>
+<h3 id="bucle-for">Bucle for</h3>
+<pre><code>&gt;&gt;&gt; for x in a:
+...    # Bloque de código
+</code></pre>
+<p>Es el más común.</p>
+<h2 id="clases">Clases</h2>
+<p>Las clases son la plantilla de los objetos, Python es un lenguaje de programación orientado a objetos, por lo que es indispensable este identificador.</p>
+<h3 id="propiedades">Propiedades</h3>
+<p>Son los atributos que tiene una clase, a fin de cuentas es como usar variables en otro contexto de programación.</p>
+<h3 id="metodos">Métodos</h3>
+<p>Son las funciones o acciones que tiene una clase.</p>
+<h2 id="modulo">Módulo</h2>
+<p>Son fragmentos de códigos externos o integrados en Python que realizan una serie de cosas, se puede conocer en otros lenguajes como librerías.</p>
+<p>Pero no nos alarmemos, todos estos identificadores los veremos más adelante de una forma más profunda.</p>
+<h2 id="palabras-clave">Palabras clave</h2>
+<p>Python como otros lenguajes, tienen una serie de palabras que no se deben utilizar bajo ningún concepto para utilizarlos como identificadores. Podemos averiguar cuáles son desde su <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">documentación oficial</a> o importando el módulo <code>keyword</code> y su propiedad <code>.kwlist</code></p>
+<pre><code>&gt;&gt;&gt; import keyword
+&gt;&gt;&gt; print(keyword.kwlist)
+</code></pre>
+<p>Nos devolverá esta salida:</p>
+<pre><code>['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+</code></pre>
+<p>Nota</p>
+<p>Ver <a href="https://repl.it/@sincorchetes/palabrasclave">ejemplo dinámico aquí</a> Todas estas palabras no se podrán utilizar como variables, nombres de lista, tuplas, diccionarios… porque su uso está reservado para otras finalidades.</p>
+<p>También podemos averiguar si la palabra que estamos utilizando puede estar dentro de esta lista con su método <code>.iskeyword()</code>.</p>
+<pre><code>&gt;&gt;&gt; keyword.iskeyword('pass')
+</code></pre>
+<p>Esto devolverá como resultado <code>True</code> porque es una palabra reservada.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="controles-de-flujo/" class="btn btn-neutral float-right" title="Condicionales">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../contenedores/docker/docker/" class="btn btn-neutral" title="Introducción"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../contenedores/docker/docker/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="controles-de-flujo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

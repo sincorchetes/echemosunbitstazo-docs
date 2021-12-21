@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Imprimir valores y funciones - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Imprimir valores y funciones";
+    var mkdocs_page_input_path = "desarrollo/python/imprimir-valores-y-funciones.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Imprimir valores y funciones</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#sustitucion-de-tipos-de-datos-en-sentencias-print">Sustitución de tipos de datos en sentencias print()</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#iteradores">Iteradores</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#funciones">Funciones</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#return">return</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#yield">yield</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tipos-de-funciones-en-python">Tipos de funciones en Python</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#asignar-una-funcion-a-una-variable">Asignar una función a una variable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#asignar-valores-por-defecto-a-los-argumentos">Asignar valores por defecto a los argumentos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#closures">Closures</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#generadores">Generadores</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#funcion-lambda">Función Lambda</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Imprimir valores y funciones</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="imprimir-valores-y-funciones">Imprimir valores y funciones</h1>
+<h2 id="sustitucion-de-tipos-de-datos-en-sentencias-print">Sustitución de tipos de datos en sentencias print()</h2>
+<p>Cuando queremos incluir un valor que proviene de variables, listas, sets, tuplas… se pueden hacer de múltiples formas. Por ejemplo:</p>
+<pre><code>variable = &quot;Susana&quot;
+print(&quot;Hola me llamo:&quot;, variable)
+Hola me llamo Susana.
+</code></pre>
+<p>Podemos hacerlo de esta forma:</p>
+<pre><code>variable = &quot;Susana&quot;
+print(&quot;Hola me llamo: %s&quot; % variable)
+Hola me llamo Susana.
+</code></pre>
+<p>Tenemos que tener en cuenta que de esta manera, hay que definir si el dato que vamos a sustituir es <code>str</code> = <code>%s%</code>, <code>int</code> = <code>%i</code>, <code>float</code> = <code>%f</code>.</p>
+<p>Nota</p>
+<p>Los valores de tipo <code>complex</code> = <code>%c</code> no tienen sustitución directa en esta forma, por lo que hay que utilizar otro método como en el anterior.</p>
+<p>O de esta otra:</p>
+<pre><code>variable = Susana
+print(f'Hola me llamo {variable}')
+</code></pre>
+<p>También tenemos esta otra:</p>
+<pre><code>variable = &quot;Susana&quot;
+print(&quot;Hola me llamo {}&quot;.format(variable))
+</code></pre>
+<p>En fin, hay muchas formas de hacer sustituciones en los <code>str</code> y en otros tipos de datos que puedes consultar en la <a href="https://docs.python.org/3/tutorial/inputoutput.html">documentación oficial</a></p>
+<h2 id="iteradores">Iteradores</h2>
+<p>Un iterador es una especie de puntero que permite devolver valores que le especifiquemos.</p>
+<pre><code> lista= [&quot;Hola&quot;,&quot;esto&quot;,&quot;es&quot;,&quot;un&quot;,&quot;ejemplo&quot;,&quot;de&quot;,&quot;iterador&quot;]
+
+ # Inicializamos el iterador
+ mi_iterador = iter(lista)
+
+ # Se puede imprimir el valor de esta manera, que devuelve la palabra Hola
+ print(next(mi_iterador))
+
+ # Pasamos al siguiente iterador que contiene la palabra &quot;esto&quot;, pero no la imprimimos.
+next(mi_iterador)
+
+# Imprimimos la palabra &quot;es&quot;
+print(next(mi_iterador))
+
+# Imprimir todos los elementos del iterador:
+for item in mi_iterador:
+  print(item)
+</code></pre>
+<h2 id="funciones">Funciones</h2>
+<p>Conjunto de código organizado y que contienen una serie de instrucciones que pueden reutilizarse. Por ejemplo, <code>dormir</code> es una función que tenemos, hay múltiples variables como el lugar, la intensidad de la luz, si estamos cómodos… pero que al final el resultado es descansar. Lo mismo sucede con las funciones.</p>
+<p>Declaración de ejemplo de una función:</p>
+<pre><code>def my_funcion():
+  # Bloque de código
+</code></pre>
+<h3 id="return">return</h3>
+<pre><code>return` permite devolver un valor de la función y darla por terminada más que utilizar un `print()
+def func(a):
+  return a
+
+valor=func(12)
+print(valor)
+</code></pre>
+<h3 id="yield">yield</h3>
+<p>En contra posición de <code>return</code>, <code>yield</code> permite seguir aplicando el código que venga más adelante de la función creando una especie de co-rutina o gestión de resultados o ejecución por turnos, como si fuera un corredor de atletismo que le pasa el testigo a otro y su marca de tiempo es el valor de retorno. Hacemos uso de los iteradores para extraer los datos.</p>
+<pre><code> def func(a):
+   print(&quot;Devolvemos el primer resultado: %i&quot; % (a))
+   yield a
+   c = a - 2
+   print(&quot;Devolvemos el segundo valor: %i&quot; % (c))
+   yield c
+
+ abc = func(20)
+
+mi_iter = iter(abc)
+
+for item in mi_iter:
+    print(item)
+</code></pre>
+<h2 id="tipos-de-funciones-en-python">Tipos de funciones en Python</h2>
+<p>En Python, tenemos 2 tipos de funciones, una que creamos nosotros y otras que vienen integradas. Las que nosotros creamos las definimos en nuestra aplicación, script… mientras que las integradas, vienen con la instalación de Python que ya fueron elaboradas y que puedes utilizar como: <code>len()</code>, <code>max()</code>, <code>min(), :code:</code>type()<code>,</code>range()`…</p>
+<p>Veamos un ejemplo:</p>
+<pre><code>&gt;&gt;&gt; def hola_mundo():
+&gt;&gt;&gt;   print(&quot;Hola Mundo&quot;)
+&gt;&gt;&gt; hola_mundo()
+Hola Mundo
+</code></pre>
+<p>Podemos pasar todo tipo de valores, por ejemplo, pasaremos una lista como valor y un número entero:</p>
+<pre><code>&gt;&gt;&gt; lugares = [ &quot;Toronto&quot;, &quot;Tokio&quot;, &quot;Nueva Zelanda&quot; ]
+
+&gt;&gt;&gt; def mostrar_lugares(valores):
+&gt;&gt;&gt;   for lugar in valores:
+&gt;&gt;&gt;     print(lugar)
+&gt;&gt;&gt; mostrar_lugares(lugares)
+Toronto
+Tokio
+Nueva Zelanda
+</code></pre>
+<h2 id="asignar-una-funcion-a-una-variable">Asignar una función a una variable</h2>
+<p>Podemos asignar una función a una variable y llamarla como función desde la propia variable:</p>
+<pre><code>def mensaje(msg):
+    print(msg)
+
+segundo=mensaje
+
+# Imprime &quot;Mundo&quot;
+segundo(&quot;Mundo&quot;)
+</code></pre>
+<h2 id="asignar-valores-por-defecto-a-los-argumentos">Asignar valores por defecto a los argumentos</h2>
+<p>Si no le decimos o especificamos un valor cuando llamamos a la función, podemos hacer que tome parámetros por defecto.</p>
+<pre><code>def test(variable=&quot;Valor que queremos&quot;)
+  print(variable)
+
+test()
+</code></pre>
+<p>Esto devolverá «Valor que queremos», si especificamos un valor tal que así:</p>
+<pre><code>test(&quot;Hola mundo&quot;)
+</code></pre>
+<p>Devolverá <code>Hola mundo</code></p>
+<h2 id="closures">Closures</h2>
+<p>Los closures es un objeto especial que permite obtener información de otras funciones hijas que forman parte de una función padre, permiten dar más seguridad al código ya que todo lo que tenga que ejecutarse se hará dentro de ese ámbito o <em>scope</em>.</p>
+<p>Ejemplo de closure:</p>
+<pre><code>def func(x):
+    def func_a():
+        print(x)
+    return func_a()
+</code></pre>
+<h2 id="generadores">Generadores</h2>
+<p>Son funciones que crean iteradores, estas funciones realmente son objetos en Python. Si hacemos un print sobre la función, veremos <code>&lt;generator object mensaje at 0x7f31a4957250&gt;</code>, es muy importante saberlo.</p>
+<p>No solo podemos trabajar con <code>return</code>, también con <code>yield</code>.</p>
+<pre><code> def mensaje(msg):
+     def lector():
+         print(msg, &quot;%s&quot; % (&quot;leido por un lector.&quot;))
+     def escritor():
+         print(msg, &quot;%s&quot; % (&quot;escrito por un escritor.&quot;))
+
+     yield lector()
+     yield escritor()
+
+ejemplo = mensaje(&quot;Alguien escribió este mensaje y ha sido&quot;)
+
+for item in ejemplo:
+    if item is None:
+        pass
+    else:
+        print(item)
+</code></pre>
+<h2 id="funcion-lambda">Función Lambda</h2>
+<p>Esta función no tiene nombre también se le conoce como función anónima, sin embargo, no puede contener más de una expresión:</p>
+<pre><code>&gt;&gt;&gt; x = lambda a : a + 10
+&gt;&gt;&gt; resultado = x(5)
+&gt;&gt;&gt; print(resultado)
+15
+</code></pre>
+<p>Si lo pasamos a función esto sería así:</p>
+<pre><code>&gt;&gt;&gt; def sumar(a,b):
+&gt;&gt;&gt;   return a + b
+&gt;&gt;&gt; sumar(5,10)
+15
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../instalacion/" class="btn btn-neutral float-right" title="Instalación">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../funciones-print-type-tipos-de-datos/" class="btn btn-neutral" title="Función print()"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../funciones-print-type-tipos-de-datos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../instalacion/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

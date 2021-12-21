@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Introducción - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Introducci\u00f3n";
+    var mkdocs_page_input_path = "sistemas/linux/bash/index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Linux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Bash</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Introducción</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#que-es-bash">¿Qué es Bash?</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Sistemas &raquo;</li>
+        
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+        
+          <li>Bash &raquo;</li>
+        
+      
+    
+    <li>Introducción</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduccion">Introducción</h1>
+<h2 id="que-es-bash">¿Qué es Bash?</h2>
+<p>Bash es un intérprete de comandos también conocido en inglés como una «<em>shell</em>» desarrollada el 8 de junio de 1989 por Brian Fox en el lenguaje C como alternativa y mejora de SH (<em>Bourne Shell</em>). Hoy en día es multiplataforma ya que puede correr tanto en Linux como en Mac OS X (de hecho es shell por defecto), en Windows mediante <a href="https://www.cygwin.com/">Cygwin</a> o mediante la instalación oficial desde su apartado de añadir nuevas características de software.</p>
+<p>Actualmente existen multitudes de I.C pero mencionaremos las más destacadas como:</p>
+<ul>
+<li><code>csh</code>: C Shell creada por Bill Joy, 1978</li>
+<li><code>tcsh</code>: TENEX C Shell desarrollada por Ken Greer, 1981</li>
+<li><code>fish</code>: Shell interactiva liberada el 13 de febrero de 2005 por Axel Liljencrantz</li>
+<li><code>zsh</code>: Z Shell elaborada por Paul Falstad en 1990</li>
+<li><code>ksh</code>: KornShell creada por David Korn en 1983</li>
+</ul>
+<p>Cada una de ellas contiene ciertos matices a la hora de desarrollar scripts que son un serie de ficheros que suelen contener comandos e intrucciones adicionales para que se puedan ejecutar sin tener que escribir grandes bloques de comandos, variables…</p>
+<h1 id="trabajando-con-bash">Trabajando con Bash</h1>
+<h2 id="directorios-y-archivos">Directorios y archivos</h2>
+<p>En este apartado veremos como trabajar con los directorios dentro del sistema. Tenemos que tener en cuenta, de que la arquitectura estandar del sistema de ficheros en Linux (FHS) está organizada en modo de árbol. Esto quiere decir que todo cuelga de un directorio raíz llamado (/), del que cuelga el resto de ellos.</p>
+<p>Nota</p>
+<p>Comentaremos los directorios más básicos y relevantes para este artículo, ya que debe dedicársele un post solamente para explicar qué funciones realiza cada directorio del sistema.**</p>
+<p>El directorio dónde por defecto se generan las carpetas para los nuevos usuarios del sistema se encuentra ubicado en <code>/home</code>. Por defecto, nuestra shell nos sitúa en el directorio principal de nuestro usuario, con lo que no tendremos que desplazarnos a niveles superiores dentro del sistema de archivos.</p>
+<h3 id="archivos-ocultos">Archivos ocultos</h3>
+<p>Los archivos ocultos se representan por llevar un <code>.</code> como prefijo al nombre del archivo o directorio y no aparecerán listados con ningún comando por defecto. No necesita ningún tipo de modificador adicional para generarlos o para leerlos.</p>
+<h3 id="rutas-absolutas-y-relativas">Rutas absolutas y relativas</h3>
+<p>Las rutas absolutas son aquellas que contienen la dirección completa dentro de la jerarquía del sistema de archivos. <code>/home/sincorchetes/Videos/Echemosunbitstazo/capitulo1.ogg</code></p>
+<p>Mientras que las rutas relativas, solo contienen una dirección breve que se muestra desde la propia carpeta. Imaginemos que estamos en el directorio <code>/home/sincorchetes/</code> y queremos llegar hasta el <code>capitulo1.ogg</code>. Para ello tendríamos que apuntar de la siguiente manera: <code>Echemosunbitstazo/capitulo1.ogg</code> ó bien <code>./Echemosunbitstazo/capitulo1.ogg</code></p>
+<h3 id="escalado-entre-directorios">Escalado entre directorios</h3>
+<p>Nosotros podemos aprovecharnos de algunos «alias» que nos provee la shell para agilizar la gestión o administración de directorios haciendo uso de las rutas relativas. Estos son algunos trucos:</p>
+<ul>
+<li><code>.</code>: Significa, el directorio actual. <code>ls .</code> devuelve una salida en la que mostrará todos los directorios y archivos en el directorio actual</li>
+<li><code>..</code>: Sube un nivel superior, <code>ls ..</code> mostrará los directorios y archivos del directorio padre.</li>
+</ul>
+<h3 id="obtener-la-ruta-del-directorio-actual">Obtener la ruta del directorio actual</h3>
+<p>Si queremos saber en qué directorio nos encontramos actualmente, bastará con ejecutar el comando:</p>
+<pre><code>$ pwd
+</code></pre>
+<p><code>pwd(1)</code> proviene del inglés «print name of current/working directory», imprimir el nombre del directorio actual.</p>
+<h3 id="creando-un-directorio">Creando un directorio</h3>
+<p>Con el siguiente comando generamos un directorio nuevo sin ningún tipo de contenido. Existe una sintaxis para crear directorios. No se puede empezar por caracteres especiales, aunque, dentro de los caracteres especiales se puede utilizar el espacio, pero se puede utilizar números, mayúsculas o minúsculas.</p>
+<pre><code>$ mkdir nombre_directorio
+</code></pre>
+<p>Nota</p>
+<p>En caso de que queramos crear un subdirectorio sin existir primero el directorio padre, nos dará error si lo ejecutamos tal cual. Para ello, deberemos aplicar la opción <code>-p</code>.</p>
+<h3 id="desplazarnos-entre-directorios">Desplazarnos entre directorios</h3>
+<p>Para poder desplazarnos entre directorios tenemos dos formas de hacerlo, mediante el comando UNIX por excelencia <code>cd(1)</code> o <code>pushd(1)</code> y <code>popd(1)</code>.</p>
+<h3 id="desplazandonos-con-cd">Desplazándonos con cd</h3>
+<p>Simplemente deberemos ejecutar el comando y la ruta ya sea relativa o absoluta a la que queramos acceder como en los siguientes ejemplos:</p>
+<ul>
+<li>Situándonos en el directorio raíz del sistema: <code>cd /</code></li>
+<li>Subiendo un nivel del directorio actual: <code>cd ..</code></li>
+<li>Accediendo a <code>/usr/local/share</code>: <code>cd /usr/local/share</code></li>
+</ul>
+<h3 id="desplazandonos-mediante-pushd-y-popd">Desplazándonos mediante pushd y popd</h3>
+<p>Uno de estos comandos tienen la ventaja de almacenar en la sesión de <code>bash(1)</code> actual el directorio y además, nos ubica en él como es el caso de <code>pushd(1)</code>. Mientras que <code>popd(1)</code>, nos permite volver hacia atrás en caso de no querer seguir estando en él.</p>
+<p>Moviéndonos al directorio raíz:</p>
+<pre><code>$ pushd .themes/
+~/.themes ~
+$ pwd
+/home/sincorchetes/.themes
+</code></pre>
+<p>Volviendo hacia atrás:</p>
+<pre><code>$ popd
+ popd
+~
+$ pwd
+/home/sincorchetes
+</code></pre>
+<p>Estos comandos tienen algunas características especiales que podemos consultarlas en el manual de cada uno de ellos.</p>
+<h3 id="renombrando-archivos-y-directorios">Renombrando archivos y directorios</h3>
+<p>Para cambiar de nombre, solo será necesario ejecutar el comando mv(1) junto con el directorio que queramos cambiar y el directorio con nuevo nombre. Se pueden emplear rutas relativas, absolutas o una combinación de ambas:</p>
+<ul>
+<li><code>mv dir dir_nuevo_nombre</code></li>
+<li><code>mv dir /home/sincorchetes/nuevo_nombre</code></li>
+<li><code>mv /home/sincorchetes/dir /home/sincorchetes/nuevo_nombre</code></li>
+</ul>
+<p>Nota</p>
+<p>Hay que tener cuidado con utilizar <code>mv(1)</code> porque también sirve para mover directorios.**</p>
+<h3 id="moviendo-archivos-y-directorios">Moviendo archivos y directorios</h3>
+<p>Para desplazar directorios o archivos, tan solo tendremos que hacer uso de nuevo del comando <code>mv(1)</code>.</p>
+<ul>
+<li><code>mv archivo.ogg /home/sincorchetes/Videos/Echemosunbitstazo</code></li>
+<li><code>mv archivo.ogg Videos/Echemosunbitstazo</code></li>
+<li><code>mv /home/sincorchetes/archivo.ogg Videos/Echemosunbitstazo</code></li>
+</ul>
+<p>También se puede aplicar un renombre más traslado:</p>
+<ul>
+<li><code>mv archivo.ogg /home/sincorchetes/Videos/Echemosunbitstazo/nuevo_nombre.ogg</code></li>
+<li><code>mv archivo.ogg Videos/Echemosunbitstazo/nuevo_nombre.ogg</code></li>
+<li><code>mv /home/sincorchetes/archivo.ogg Videos/Echemosunbitstazo</code></li>
+<li><code>mv /home/sincorchetes/archivo.ogg /home/sincorchetes/Videos/Echemosunbitstazo</code></li>
+</ul>
+<h3 id="copiando-archivos-y-directorios">Copiando archivos y directorios</h3>
+<p>En el caso de copiar archivos, tenemos el comando <code>cp(1)</code>. También puede aplicarse el uso de rutas absolutas, relativas o un conjunto de las mismas. <code>cp archivo directorio_a_copiar</code></p>
+<p>Es importante destacar, que para copiar un directorio completo a pesar de que esté vacio. Hagamos uso del modificador <code>-r</code> o <code>-R</code> (<em>recursivo</em>)</p>
+<p>También dispone de un modo interactivo utilizando el modificador <code>-i</code></p>
+<h3 id="listar-archivos-y-directorios">Listar archivos y directorios</h3>
+<p>El comando por excelencia en estos casos es <code>ls(1)</code> Nos permite listar con multitudes de opciones si utilizamos los modificadores.</p>
+<ul>
+<li>Listar todos los archivos incluyendo los ocultos con la información que muestra <code>ls -l</code>: <code>ls -al</code></li>
+<li>Mostar el nombre de todos los archivos incluyendo la representación del espacio como caracter escapado: <code>ls -b</code></li>
+<li>Mostrar el nombre de todos los archivos en una sola columna: <code>ls -w 1</code></li>
+</ul>
+<h3 id="tipos-de-archivo">Tipos de archivo</h3>
+<p>En contra posición de sistemas como Windows, en Linux se puede tener un archivo sin ningún tipo de extensión. El sistema se encarga de averiguar que tipo de archivo es y abrirlo con la aplicación correspondiente.</p>
+<p>Si queremos saber algún día si nos han enviado un ejecutable o un audio realmente, haremos uso del comando <code>file(1)</code></p>
+<h3 id="crear-un-fichero-vacio">Crear un fichero vacío</h3>
+<p>Aunque la auténtica utilidad del comando <code>touch(1)</code> es modificar la fecha y hora de los archivos. También se puede utilizar para crear un fichero vacío y añadir texto posteriormente.</p>
+<pre><code>touch fichero_nuevo
+</code></pre>
+<h3 id="mostrando-informacion-de-un-fichero">Mostrando información de un fichero</h3>
+<p>Si queremos leer un archivo de texto plano como la configuración de un servidor Apache, haremos uso del comando <code>cat(1)</code>.</p>
+<pre><code>cat /etc/profile
+</code></pre>
+<p>Salida truncada:</p>
+<pre><code># /etc/profile
+
+# System wide environment and startup programs, for login setup
+# Functions and aliases go in /etc/bashrc
+
+# It's NOT a good idea to change this file unless you know what you
+# are doing. It's much better to create a custom.sh shell script in
+# /etc/profile.d/ to make custom changes to your environment, as this
+# will prevent the need for merging in future updates.
+
+pathmunge () {
+  case &quot;:${PATH}:&quot; in
+    *:&quot;$1&quot;:*)
+    ;;
+    *)
+    if [ &quot;$2&quot; = &quot;after&quot; ] ; then
+      PATH=$PATH:$1
+    else
+      PATH=$1:$PATH
+    fi
+    esac
+}
+</code></pre>
+<h2 id="trabajando-con-texto">Trabajando con texto</h2>
+<h3 id="mostrar-o-redireccionar-texto">Mostrar o redireccionar texto</h3>
+<p>Bash nos permite mostrar una frase, un texto que queramos gracias al comando <code>echo(1)</code>.</p>
+<pre><code>echo &quot;¡No nos perderemos los nuevos artículos de Echemosunbitstazo!&quot;
+</code></pre>
+<p>También podemos redirigir el texto a un archivo nuevo</p>
+<pre><code>echo &quot;¡No nos perderemos los nuevos artículos de Echemosunbitstazo!&quot; &gt; /home/sincorchetes/Documentos/archivo_nuevo
+</code></pre>
+<p>Añadir información a un archivo ya existente</p>
+<pre><code>echo &quot;¡No te pierdas él próximo día otro capítulo más sobre Bash en echemosunbitstazo.es&quot; &gt;&gt; /home/sincorchetes/Documento/existente
+</code></pre>
+<h3 id="crear-un-archivo-y-anadir-texto-directamente">Crear un archivo y añadir texto directamente</h3>
+<p>Podemos hacer uso del comando <code>cat(1)</code> para finalizar la edición, tendremos que finalizarla pulsando la combinación de teclas <code>CTRL+D</code> y para ello de la siguiente manera:</p>
+<pre><code>cat &gt;fichero_de_ejemplo
+Esto es un ejemplo.
+</code></pre>
+<h2 id="copias-de-seguridad">Copias de seguridad</h2>
+<p>El comando por excelencia para elaborar copias de seguridad en Linux es haciendo uso del comando <code>tar(1)</code></p>
+<h3 id="elaborando-copias-de-seguridad">Elaborando copias de seguridad</h3>
+<h3 id="elaborando-una-copia-de-un-directorio">Elaborando una copia de un directorio</h3>
+<pre><code>tar cfv copia_seguridad.tar dir1 dir2 archivo1 archivo2...
+</code></pre>
+<h3 id="comprimir-con-bzip2">Comprimir con bzip2</h3>
+<pre><code>tar cfvj copia_Seguridad.tar.bz2 dir1 dir2 arch1 arch2...
+</code></pre>
+<h3 id="utilizar-compresion-gzip">Utilizar compresión gzip</h3>
+<pre><code>tar cfvz copia_seguridad.tar.gz dir1 dir2 arch1 arch2...
+</code></pre>
+<h3 id="crear-una-copia-de-seguridad-con-formato-xz">Crear una copia de seguridad con formato xz</h3>
+<pre><code>tar cfvJ copia_seguridad.tar.xz dir1 dir2 arch1 arch2...
+</code></pre>
+<h3 id="descomprimiendo-copias-de-seguridad">Descomprimiendo copias de seguridad</h3>
+<p>A la hora de descomprimir las copias de seguridad no tenemos que declarar el tipo de formato en el que está comprimido, con lo que ganamos más tiempo para dedicarlo a otras cosas.</p>
+<h3 id="descomprimir-una-copia-de-seguridad">Descomprimir una copia de seguridad</h3>
+<pre><code>tar xfv copia_seguridad.tar
+</code></pre>
+<h2 id="comando-grep">Comando grep</h2>
+<p>Este es uno de los comandos más esencial de Bash, nos permite mostrar coincidencias en archivos en base a la cadena de caracteres que nosotr@s le pasemos, en otras palabras, si queremos buscar una palabra en un archivo de texto, <code>grep(1)</code> es nuestro comando.</p>
+<h3 id="sintaxis-y-ejemplos">Sintaxis y ejemplos</h3>
+<p>Acorde con las indicaciones que nos proporciona la todopoderosa biblia de los comandos, <code>man(1)</code> estos son 3 ejemplos que nos da <code>man 1 grep</code>.</p>
+<pre><code>grep [OPCIONES] PATRÓN [FICHERO...]
+grep [OPCIONES] -e PATRÓN ... [FICHERO...]
+grep [OPCIONES] -f FICHERO ... [FICHERO...]
+</code></pre>
+<p>Tanto las opciones, como los patrones y los ficheros se pueden repetir dentro de la línea de ejecución de nuestro comando.</p>
+<p>Vamos con los ejemplos:</p>
+<pre><code>grep -o &quot;Linux&quot; /proc/version
+</code></pre>
+<p>Imprimirá la cadena «Linux» si la encuentra en el archivo, y la imprime tantas veces como la encuentre.</p>
+<pre><code>grep -q &quot;Linux&quot; /proc/version
+</code></pre>
+<p>No imprime nada, es una opción en la que se omite la salida, si encuentra una coincidencia con dicha palabra, devolverá en el estado de la shell un 0. <code>echo $?</code> = 0 si se encontró y = 1 en el caso contrario.</p>
+<pre><code>grep -H &quot;sda&quot; /proc/* 2&gt;/dev/null
+</code></pre>
+<p>Muestra en cada línea en la que encuentre coincidencias, también el nombre del archivo y omite errores.</p>
+<pre><code>grep -A 2 &quot;_this_module&quot; /proc/kallsyms
+</code></pre>
+<p>Muestra las 2 líneas siguientes de haber encontrado la coincidencia en la o las líneas.</p>
+<pre><code>grep -B 2 &quot;_this_module&quot; /proc/kallsyms
+</code></pre>
+<p>La inversa de la anterior, en vez de mostrar las 2 líneas siguientes, muestra las dos líneas anteriores a la coincidencia.</p>
+<pre><code>grep -C 2 &quot;_this_module&quot; /proc/kallsyms
+</code></pre>
+<p>Si la A y la B hacía cada cosa por separado, con la C podemos mostrar tanto las líneas anteriores como las posteriores. En este caso muestra el resultado de las dos sentencias anteriores en una sola sentencia.</p>
+<pre><code>grep -rA 2 &quot;gcc&quot; /proc/ 2&gt;/dev/null
+</code></pre>
+<p>Buscará de forma recursiva en todos los ficheros y directorios que se encuentren dentro del directorio especificado y cuándo obtenga una coincidencia, imprimirá las 2 líneas anteriores a la coincidencia incluyendo el nombre del archivo en el que se encuentre.</p>
+<p>Nota</p>
+<p>El uso del parámetro -r ya incluye el parámetro -H por defecto</p>
+<pre><code>grep -U &quot;note&quot; /bin/cp
+</code></pre>
+<p>Pretendemos encontrar una coincidencia dentro de un binario, y que en caso de encontrarla, ésta nos lo diga mediante un mensaje de salida.</p>
+<pre><code>grep -ob &quot;root&quot; /etc/passwd
+</code></pre>
+<p>Nos mostrará las líneas en dónde la coincidencia se haya repetido n veces dentro de un fichero especificado.</p>
+<pre><code>grep -obrA 2 &quot;root&quot; /etc 2&gt;/dev/null
+</code></pre>
+<p>Permite efectuar lo mismo, pero se visualizarán las 2 líneas en cada coincidencia encontrada, número de línea, nombre de archivo dentro de un directorio y se omitirán los mensajes de error.</p>
+<pre><code>grep -FrB 2 '/usr' /proc 2&gt;/dev/null
+</code></pre>
+<p>Permite utilizar caracteres especiales para la búsqueda de coincidencias. Este comando buscará de forma recursiva la cadena que contiene un carácter «prohibido» y mostrará las 2 líneas anteriores cada vez que encuentre una coincidencia. También omitirán los mensajes de error.</p>
+<pre><code>grep -ErC 2 '??linux' /proc 2&gt;/dev/null
+</code></pre>
+<p>Al contrario que el anterior, aquí utilizaremos expresiones regulares como es el caso de ?? que sustituye a un caracter por signo de interrogación que no recordemos o no estemos seguro de cuál puede ser. Esta sentencia imprimirá las dos líneas siguientes a las coincidencias así mismo como las 2 anteriores, los mensajes de error se omitirán y se visualizará el nombre de los archivos que contengan dichas coincidencias</p>
+<h3 id="fgrep-y-egrep">fgrep y egrep</h3>
+<p>Pues ya los hemos dado en los dos ejemplos anteriores, aunque no lo creamos, <code>fgrep(1)</code> como <code>egrep(1)</code> son dos comandos que actúan como alias.</p>
+<ul>
+<li><code>fgrep(1)</code> equivale a <code>grep -F</code></li>
+<li><code>egrep(1)</code> es igual a <code>grep -E</code></li>
+</ul>
+<h2 id="alias">Alias</h2>
+<p>Los alias nos permiten reducir la longitud de una sentencia que queramos ejecutar en nuestro sistema y atajarla con una simple palabra. Por ejemplo, si queremos acceder a un directorio muy concurrido desde terminal.</p>
+<pre><code>cd ~/Documentos/Archivos/2018/05/10/10-11/Sector/1/ficheros_importantes/Codigo054/Area_51/
+</code></pre>
+<p>No nos imaginamos en absoluto tener que teclear toda esta ruta cada vez que queramos acceder al directorio Area_51. Pues podemos generar un alias, a nivel de sistema o a nivel de nuestro usuario.</p>
+<p>A nivel de sistema, tenemos que añadirlo en <code>/etc/bashrc</code> si es que queremos que ese alias también lo tengan el resto de usuarios o si solo lo queremos para el nuestro, en ese caso, <code>~/.bashrc</code> es el que debemos tocar de la siguiente manera:</p>
+<pre><code>alias nombre_alias='cd ~/Documentos/Archivos/2018/05/10/10-11/Sector/1/ficheros_importantes/Codigo054/Area_51/'
+</code></pre>
+<p>Posteriormente aplicamos los cambios:</p>
+<pre><code>source /etc/bashrc
+</code></pre>
+<p>o si es a nivel usuario:</p>
+<pre><code>source ~/.bashrc
+</code></pre>
+<h2 id="enlaces">Enlaces</h2>
+<p>Los enlaces vienen a ser lo que en Windows tenemos como «Accesos directos» pero a nivel de terminal, podemos especificar un directorio o un archivo que se encuentre en un directorio X pero teniendo un acceso más rápido en un directorio en el que trabajemos. También tenemos enlaces simbólicos que son accesos que si es borrado el archivo o directorio original solo queda el enlace y por lo tanto, no funciona y no es útil, o tenemos lo que denominamos enlaces duros, en los que se conserva una copia del fichero o directorio.</p>
+<h3 id="enlaces-simbolicos">Enlaces simbólicos</h3>
+<p>Para poderlos generar, simplemente tenemos que hacer uso del comando <code>ln(1)</code> con el parámetro <code>-s</code> de soft.</p>
+<pre><code>ln -s /directorio_a_enlazar /directorio_donde_quiero_ver_el_enlace
+</code></pre>
+<p>Por ejemplo:</p>
+<pre><code>ln -s /usr/src ~
+</code></pre>
+<p>Nos genera un enlace simbólico hacia el directorio <code>/usr/src</code> de nuestro <code>/home</code>.</p>
+<p>¿Cómo averiguar si dispongo del enlace simbólico? Cuando hacemos un <code>ls(1)</code> para listar documentos y directorios, veremos en una de las líneas de salida un dato similar:</p>
+<pre><code>lrwxrwxrwx.  1 sincorchetes sincorchetes         9 May 20 17:37  src -&gt; /usr/src/
+</code></pre>
+<ul>
+<li>«l» al principio de esta entrada identifica un enlace simbólico.</li>
+<li><code>src -&gt; /usrc/src</code>: Nos dice hacia dónde apunta.</li>
+</ul>
+<h3 id="enlaces-duros">Enlaces duros</h3>
+<p>Los enlaces duros permiten crear «una copia» de lo enlazado, de tal forma, que si se destruye el archivo o directorio original contínua funcionando.</p>
+<pre><code>ln /directorio_a_enlazar /directorio_donde_quiero_ver_el_enlace
+</code></pre>
+<p>De hecho, si hacemos un <code>ls(1)</code>, no veremos añadida una <code>l</code> en los permisos o en acceso tipo <code>src -&gt; /usr/src</code>.</p>
+<h2 id="busqueda-de-archivos">Búsqueda de archivos</h2>
+<p><code>find(1)</code> a diferencia de <code>locate(1)</code> es un comando que busca a tiempo real y tiene muchísimas funcionalidades añadidas como filtrar por nombre, tipo de ejecutable, fecha, hora…. e incluso, eliminar los ficheros que hemos querido encontrar, mientras que <code>locate(1)</code> trabaja junto con una base de datos generada por <code>updatedb(8)</code> reduciendo drásticamente la actualización puntera de la ubicación de los ficheros y directorios además de no tener la afinidad que posee <code>find(1)</code>.</p>
+<p><a href="https://asciinema.org/a/182400"><img alt="https://asciinema.org/a/182400.png" src="https://asciinema.org/a/182400.png" /></a></p>
+<h3 id="comdando-find">Comdando find</h3>
+<p>En este artículo vamos a guiarnos más por los ejemplos que por explicar la sintaxis o los parámetros de uno en uno.</p>
+<p>Encontrar todos aquellos ficheros y directorios que se encuentren en el directorio <code>/etc</code>, y que aquellos directorios a los que no no podamos acceder a su contenido, no nos muestre el error de permisos.</p>
+<pre><code>find /etc 2&gt;/dev/null
+</code></pre>
+<p>Encontrar todos aquellos archivos en <code>/var/</code> cuya extensión sea .log, y que por supuesto, no muestre aquellos directorios que requieran permisos para su acceso.</p>
+<pre><code>find /var -name &quot;*.log&quot; 2&gt;/dev/null
+</code></pre>
+<p>Mostrar todos los directorios de nuestro <code>/home</code> sin contar los archivos</p>
+<pre><code>find ~ -type d
+</code></pre>
+<p>Encontrar archivos vacíos en nuestro <code>/home</code> y eliminarlos todos</p>
+<pre><code>find ~ -empty -type f -exec rm -rf {} \;
+</code></pre>
+<p>Encontrar ficheros con extensión .log y copiarlos en una carpeta dentro de nuestro home con permisos de superusuario</p>
+<pre><code>sudo find /var -name &quot;.log&quot; -exec cp {} /home/sincorchetes/LOGS \;
+</code></pre>
+<p>Buscando archivos cuya fecha de modificación sea de hace un minuto en nuestro <code>/home</code></p>
+<pre><code>find ~ -cmin 1
+</code></pre>
+<p>Ficheros que han sido accedidos hace 10 minutos</p>
+<pre><code>find ~ -amin 10
+</code></pre>
+<p>Visualizar archivos que contengan .log de extensión, contengan permisos 644</p>
+<pre><code>sudo find /var -name &quot;*.log&quot; -perm 644
+</code></pre>
+<p>Ver archivos que pesen igual o redondeando den 2GB en nuestro directorio</p>
+<pre><code>find ~ -size 2G
+</code></pre>
+<p>Buscar directorios que contengan nuestro nombre de usuario, con permisos 777.</p>
+<pre><code>find / -user sincorchetes -type d -perm 777
+</code></pre>
+<p>Mostrar todos los archivos o directorios simbólicos que se encuentren en el directorio <code>/dev</code> y mostrarlo como si ejcutásemos un <code>ls(1)</code></p>
+<pre><code>sudo find /dev -type l -ls
+</code></pre>
+<p>Listando aquellos archivos de nuestro <code>/home</code> cuya extensión contenga «<code>*</code>.avi» y sean iguales o superiores a 1G</p>
+<pre><code>find ~ -name &quot;*.avi&quot; -a -size 1G
+</code></pre>
+<p>Suprimiendo los .rpm que encontremos que lleguen a 10 megas</p>
+<pre><code>sudo find /var/cache/rpm -name &quot;*.rpm&quot; -a -size 10M -exec rm -rf {} \;
+</code></pre>
+<p>Podemos seguir ejemplos del manpages de <code>find(1)</code> o imaginarnos lo que se nos ocurra que podamos hacer en un futuro, estos son solo pequeños ejemplos de lo que podemos hacer con esta fantástica utilidad.</p>
+<h3 id="comdando-locate">Comdando locate</h3>
+<p>Bien, como hemos dicho anteriormente, este comando hace uso de una base de datos que por lo general suele ubicarse en <code>/var/lib/mlocate/mlocate.db</code>, y su fichero de configuración suele encontrarse en <code>/etc/updatedb.conf</code> todo depende de la distribución que utilicemos.</p>
+<p>También podemos hacer un indexado que es registrar todos los archivos y directorios que queramos y se almacenen por un cierto orden en la base de datos de locate, sin tener que hacer uso de superusuario o creando un daemon en el sistema.</p>
+<h4 id="regenerando-las-bases-de-datos">Regenerando las bases de datos</h4>
+<p>Podemos hacer que nos indexe todo lo que contenga el sistema y que lo puedan ver tod@s l@s usuari@s.</p>
+<pre><code>sudo updatedb
+</code></pre>
+<p>O bien, podemos generar una base de datos para nosotr@s.</p>
+<pre><code>mkdir .locateupdatedb -l 0 -U /DIR -o .locate/db_file
+</code></pre>
+<ul>
+<li><code>-l 0</code>: Permite entre otras cosas, crear el fichero de la base de datos utilizando nuestro usuario.</li>
+<li><code>-U /DIR</code>: Directorio a idnexar</li>
+<li><code>-o nombre_fichero</code>: El nombre que le pondremos a la db</li>
+</ul>
+<p>Si queremos añadir más directorios, tendremos que ejecutar el comando modificando <code>/DIR</code></p>
+<h4 id="buscando-archivos-o-directorios">Buscando archivos o directorios</h4>
+<p>Basta con ejecutar <code>locate nombre_archivo/nombre_dir</code> y el comando nos arrojará una salida completa con las coincidencias que encuentre en la db.</p>
+<p>Sin embargo, si queremos ejecutar nuestro fichero, tendremos que especificárselo a <code>locate(1)</code></p>
+<pre><code>locate nombre_directorio/nombre_archivo -d .locate/db_file
+</code></pre>
+<h4 id="visualizando-estadisticas">Visualizando estadísticas</h4>
+<p>Se pueden ver cuántos archivos y directorios tenemos actualmente registrados en cada db.</p>
+<pre><code>locate -S
+</code></pre>
+<p>ó</p>
+<pre><code>locate -Sd .locate/db_file
+</code></pre>
+<h3 id="comando-whereis">Comando whereis</h3>
+<ul>
+<li>Este comando nos viene de fábula cuando queremos encontrar algún binario, archivo fuente o incluso páginas de manual de <code>man(1)</code>, para hacerlo, este lleva una búsqueda en aquellos directorios que se encuentren declarados en la variable <code>$PATH</code> y <code>$MANPATH</code>. Estas variables las podemos encontrar en <code>/etc/profile</code> o en <code>~/.bash_profile</code></li>
+</ul>
+<p>(en nuestro caso)</p>
+<pre><code>echo $PATH
+</code></pre>
+<p>Nuestra salida:</p>
+<pre><code>echo $PATH/usr/lib/qtchooser:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/sincorchetes/.composer/vendor/bin:/home/sincorchetes/.local/bin:/home/sincorchetes/bin:/home/sincorchetes/.bin/scripts
+</code></pre>
+<p>Vamos a visualizar un par de ejemplos.</p>
+<h4 id="buscando-una-pagina-con-la-coincidencia">Buscando una página con la coincidencia</h4>
+<pre><code>whereis -m cat
+</code></pre>
+<h4 id="encontrando-la-ubicacion-del-binario">Encontrando la ubicación del binario</h4>
+<pre><code>whereis -b cat
+</code></pre>
+<h4 id="buscando-la-fuente-de-un-kernel-de-fedora-28">Buscando la fuente de un kernel de Fedora 28</h4>
+<pre><code>whereis -s 4.16.8-300.fc28.
+</code></pre>
+<h3 id="comando-whatis">Comando whatis</h3>
+<p>Este comando nos permite buscar en las páginas de <code>man(1)</code> y nos devuelve una descripción del mismo en una sola línea, en caso de que encuentre varios resultados, mostrará ambos o más y su categoría dentro de <code>man(1)</code>.</p>
+<pre><code>whatis cat
+</code></pre>
+<p>Salida:</p>
+<pre><code>cat (1p) - concatenate and print filescat (1) - concatenate files and print on the standard output
+</code></pre>
+<p>Podemos especificar un directorio diferente para que busque en otras páginas de <code>man(1)</code> pues que no tengamos instaladas en el directorio raíz o no se encuentren registradas en <code>~/.bash_profile</code></p>
+<pre><code>whatis -M ~/.man/ cat
+</code></pre>
+<p>Entre otras cosas</p>
+<h3 id="comando-apropos">Comando apropos</h3>
+<p>Este comando es parecido al anterior, lo que utiliza directamente <code>mandb(1)</code>, también permite utilizar otra ruta de directorio para los manpages…etc</p>
+<pre><code>apropos whatis
+</code></pre>
+<p>Salida:</p>
+<pre><code>whatis (1) - display one-line manual page descriptions
+</code></pre>
+<h2 id="redireccionamiento">Redireccionamiento</h2>
+<p>Un redireccionamiento, como su propio nombre indica lo que hace es una redirección a un determinado sitio. En nuestro caso, utilizaremos los redireccionamientos para gestionar tanto las salidas, como entradas así como los niveles de error que de un comando o una aplicación para utilizarlos en nuestro beneficio.</p>
+<p>Podemos decirle a un comando, que si tiene un error X, no lo muestre en pantalla y lo rediriga a un archivo de texto para que haga de log. También podemos añadir una frase, sentencias… a un archivo ya existente o en caso de que no exista que lo cree; comentar el número de palabras que tiene un texto… y un sin fin de cosas más.</p>
+<h3 id="operadores-de-redireccionamiento">Operadores de redireccionamiento</h3>
+<p>Estos son los operadores que utilizaremos en la elaboración de scripts sobre todo, capítulo que introduciremos estos días con las siguientes entregas.</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>Redirecciona una salida hacia un archivo o comando. Si el archivo no existe, lo crea, y si existe, lo sobreescribe</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code></td>
+<td>Igual que el anterior, pero si el archivo existe no lo destruye, añade la salida después de la última línea</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>Redirecciona una entrada hacia un comando para que este emita una salida (si lo hace), puede ser la salida de un comando hacia otro, un fichero…</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code></td>
+<td>Redirecciona el contenido de un fichero hasta que se encuentre la palabra especificada en la redirección para finalizarla</td>
+</tr>
+</tbody>
+</table>
+<h3 id="canales">Canales</h3>
+<p>Nuestra terminal tiene una serie de canales por los que se toman la entrada, salida y errores.</p>
+<p>+——-+ ——————————————————————-+————-+ | Canal | Descripción | Ubicación | +——-+ ——————————————————————-+————-+ | 0 | Es el canal por defecto de la entrada estándar | /dev/stdin | +——-+ ——————————————————————-+————-+ | 1 | Especifica la salida de un comando. Por ejemplo ls 2&gt; file.txt | /dev/stdout | +——-+ ——————————————————————-+————-+ | 2 | Muestra la presencia de errores. Por ejemplo ls -lklk 3&gt; error.txt | /dev/stderr | +——-+ ——————————————————————-+————-+</p>
+<h3 id="ejemplos">Ejemplos</h3>
+<h4 id="almacenar-la-salida-del-comando-ls-al-en-un-fichero-listatxt">Almacenar la salida del comando ls -al en un fichero lista.txt</h4>
+<pre><code>ls -al &gt; lista.txt
+</code></pre>
+<p>Veremos como no se muestra nada en pantalla, pero se ha creado el archivo <code>lista.txt</code></p>
+<h4 id="mostrar-el-contenido-de-listatxt">Mostrar el contenido de <code>lista.txt</code></h4>
+<pre><code>cat lista.txt
+total 568
+drwxrwxr-x.  2 sincorchetes sincorchetes  4096 May  2 01:43 .
+drwx------. 55 sincorchetes sincorchetes  4096 May  2 17:10 ..
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 20E2MC8SVX-9423.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 36712GXM3C-865.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 4SASA426RU.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 5ODFPGZXOI-25637.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 5PYBWDCZWK.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 6A21WJKHWL.png
+</code></pre>
+<p>Nota</p>
+<p>Recordemos que el operador <code>&gt;</code> sobreescribe todo lo que haya, si queremos añadir información nueva al archivo debemos utilizar el operador <code>&gt;&gt;</code></p>
+<pre><code>ls -al &gt;&gt; lista.txt
+cat lista.txt
+total 568
+drwxrwxr-x.  2 sincorchetes sincorchetes  4096 May  2 01:43 .
+drwx------. 55 sincorchetes sincorchetes  4096 May  2 17:10 ..
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 20E2MC8SVX-9423.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 36712GXM3C-865.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 4SASA426RU.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 5ODFPGZXOI-25637.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 5PYBWDCZWK.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 6A21WJKHWL.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 6FG92BUEDM-12977.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 A6XZFBO1TK-18309.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 FBEBPAR2O9-16637.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  2 01:43 FP9EZ05Y3E-16753.png
+-rw-rw-r--.  1 sincorchetes sincorchetes 25277 May  1 12:55 FZRD6D42BI-875.png
+</code></pre>
+<h4 id="guardar-todos-los-errores-que-surjan-en-la-ejecucion-del-programa">Guardar todos los errores que surjan en la ejecución del programa</h4>
+<pre><code>cat ks 2&gt; error.txt
+</code></pre>
+<h4 id="no-se-mostrara-nada-en-pantalla-pero-nos-daremos-cuenta-el-error-que-nos-da-cat1-en-el-fichero-que-se-ha-creado-llamado-errortxt">No se mostrará nada en pantalla, pero nos daremos cuenta el error que nos da <code>cat(1)</code> en el fichero que se ha creado llamado <code>error.txt</code></h4>
+<pre><code>cat error.txt
+cat: jk: No such file or directory
+</code></pre>
+<h4 id="mostrar-en-pantalla-tanto-la-salida-estandar-como-los-errores">Mostrar en pantalla tanto la salida estándar como los errores</h4>
+<pre><code>ls -al 2&gt;&amp;1 info.txt
+</code></pre>
+<h4 id="guardar-en-un-fichero-tanto-la-salida-como-los-errores">Guardar en un fichero tanto la salida como los errores</h4>
+<pre><code>ls -al 2&gt;&amp;1 info.txt &gt; file.txt
+</code></pre>
+<h4 id="calcular-las-lineas-que-tiene-un-fichero-de-texto">Calcular las líneas que tiene un fichero de texto</h4>
+<pre><code>wc -l &lt; file.text
+</code></pre>
+<h4 id="anadir-informacion-a-un-fichero-e-interrumpirlo-utilizando-una-palabra-clave-declarada-por-el-usuario">Añadir información a un fichero e interrumpirlo utilizando una palabra clave declarada por el usuario</h4>
+<pre><code>cat add &lt;&lt; EOF
+</code></pre>
+<h4 id="crear-un-fichero-de-texto-utilizando-la-canal-de-entrada-y-utilizando-una-palabra-clave-para-finalizar-la-adiccion">Crear un fichero de texto utilizando la canal de entrada y utilizando una palabra clave para finalizar la adicción</h4>
+<pre><code>cat &gt; create_text.txt &lt;&lt; EOF
+</code></pre>
+<h4 id="adherir-la-salida-estandar-de-multiples-textos-y-redireccionandolos-a-un-archivo">Adherir la salida estándar de múltiples textos y redireccionándolos a un archivo</h4>
+<pre><code>cat lista.txt error.txt info.txt create_text.txt &gt; salida_multiple
+</code></pre>
+<h2 id="tuberias">Tuberías</h2>
+<p>Una tubería es una secuencia de uno o más comandos separados por operadores de control como <code>|</code> o <code>&amp;</code>. Suelen utilizarse mucho junto con el comando <code>grep(1)</code>, <code>egrep(1)</code> y <code>fgrep(1)</code> para filtrar resultados, o el comando <code>cut(1)</code> para recortar la salida estándar, generalmente producida por comandos. Estos comandos que hemos mencionado les dedicaremos un post especial debido a la importancia de los mismos. Sobre todo cuando demos scripting más adelante.</p>
+<h3 id="este-es-el-formato-de-una-tuberia-comun">Este es el formato de una tubería común</h3>
+<pre><code>comando [+parámetros] | ó &amp; [comando1]
+</code></pre>
+<h3 id="ejemplos_1">Ejemplos</h3>
+<h3 id="basandonos-en-esta-estructura-de-directorios">Basándonos en esta estructura de directorios</h3>
+<pre><code>.
+├── fichero-0
+├── fichero-1
+├── fichero-10
+├── fichero-11
+├── fichero-12
+├── fichero-13
+├── fichero-14
+├── fichero-15
+├── fichero-16
+├── fichero-17
+├── fichero-18
+├── fichero-19
+├── fichero-2
+├── fichero-3
+├── fichero-4
+├── fichero-5
+├── fichero-6
+├── fichero-7
+├── fichero-8
+└── fichero-9
+</code></pre>
+<h3 id="mostrar-un-valor-relacionado-con-dmesg1">Mostrar un valor relacionado con <code>dmesg(1)</code></h3>
+<pre><code>dmesg |grep Bluetooth
+[   23.265232] Bluetooth: Core ver 2.22
+[   23.265247] Bluetooth: HCI device and connection manager initialized
+[   23.265250] Bluetooth: HCI socket layer initialized
+[   23.265251] Bluetooth: L2CAP socket layer initialized
+[   23.265256] Bluetooth: SCO socket layer initialized
+[   24.078796] Bluetooth: hci0: read Intel version: 370810225019140f18
+[   24.078797] Bluetooth: hci0: Intel device is already patched. patch num: 18
+[   35.047963] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   35.047967] Bluetooth: BNEP filters: protocol multicast
+[   35.047974] Bluetooth: BNEP socket layer initialized
+[   85.419671] Bluetooth: RFCOMM TTY layer initialized
+[   85.419675] Bluetooth: RFCOMM socket layer initialized
+[   85.419722] Bluetooth: RFCOMM ver 1.11
+[60146.891379] Bluetooth: hci0: read Intel version: 370810225019140f00
+[60147.826024] Bluetooth: hci0: Intel Bluetooth firmware file: intel/ibt-hw-37.8.10-fw-22.50.19.14.f.bseq
+[60148.097374] Bluetooth: hci0: Intel firmware patch completed and activated
+[60151.506132] Bluetooth: hci0: command 0x0c56 tx timeout
+</code></pre>
+<h3 id="mostrar-un-valor-relacionado-con-la-salida-del-comando-lspci8">Mostrar un valor relacionado con la salida del comando <code>lspci(8)</code></h3>
+<pre><code>lspci |grep VGA00:02.0 VGA compatible controller: Intel Corporation Device 591b (rev 04)
+</code></pre>
+<h2 id="fuentes">Fuentes</h2>
+<ul>
+<li>Ediciones ENI - LPI I Tercera edición</li>
+<li><a href="https://www.ibm.com/support/knowledgecenter">IBM Knowledge Center</a></li>
+<li>The Linux Documentation Project ~ <a href="https://www.tldp.org/LDP/abs/html">TLDP</a></li>
+<li><a href="https://www.ibm.com/support/knowledgecenter">IBM Knowledge Center</a></li>
+<li>manpages: <code>find(1)</code>, <code>locate(1)</code>, <code>updatedb(1)</code>, <code>whereis(1)</code>, <code>whatis(1)</code>, <code>apropos(1)</code>, <code>ln(1)</code>, <code>ls(1)</code>, <code>help if</code></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bash-scripting/" class="btn btn-neutral float-right" title="Aprendiendo scripting">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../almacenamiento/lvm/" class="btn btn-neutral" title="Lvm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../almacenamiento/lvm/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="bash-scripting/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

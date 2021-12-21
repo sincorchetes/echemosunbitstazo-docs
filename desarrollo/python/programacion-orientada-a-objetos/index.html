@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Programación orientada a objetos - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Programaci\u00f3n orientada a objetos";
+    var mkdocs_page_input_path = "desarrollo/python/programacion-orientada-a-objetos.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Python</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Programación orientada a objetos</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#principios-basicos">Principios básicos</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#que-es-una-clase">¿Qué es una clase?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#como-declaramos-una-clase">¿Cómo declaramos una clase?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#como-podemos-anadirle-propiedades-y-metodos-a-una-clase">¿Cómo podemos añadirle propiedades y métodos a una clase?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#que-es-un-objeto">¿Qué es un objeto?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#herencia">Herencia</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sobreescribiendo-metodos-en-clases-hijas">Sobreescribiendo métodos en clases hijas</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tipos-de-herencia">Tipos de herencia</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcion-super">Función super()</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#encapsulamiento">Encapsulamiento</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#como-encapsular">¿Cómo encapsular?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#como-podemos-acceder-o-modificar-las-variables-propiedades-o-los-metodos-de-ambito-privado">¿Cómo podemos acceder o modificar las variables, propiedades, o los métodos de ámbito privado?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#polimorfismo">Polimorfismo</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Linux</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Almacenamiento</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/almacenamiento/lvm/">Lvm</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../../sistemas/linux/entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../../sistemas/linux/systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Desarrollo &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
+        
+      
+    
+    <li>Programación orientada a objetos</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="programacion-orientada-a-objetos">Programación orientada a objetos</h1>
+<p>Python es un lenguaje como ya mencionamos anteriormente orientado a objetos. Los objetos contienen una serie de métodos y propiedades que lo definen. Si pensamos en un humano, tenemos como propiedades el color de ojos, color de piel, altura… y los métodos serían las acciones como el baile, leer, saltar, correr…</p>
+<p>Esta metodología de programación nos permite reusar el código las veces que queramos sin tener que estar escribiendo múltiples líneas con funciones específicas para determinadas partes de nuestro código si lo hicieramos en una programacioń estructurada o procedural.</p>
+<h2 id="principios-basicos">Principios básicos</h2>
+<p>En Python tenemos los siguientes principios:</p>
+<ul>
+<li><strong>Clase</strong>: Tipo de dato que contiene un esquema de métodos y propiedades que se usarán para construir un objeto.</li>
+<li><strong>Objeto</strong>: Una clase que se ha inicializado, es decir, existe y tiene nombres y apellidos propios en su ejecucioń.</li>
+<li><strong>Herencia</strong>: Propiedades o métodos que ha recibido una clase hija por parte de una clase padre, esto no quiere decir que vaya a heredar todos los métodos y propiedades, solo aquellos que se le permitan.</li>
+<li><strong>Encapsulación</strong>: La habilidad de enseñar aquello que solo se pueda mostrar y esconder lo que no nos interesa visibilizar.</li>
+<li><strong>Polimorfismo</strong>: La capacidad que tiene un objeto para cambiar su rol al mismo tiempo, puede actuar de un rol y en otro rol al mismo tiempo.</li>
+</ul>
+<h3 id="que-es-una-clase">¿Qué es una clase?</h3>
+<p>Una clase es la plantilla que tendrá el objeto que queremos crear, contiene una serie de méotodos y propiedades que los utilizaremos una vez generemos el objeto. Por supuesto, una clase es un tipo de dato dentro de Python.</p>
+<h3 id="como-declaramos-una-clase">¿Cómo declaramos una clase?</h3>
+<p>Para generar una clase seguiremos esta sintaxis:</p>
+<pre><code>class NombreClase:
+  # Bloque de código
+</code></pre>
+<h3 id="como-podemos-anadirle-propiedades-y-metodos-a-una-clase">¿Cómo podemos añadirle propiedades y métodos a una clase?</h3>
+<p>De la siguiente forma:</p>
+<pre><code>class Coche:
+  propiedad = valor
+
+  def método(self):
+    # Bloque de código
+</code></pre>
+<p>Un ejemplo podría ser:</p>
+<pre><code>class Coche:
+  marca = &quot;Toyota&quot;
+  modelo = &quot;Corolla&quot;
+
+  def publicidad(self):
+    print(&quot;De 0 a 100 en 10 segundos&quot;)
+</code></pre>
+<p>Tenemos la clase Coche, con unas propiedades definidas que son la marca y el modelo, además, tenemos un método llamado publicidad que muestra un mensaje. En el siguiente apartado, veremos como trabajar con esta clase pero desde la vista de un objeto.</p>
+<h3 id="que-es-un-objeto">¿Qué es un objeto?</h3>
+<p>Un objeto es la materialización de una clase, es decir, cuando lo generamos a partir de unas instrucciones ya empieza a existir en nuestro programa que estemos desarrollando. Por ejemplo, tenemos la clase Casa, evidentemente, las casas que declaremos tiene propiedades y métodos diferentes, por ejemplo, tiene una dirección, un número, una elevación, una función, un espacio diferente. Si creamos 5 casas, hemos creado 5 objetos partiendo de una sola clase que es la clase Casa.</p>
+<p>En resumen:</p>
+<ul>
+<li>Es la unidad básica de POO</li>
+<li>Representa una instancia particular partiendo de una clase</li>
+<li>Puede haber más instancias partiendo de una misma clase</li>
+<li>Cada objeto puede contener y mantener su información</li>
+</ul>
+<h4 id="como-declaramos-un-objeto">¿Cómo declaramos un objeto?</h4>
+<p>La sintaxis es:</p>
+<pre><code>NombreObjeto = NombreClase()
+</code></pre>
+<p>En este ejemplo creamos 3 objetos diferentes partiendo de la clase anterior.</p>
+<pre><code>NombreObjeto = NombreClase()
+NombreObjeto2 = NombreClase()
+NombreObjeto3 = NombreClase()
+</code></pre>
+<h4 id="para-acceder-a-sus-propiedades">Para acceder a sus propiedades</h4>
+<pre><code>NombreObjeto.propiedad1
+</code></pre>
+<h4 id="para-acceder-a-sus-metodos">Para acceder a sus métodos</h4>
+<pre><code>NombreObjeto.método1()
+</code></pre>
+<p>Utilizando el ejemplo que hemos creado antes:</p>
+<pre><code>class Coche:
+  marca = &quot;Toyota&quot;
+  modelo = &quot;Corolla&quot;
+  publicidad = &quot;De 0 a 100 en 10 segundos&quot;
+
+  def eslogan(self):
+    print(&quot;Este es un método&quot;,self.publicidad)
+
+Sara = Coche()
+Ionela = Coche()
+</code></pre>
+<p>Tenemos a dos personas que utilizan el mismo coche Ionela y Sara y lo vemos:</p>
+<pre><code>print(Ionela.marca,Ionela.modelo)
+Toyota Corolla
+Ionela.eslogan()
+De 0 a 100 en 10 segundos
+
+print(Sara.marca,Sara.modelo)
+Toyota Corolla
+Sara.eslogan()
+De 0 a 100 en 10 segundos
+</code></pre>
+<p>¿Qué pasa si Sara quiere cambiar de coche?</p>
+<pre><code>Sara.marca = &quot;Citröen&quot;
+Sara.modelo = &quot;Xsara&quot;
+Sara.publicidad = &quot;El confort no es discutible.&quot;
+print(Sara.marca,Sara.modelo)
+Citröen Xsara
+Sara.eslogan()
+El confort no es discutible.
+</code></pre>
+<p>¿Pero Ionela ha cambiado de coche?</p>
+<pre><code>print(Ionela.marca,Ionela.modelo)
+Toyota Corolla
+Ionela.eslogan()
+De 0 a 100 en 10 segundos
+</code></pre>
+<p>¡Ya lo tenemos! Podemos instanciar objetos diferentes partiendo de una misma clase y cambiar sus propiedades sin afectar al resto de objetos. ¿A qué es sencillo? Pero, ¿Qué pasa si queremos cualquier persona pueda tener un coche diferente desde el principio?</p>
+<p>Pues a pesar de que se puede hacer creando un método que le asigne el valor a las propiedades, lo más correcto es utilizando el método <code>__init__</code>. Este método <code>constructor</code> (que permite inicializar un objeto) asigna valores a las propiedades del objeto cuando se construye, por ejemplo.</p>
+<pre><code>class NombreClase:
+  def __init__(self, valor_propiedad1, valor_propiedad2):
+    self.propiedad1 = valor_propiedad1
+    self.propiedad2 = valor_propiedad2
+
+  def metodo1(self):
+    # Bloque de código
+</code></pre>
+<p>Para crear el objeto:</p>
+<pre><code>Variable=NombreClase(&quot;Valor de ejemplo n1&quot;,&quot;Valor de ejemplo n2&quot;)
+</code></pre>
+<p>Si parece dificultoso de entender, no pasa nada, este es otro ejemplo con comentarios (<em>¡Será por ejemplos!</em>):</p>
+<pre><code># Definimos la clase Coche
+class Coche:
+
+  # Definimos el constructor que sustituirá los
+  # valores de las propiedades cuando las definamos al inicializar el objeto.
+
+  def __init__(self,marca,modelo, velocidad):
+    self.marca = marca
+    self.modelo = modelo
+    self.velocidad = velocidad
+
+  # Cuando se llama a este método la velocidad se incrementa +1.
+  def acelerar(self):
+    self.velocidad += 1
+    print(self.velocidad)
+
+  # Cuando se llama a este método la velocidad disminuye en -1.
+  def frenar(self):
+    self.velocidad -= 1
+    print(self.velocidad)
+
+  # Creamos los objetos:
+
+  Chami = Coche(&quot;Nissan&quot;, &quot;Almera&quot;, 0)
+  Jose = Coche(&quot;Toyota&quot;,&quot;Corolla AE92 GTi Twin Cam&quot;, 0)
+
+  # Imprimimos los valores que tienen las propiedades de cada objeto:
+
+  print(&quot;El coche de Chami es un:&quot;,Chami.marca,Chami.modelo,&quot;y ahora va a&quot;,Chami.velocidad,&quot;km/h.&quot;)
+  print(&quot;El coche de Jose es un:&quot;,Jose.marca,Jose.modelo,&quot;y ahora va a&quot;,Jose.velocidad,&quot;km/h.&quot;)
+
+  # Aumentamos la velocidad a uno de los objetos:
+  Chami.acelerar()
+
+  # Si queremos aumentar más veces la velocidad, podemos usar un bucle
+  for x in range(0, 100):
+    Chami.acelerar()
+
+  # Imprimimos la velocidad actual
+  print(&quot;Chami va a una velocidad de %i&quot; % Chami.velocidad)
+</code></pre>
+<p>Este ejemplo si lo ejecutamos dará como resultado:</p>
+<pre><code>El coche de Chami es un: Nissan Almaera y ahora va a 0 km/h.
+El coche de Jose es un: Toyota Corolla AE92 GTi Twin Cam y ahora va a 0 km/h.
+</code></pre>
+<h2 id="herencia">Herencia</h2>
+<p>Una de las propiedades que mencionamos que podían tener los objetos es la herencia, por lo que una clase hija puede contener propiedades y métodos de una clase padre. Veamos un ejemplo:</p>
+<pre><code># Definimos la clase padre:
+class ClasePadre:
+# Decimos que se ejecute el código sin hacer nada.
+  pass
+
+# Y aquí la clase hija:
+class ClaseHija(ClasePadre):
+  pass
+
+# Creamos el objeto
+Objeto = ClaseHija()
+</code></pre>
+<p>Este es un ejemplo:</p>
+<pre><code># Definimos la clase Familia
+class Familia():
+
+  # Con sus propiedades que se rellenarán cuando se inicialice el objeto.
+  def __init__(self, miembros, apellidos):
+    self.miembros = miembros
+    self.apellidos = apellidos
+
+    # Cuando se cree la clase, mostrará el apellido que ha recibido.
+    print(&quot;Apellidos: %s&quot; % (self.apellidos))
+
+# Creamos la clase Hijo que hereda de Familia
+class Hijo(Familia):
+
+  # Se rellenarán propiedades para este objeto.
+  def __init__(self, nombre, apellidos):
+
+  # Si queremos heredar propiedades y métodos, tendremos que hacer uso de la función super()
+  # super() lo explicaremos más adelante.
+  # Aquí llamamos la propiedad específica de Familia, Familia.apellidos y la inicializamos
+    super().__init__(self,apellidos)
+
+  # Definimos aquí los valores que tendrán estas propiedades
+    self.nombre = nombre
+    self.apellidos = apellidos
+
+# Añadimos un método para el Hijo
+  def mostrar_info(self):
+
+    # Decimos que imprima self.nombre y self.apellidos.
+    print(&quot;Soy %s y soy de la familia %s&quot; % (self.nombre,self.apellidos))
+
+# Creamos el objeto
+Pugsley = Hijo(&quot;Pugsley&quot;,&quot;Adams&quot;)
+
+# Llamamos al método mostrar_info()
+Pugsley.mostrar_info()
+</code></pre>
+<p>Seguro que te preguntas sobre <code>super().__init__(...)</code>, esta función como comentamos permite heredar propiedades y métodos de otra clase. Vendría a ser lo mismo que:</p>
+<pre><code>class A:
+  def __init__(self, ejemplo):
+    self.ejemplo = ejemplo
+
+class B(A):
+  def __init__(self, x, y, z):
+
+    # Este procedimiento es más complicado y más tedioso de hacer.
+    self.guardar_info = A(x)
+
+obj = B(2,3,4)
+print(obj.guardar_info.ejemplo)
+</code></pre>
+<h3 id="sobreescribiendo-metodos-en-clases-hijas">Sobreescribiendo métodos en clases hijas</h3>
+<p>Se puede hacer evidentemente, si en la clase A tenemos un método llamado <code>saludar()</code>, y la clase B que hereda de la clase A, le podemos definir el contenido del mensaje que devolverá el método <code>saludar()</code>.</p>
+<pre><code> class A:
+   def saludar(self):
+     print(&quot;Hola mundo&quot;)
+
+ class B(A):
+   def saludar(self):
+     print(&quot;Hello everybody&quot;)
+
+ obj = B
+ obj.saludar()
+</code></pre>
+<p>Y devolverá <code>Hello everybody</code>.</p>
+<h3 id="tipos-de-herencia">Tipos de herencia</h3>
+<p>Bien, habiendo visto un ejemplo de herencia, también os cuento, que hay distintos ejemplos de herencia:</p>
+<ul>
+<li>Simple</li>
+<li>Múltiple</li>
+<li>Multi nivel</li>
+<li>Jerárquica</li>
+<li>Híbrida</li>
+</ul>
+<h4 id="simple">Simple</h4>
+<p>Es el tipo de herencia que hemos visto hasta ahora.</p>
+<pre><code>class A:
+  pass
+class B(A):
+  pass
+</code></pre>
+<h4 id="multiple">Múltiple</h4>
+<p>Es una clase que hereda desde otras clases, por lo que tendrá propiedades y métodos de ambas clases (A y B).</p>
+<pre><code> class A:
+   pass
+ class B:
+   pass
+ class C(A,B):
+   pass
+
+ # Establecemos una comparación para ver si realmente son subclases o no.
+ # Devolverá True o False dependiendo de si es correcto o no.
+ issubclass(C,A) and issubclass(C,B)
+</code></pre>
+<h4 id="multinivel">Multinivel</h4>
+<p>Esto se refiere, a que tenemos una clase abuelo, de la cuál hereda una clase padre, del cuál hereda una clase hijo.</p>
+<pre><code>class A:
+  pass
+class B(A):
+  pass
+class C(B):
+  pass
+</code></pre>
+<p>Como vemos, la clase C hereda de la clase B, la clase B de la clase A, y A es la clase principial de primer nivel. Por lo tanto, la clase C herederá propiedades y métodos de todas sus clases superiores a menos que se establezca qué propiedades o métodos se podrán heredar, esto forma parte del encapsulamiento que veremos más tarde.</p>
+<h4 id="jerarquica">Jerárquica</h4>
+<p>Tenemos múltiples clases que heredan de una sola clase, es decir.</p>
+<pre><code>class A:
+  pass
+class B(A):
+  pass
+class C(A):
+  pass
+class D(A):
+  pass
+</code></pre>
+<p>Un ejemplo puede ser, clase Jefe/Jefa de una empresa que tiene el rol más alto de una organización y que por debajo de ellos hay otros roles acordes a la labor de la empresa que tienen menos privilegios, otras funciones…etc</p>
+<h4 id="hibrido">Híbrido</h4>
+<p>Es la combinación de una o múltiples clases con una o múltiples clases por ejemplo: Imaginamos que tenemos 5 clases (A,B,C,D,E).</p>
+<ul>
+<li>Clase A es una clase padre.</li>
+<li>Clase B,C,D heredan de la clase A</li>
+<li>Clase E, hereda de la clase B y D.</li>
+<li>Clase E es la clase padre de B y D.</li>
+</ul>
+<p>Aquí podemos identificar varios tipos de herencia:</p>
+<ul>
+<li>A, B, C, D, C = <strong>Herencia híbrida</strong></li>
+<li>B, C, D que heredan de A = <strong>Herencia jerárquica</strong></li>
+<li>E que hereda de B y D = <strong>Herencia múltiple</strong></li>
+<li>C hereda de A = <strong>Herencia simple</strong></li>
+</ul>
+<p>Un ejemplo de sintaxis:</p>
+<pre><code>class A:
+  pass
+class B(A):
+  pass
+class C(A):
+  pass
+class D(A):
+  pass
+class E(B,D)
+</code></pre>
+<p>Si añadimos una variable en la clase A, creamos un objeto que referencie a E:</p>
+<pre><code>class A:
+  hello_world = &quot;Hola Mundo&quot;
+class B(A):
+  pass
+class C(A):
+  pass
+class D(A):
+  pass
+class E(B,D):
+  pass
+obj = E()
+  print(obj.hello_world)
+</code></pre>
+<p><code>obj</code> habrá impreso <code>"Hola Mundo"</code>.</p>
+<h3 id="funcion-super">Función super()</h3>
+<p>Se utiliza para llamar a métodos de una clase padre, hemos visto en un ejemplo anterior como llamábamos a <code>super().__init__(self, nombre, apellidos)</code> en el ejemplo de la Familia Adams. Aquí estábamos llamando al método inicializador de la clase <code>Familia</code>. Pero podemos llamar a otros métodos también. <code>super().método()</code>.</p>
+<pre><code>class Vehiculo:
+  def arrancar(self):
+    print(&quot;Arrancamos el coche&quot;)
+  def parar(self):
+    print(&quot;Paramos el coche&quot;)
+
+class Conductor(Vehiculo):
+  def soplar(self):
+    print(&quot;Soplando, soplando y soplando...&quot;)
+
+  def control_policia(self):
+    super().parar()
+    print(&quot;Persona - Hola agente, buenos días&quot;)
+    print(&quot;Policía - Hola, vamos hacerle una prueba de alcoholemia, por favor, sople en la boquilla&quot;)
+    print(&quot;Persona - Vale&quot;)
+    self.soplar()
+    print(&quot;Policía - Genial, puede usted proseguir&quot;)
+    super().arrancar()
+
+Antonio = Conductor()
+Antonio.control_policia()
+</code></pre>
+<p>Como vemos, no hace falta que llamemos a <code>__init__</code> porque __no estamos inicializando ningún valor en ninguna propiedad <code>__</code> y como se ejecutan los métodos <code>parar()</code> y <code>arrancar()</code> que forman parte de la clase <code>Vehiculo</code>.</p>
+<h2 id="encapsulamiento">Encapsulamiento</h2>
+<p>Encapsular permite abstraer cierta información al mundo y mostrar solo aquella que interese. Por ejemplo, cuando enviamos un paquete por correos, el personal de correos no puede ver el contenido del paquete, pero si que puede ver el destinatario y el remitente, pudiendo identificar a las dos personas implicadas y saber sus direcciones de correo postal.</p>
+<h3 id="como-encapsular">¿Cómo encapsular?</h3>
+<p>Para encapsular, básicamente tendremos que añadirle dos guiones bajos <code>"_ __ _ "</code> delante de la propiedad que queremos ocultar.</p>
+<pre><code>class A:
+  self._propiedad = valor
+</code></pre>
+<p>Veamos un ejemplo:</p>
+<pre><code>class Persona:
+  def __init__(self):
+    self.nombre  = &quot;Susana&quot;
+    self.__apellidos = &quot;Bramura&quot;
+    self._tlfno = &quot;777 777 777&quot;
+
+Carlos = Persona()
+
+print(Carlos.apellidos)
+</code></pre>
+<p>Veremos un error parecido a este:</p>
+<pre><code>Traceback (most recent call last):
+  File &quot;main.py&quot;, line 9, in &lt;module&gt;
+    print(Carlos.apellidos)
+AttributeError: 'Persona' object has no attribute 'apellidos'
+</code></pre>
+<p>Y nos preguntaremos… Pero, si llamamos a <code>Carlos.apellidos</code> y nosotros hemos puesto: <code>Carlos.__apellidos</code>, ¿no sería más correcto para querer obtener el valor de los apellidos de la clase Persona? Bueno, aunque pensemos esto, si utilizamos <code>__</code> igualmente dará el mismo error porque no se puede acceder desde fuera a una propiedad o método encapsulado.</p>
+<pre><code>print(Carlos.__apellidos)
+Traceback (most recent call last):
+  File &quot;main.py&quot;, line 8, in &lt;module&gt;
+    print(Carlos.__apellidos)
+AttributeError: 'Persona' object has no attribute '__apellidos'
+</code></pre>
+<h3 id="como-podemos-acceder-o-modificar-las-variables-propiedades-o-los-metodos-de-ambito-privado">¿Cómo podemos acceder o modificar las variables, propiedades, o los métodos de ámbito privado?</h3>
+<p>Tendremos que crear métodos específicos que puedan acceder a esas variables, propiedades o métodos.</p>
+<pre><code>class A:
+# Constructor de clase
+  def __init__(self):
+
+  # Asignamos 20 a esta propiedad privada
+    self.__propiedad = 20
+
+  def __metodo(self):
+    print(&quot;Soy un método privado.&quot;)
+
+  # Soy un método público que leerá y ejecutará contenido privado.
+  def mostrar(self):
+    self.__metodo()
+    print(self.__variable)
+
+  def cambiar(self,propiedad):
+    self.__propiedad = propiedad
+    print(&quot;Esta es la nueva propiedad %i % (self.__propiedad))
+
+# Instanciamos el objeto
+obj = A()
+
+# Ejecutamos el método público mostrar()
+obj.mostrar()
+
+# Modificamos el valor propiedad
+obj.cambiar(300)
+</code></pre>
+<h2 id="polimorfismo">Polimorfismo</h2>
+<p>Es la capacidad que tiene un objeto para ser y poder ser otra cosa al mismo tiempo. Por ejemplo, un pájaro. Un pájaro puede ser un pingüino y un gorrión, ambos tienen propiedades en común como las patas, ojos, orejas; el color de las plumas, de los ojos, de los picos. También, tienen una serie de métodos similares como volar, poner huevos, comer, dormir… ¿Qué tienen en común todos ellos? Que son pájaros. Por lo tanto, un pájaro puede ser un gorrión o puede ser un pingüino al mismo tiempo sin perder lo que es su esencia, que es ser un pájaro.</p>
+<pre><code># Creamos la clase Pájaro
+class Pajaro:
+
+  # Método volar
+  def nadar(self):
+    print(&quot;Puedo nadar.&quot;)
+
+  def volar(self):
+    print(&quot;Puedo volar.&quot;)
+
+class Pinguino(Pajaro):
+  def nadar(self):
+    print(&quot;Puedo nadar.&quot;)
+
+  def volar(self):
+    print(&quot;No puedo volar.&quot;)
+
+  def ver_volar(birds)
+    birds.volar()
+
+gorrion=Pajaro()
+pinguino=Pinguino()
+
+# Este imprimirá que pude volar
+ver_volar(gorrion)
+
+# Este imprimirá que no puede volar
+ver_volar(pinguino)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tipos-de-operadores/" class="btn btn-neutral float-right" title="Tipos de operadores">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../modulos/" class="btn btn-neutral" title="Modulos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../modulos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tipos-de-operadores/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

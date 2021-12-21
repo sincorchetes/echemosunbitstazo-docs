@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../../../img/favicon.ico">
+  <title>Lvm - Echemos un bitstazo</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Lvm";
+    var mkdocs_page_input_path = "sistemas/linux/almacenamiento/lvm.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114291557-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114291557-1');
+  </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Echemos un bitstazo</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../..">¡Bienvenidos a Echemos un bitstazo!</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Automatizacion</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Ansible</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../automatizacion/ansible/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Contenedores</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Docker</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../contenedores/docker/docker/">Introducción</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Desarrollo</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Python</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/">Introducción</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/controles-de-flujo/">Condicionales</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/fecha-y-hora/">Fecha y hora</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/funciones-print-type-tipos-de-datos/">Función print()</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/imprimir-valores-y-funciones/">Imprimir valores y funciones</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/instalacion/">Instalación</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/introducir-datos-y-control-de-excepciones/">Obtener datos introducidos por el usuario</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/modulos/">Modulos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/programacion-orientada-a-objetos/">Programación orientada a objetos</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/tipos-de-operadores/">Tipos de operadores</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../desarrollo/python/tuplas-dic-sets-listas-y-mas/">Tuplas</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Redes</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../../redes/conversion-numeros/">Conversión de números</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Servicios</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Monitorizacion</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Zabbix</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../../servicios/monitorizacion/zabbix/">Introducción</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Web</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../servicios/web/NGINX/">NGINX</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Sistemas</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Linux</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="#">Acl</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../acl/gestion-de-usuarios-y-grupos/">Gestión de usuari@s y grupos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Almacenamiento</a>
+    <ul class="current">
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Lvm</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#comprobar-volumenes-fisicos">Comprobar volúmenes físicos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#crear-volumen-fisico">Crear volumen físico</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#activar-volumenes-fisicos-inactivos">Activar volúmenes físicos inactivos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#desactivar-volumenes-fisicos">Desactivar volúmenes físicos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#visualizar-informacion-del-volumen-fisico">Visualizar información del volumen físico</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Bash</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../bash/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../bash/bash-scripting/">Aprendiendo scripting</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Entornos escritorio</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="#">Workaround</a>
+    <ul>
+                <li class="toctree-l4"><a class="reference internal" href="../../entornos-escritorio/workaround/ajustando-la-apariencia-en-aplicaciones-qt/">Ajustando la apariencia en aplicaciones Qt</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Systemd</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../systemd/">Introducción</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../systemd/diferencias-entre-gestores-de-servicios/">Diferencias entre gestores de servicios</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Echemos un bitstazo</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Sistemas &raquo;</li>
+        
+      
+        
+          <li>Linux &raquo;</li>
+        
+      
+        
+          <li>Almacenamiento &raquo;</li>
+        
+      
+    
+    <li>Lvm</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <p>EL LVM funciona por capas:</p>
+<pre><code>-- Volúmen físico (PV)
+|
+|
+|---- Grupo de volúmenes lógicos (VG)
+      |
+      |
+      |--------- Volumen lógico (LV)
+                |
+                |
+                |
+                |------ Tipo de partición (EXT4|XFS|REISERFS|BTRFS)
+</code></pre>
+<ul>
+<li><strong>Volumen físico</strong> es una unidad reservada para poder utilizar el LVM y se crea a partir de una partición del sistema.</li>
+<li><strong>Grupo de volúmenes:</strong> Permite adherir volúmenes físicos al grupo incrementando/reduciendo el espacio y otras características.</li>
+<li><strong>Volumen lógico:</strong> Se utiliza para gestionar las particiones que utilizaremos</li>
+<li><strong>Tipo de partición:</strong> Es el formato que le daremos al volumen lógico y que utilizaremos de sistema de archivos</li>
+</ul>
+<h1 id="volumenes-fisicos">Volúmenes físicos</h1>
+<h2 id="comprobar-volumenes-fisicos">Comprobar volúmenes físicos</h2>
+<ul>
+<li>Para comprobarlos ejecutamos un <code>sudo pvscan</code></li>
+<li>Si no devuelve ningún resultado, es que no existen.</li>
+</ul>
+<h2 id="crear-volumen-fisico">Crear volumen físico</h2>
+<ul>
+<li>Identificar la partición que queremos trabajar, la podemos averiguar con: <code>sudo fdisk -l /dev/UNIDAD_ALMACENAMIENTO</code> Por ejemplo: <code>/dev/sdb1</code></li>
+<li>Cuando la sepamos, creamos el volumen con: <code>sudo pvcreate /dev/UNIDAD_ALMACENAMIENTO_N'' Ejemplo: :code:</code>sudo pvcreate /dev/sdb1`</li>
+<li>Comprobar que se ha creado <code>sudo pvscan</code></li>
+</ul>
+<h2 id="activar-volumenes-fisicos-inactivos">Activar volúmenes físicos inactivos</h2>
+<ul>
+<li>Falta proc</li>
+</ul>
+<h2 id="desactivar-volumenes-fisicos">Desactivar volúmenes físicos</h2>
+<ul>
+<li>Falta proc</li>
+</ul>
+<h2 id="visualizar-informacion-del-volumen-fisico">Visualizar información del volumen físico</h2>
+<ul>
+<li>Averiguar que PV queremos comprobar <code>sudo pvdisplay /dev/PV_Nombre</code></li>
+</ul>
+<h1 id="grupo-de-volumenes">Grupo de volúmenes</h1>
+<h2 id="crear-un-grupo-de-volumenes">Crear un grupo de volúmenes</h2>
+<ul>
+<li>Hay que averiguar que volumen físico vamos a utilizar para poder crear el volumen</li>
+<li>Crear el volumen: <code>sudo vgcreate **Nombre_GrupoVolumen** /dev/Unidad_AlmacenamientoN_partición</code></li>
+</ul>
+<h2 id="eliminar-un-grupo-de-volumenes">Eliminar un grupo de volúmenes</h2>
+<ul>
+<li>Averiguar que volumen vamos a eliminar</li>
+<li>Eliminándolo</li>
+</ul>
+<pre><code>sudo vgchange -a n Nombre_GrupoVolumen
+sudo vgremove Nombre_GrupoVolumen
+</code></pre>
+<h2 id="averiguar-la-informacion-de-un-grupo-de-volumen">Averiguar la información de un grupo de volumen</h2>
+<ul>
+<li>Averiguar que VG queremos comprobar <code>sudo vgdisplay /dev/VG_Nombre</code></li>
+</ul>
+<h1 id="volumenes-logicos-y-particiones">Volúmenes lógicos y particiones</h1>
+<h2 id="comprobar-volumenes-logicos">Comprobar volúmenes lógicos</h2>
+<ul>
+<li>Para comprobarlos ejecutamos un <code>sudo lvscan</code></li>
+<li>Comprobar el tipo de FS que usa el volumen lógico <code>sudo mount |grep Nombre_Volumen</code></li>
+<li>Si no devuelve ningún resultado, es que no existen.</li>
+</ul>
+<h2 id="crear-volumen-logico">Crear volumen lógico</h2>
+<ul>
+<li>Paso anterior</li>
+<li>Ocupar todo el espacio disponible del Grupo de Volúmen (<code>VolGroupXY</code>): <code>sudo lvcreate -l 100%FREE -n NOMBRELV VOLGROUPXY</code></li>
+<li>Coger espacio medido (e.g 10G): <code>sudo lvcreate -L 20G -n NOMMBRELV VOLGROUPXY</code></li>
+<li>Formatear en EXT4: <code>sudo mkfs.ext4 /dev/VolGroupXY/LVol</code></li>
+<li>Formatear en XFS: <code>sudo mkfs.xfs /dev/VolGroupXY/LVol</code></li>
+</ul>
+<h2 id="expandir-volumen-logico-con-capacidad-especifica">Expandir volumen lógico con capacidad específica</h2>
+<ul>
+<li>Aumentar el volumen lógico a 20GB <code>sudo lvextend -L +20GB /dev/VolGroupXY/LVol</code></li>
+<li>Formatear en EXT4: <code>sudo resize2fs /dev/VolGroupXY/vol</code></li>
+<li>Formatear en XFS <code>sudo xfs_growfs /dev/VolGroupXY/vol</code></li>
+</ul>
+<h2 id="aumentar-un-volumen-logico-con-todo-el-espacio-disponible">Aumentar un volumen lógico con todo el espacio disponible</h2>
+<p>Para incrementar el espacio del volumen lógico para que consuma todo el espacio libre del grupo de volúmenes: <code>sudo lvextend -l +100%FREE /dev/VolGroupXY/LVol</code> * Formatear en EXT4: :code:<code>sudo resize2fs /dev/VolGroupXY/vol * Formatear en XFS:</code>sudo xfs_growfs /dev/VolGroupXY/vol`</p>
+<h2 id="reducir-el-espacio-de-un-volumen-logico-procedimiento-no-probado">Reducir el espacio de un volúmen lógico (Procedimiento NO probado)</h2>
+<p>Nota</p>
+<p>Procedimiento no válido para particiones XFS</p>
+<ul>
+<li>Una vez identificado el volumen lógico, lo reducimos: <code>sudo lvreduce --size X(GB|MB|KB) /dev/VolGroupXY/LVol</code></li>
+<li>Hay que redimensionar el espacio de la partición utilizada</li>
+</ul>
+<h2 id="averiguar-la-informacion-de-un-volumen-logico">Averiguar la información de un volumen lógico</h2>
+<ul>
+<li>Averiguar que LV queremos comprobar: <code>sudo lvdisplay /dev/VG_Nombre</code></li>
+</ul>
+<h2 id="renombrar-un-volumen-logico">Renombrar un volúmen lógico</h2>
+<pre><code>sudo umount -lf /dev/VolGroup02/VOL
+sudo lvrename /dev/VolGroup02/VOL /dev/VolGroup02/VOL_NUEVO_NOMBRE
+</code></pre>
+<h1 id="referencias">Referencias</h1>
+<p>[[https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/logical_volume_manager_administration/index|LVM - Red Hat Doc]]</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../bash/" class="btn btn-neutral float-right" title="Introducción">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../acl/gestion-de-usuarios-y-grupos/" class="btn btn-neutral" title="Gestión de usuari@s y grupos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../acl/gestion-de-usuarios-y-grupos/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../bash/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../../..';</script>
+    <script src="../../../../js/theme_extra.js" defer></script>
+    <script src="../../../../js/theme.js" defer></script>
+      <script src="../../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
